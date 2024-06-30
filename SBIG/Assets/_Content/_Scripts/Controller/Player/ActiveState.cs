@@ -24,5 +24,14 @@ namespace Controller.Player
             if (InputHandler.Instance.LeftClick.IsPressed)
                 _player.CompWeaponHandle.Fire();
         }
+        protected virtual void Interaction()
+        {
+            _player.CompCarry.LogicUpdate();
+
+            if (InputHandler.Instance.Interact.IsPressed)
+                _player.CompCarry.OnInteractButton();
+            if(InputHandler.Instance.ActivateCauldron.IsPressed)
+                _player.CompCarry.OnActivateCauldronButton();
+        }
     }
 }

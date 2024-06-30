@@ -24,6 +24,10 @@ namespace YInput
 
         public InputState LeftClick {  get; private set; }
 
+        public InputState Interact {  get; private set; }
+
+        public InputState ActivateCauldron { get; private set; }
+
         #endregion
 
         private Keys _keys;
@@ -32,6 +36,8 @@ namespace YInput
             _keys = new Keys();
 
             LeftClick = new InputState(_keys.gameplay.LeftClick);
+            Interact = new InputState(_keys.gameplay.Interact);
+            ActivateCauldron = new InputState(_keys.gameplay.ActivateCauldron);
 
             EnableGameplayMod();
         }
@@ -44,6 +50,8 @@ namespace YInput
         private void LateUpdate()
         {
             LeftClick.ResetInputInfo();
+            Interact.ResetInputInfo();
+            ActivateCauldron.ResetInputInfo();
         }
 
         private void EnableGameplayMod()

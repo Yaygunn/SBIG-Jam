@@ -53,6 +53,24 @@ public partial class @Keys: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""7684762c-1da5-4f6e-a8b6-e979576fa9a6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ActivateCauldron"",
+                    ""type"": ""Button"",
+                    ""id"": ""337497b3-07ba-421a-852f-e92a386ec53d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -132,6 +150,28 @@ public partial class @Keys: IInputActionCollection2, IDisposable
                     ""action"": ""MouseMove"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""85f831f4-94fc-43e7-bee1-a6803d331ed6"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4b251ac6-5810-4ed7-8ab3-6b7706579d71"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ActivateCauldron"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -143,6 +183,8 @@ public partial class @Keys: IInputActionCollection2, IDisposable
         m_gameplay_move = m_gameplay.FindAction("move", throwIfNotFound: true);
         m_gameplay_LeftClick = m_gameplay.FindAction("LeftClick", throwIfNotFound: true);
         m_gameplay_MouseMove = m_gameplay.FindAction("MouseMove", throwIfNotFound: true);
+        m_gameplay_Interact = m_gameplay.FindAction("Interact", throwIfNotFound: true);
+        m_gameplay_ActivateCauldron = m_gameplay.FindAction("ActivateCauldron", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -207,6 +249,8 @@ public partial class @Keys: IInputActionCollection2, IDisposable
     private readonly InputAction m_gameplay_move;
     private readonly InputAction m_gameplay_LeftClick;
     private readonly InputAction m_gameplay_MouseMove;
+    private readonly InputAction m_gameplay_Interact;
+    private readonly InputAction m_gameplay_ActivateCauldron;
     public struct GameplayActions
     {
         private @Keys m_Wrapper;
@@ -214,6 +258,8 @@ public partial class @Keys: IInputActionCollection2, IDisposable
         public InputAction @move => m_Wrapper.m_gameplay_move;
         public InputAction @LeftClick => m_Wrapper.m_gameplay_LeftClick;
         public InputAction @MouseMove => m_Wrapper.m_gameplay_MouseMove;
+        public InputAction @Interact => m_Wrapper.m_gameplay_Interact;
+        public InputAction @ActivateCauldron => m_Wrapper.m_gameplay_ActivateCauldron;
         public InputActionMap Get() { return m_Wrapper.m_gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -232,6 +278,12 @@ public partial class @Keys: IInputActionCollection2, IDisposable
             @MouseMove.started += instance.OnMouseMove;
             @MouseMove.performed += instance.OnMouseMove;
             @MouseMove.canceled += instance.OnMouseMove;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
+            @ActivateCauldron.started += instance.OnActivateCauldron;
+            @ActivateCauldron.performed += instance.OnActivateCauldron;
+            @ActivateCauldron.canceled += instance.OnActivateCauldron;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -245,6 +297,12 @@ public partial class @Keys: IInputActionCollection2, IDisposable
             @MouseMove.started -= instance.OnMouseMove;
             @MouseMove.performed -= instance.OnMouseMove;
             @MouseMove.canceled -= instance.OnMouseMove;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
+            @ActivateCauldron.started -= instance.OnActivateCauldron;
+            @ActivateCauldron.performed -= instance.OnActivateCauldron;
+            @ActivateCauldron.canceled -= instance.OnActivateCauldron;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -267,5 +325,7 @@ public partial class @Keys: IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnLeftClick(InputAction.CallbackContext context);
         void OnMouseMove(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
+        void OnActivateCauldron(InputAction.CallbackContext context);
     }
 }
