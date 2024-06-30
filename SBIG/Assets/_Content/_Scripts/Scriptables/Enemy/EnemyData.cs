@@ -9,8 +9,10 @@ namespace Scriptables.Enemy
         public string enemyName;
         public float detectionRange;
         public float attackRange;
+        public float attackCooldown;
         public bool targetPlayer;
         public bool targetCrops;
+        public bool prioritizePlayer;
         public bool canBeInterrupted;
         public int baseHealth;
         public int baseDamage;

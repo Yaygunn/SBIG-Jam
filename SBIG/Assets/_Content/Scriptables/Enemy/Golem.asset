@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Golem
   m_EditorClassIdentifier: 
   enemyName: Golem
-  detectionRange: 20f
-  attackRange: 3f
+  detectionRange: 20
+  attackRange: 3
+  attackCooldown: 1.5
   targetPlayer: 1
   targetCrops: 1
+  prioritizePlayer: 1
   canBeInterrupted: 0
   baseHealth: 25
   baseDamage: 2

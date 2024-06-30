@@ -49,6 +49,8 @@ namespace Controller.Enemy.States
             if (Time.time >= _nextCheckTime)
             {
                 _nextCheckTime = Time.time + _checkInterval;
+
+                CheckForPlayer();
                 
                 if (enemy.Target != null)
                 {
@@ -69,6 +71,10 @@ namespace Controller.Enemy.States
                         enemy.ChangeState(enemy.StateIdle);
                     }
                 }
+                else
+                {
+                    enemy.ChangeState(enemy.StateIdle);
+                }
             }
         }
 
@@ -80,6 +86,22 @@ namespace Controller.Enemy.States
         public override void Exit()
         {
             // Exit Chase State
+        }
+
+        private void CheckForPlayer()
+        {
+            if (enemy.EnemyConfig.prioritizePlayer)
+            {
+                GameObject playerObject = GlobalObject.Player;
+                if (playerObject != null)
+                {
+                    float playerDistance = Vector3.Distance(enemy.transform.position, playerObject.transform.position);
+                    if (playerDistance < Vector3.Distance(enemy.transform.position, enemy.Target.position))
+                    {
+                        enemy.Target = playerObject.transform;
+                    }
+                }
+            }
         }
         
         private bool FindClosestTarget(GameObject player, GameObject[] crops, out Transform target)

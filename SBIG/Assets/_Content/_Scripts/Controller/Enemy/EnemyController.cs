@@ -35,12 +35,12 @@ namespace Controller.Enemy
 
         private void Update()
         {
-            StateCurrent?.LogicUpdate();
+            StateCurrent.LogicUpdate();
         }
         
         private void FixedUpdate()
         {
-            StateCurrent?.PhysicUpdate();
+            StateCurrent.PhysicUpdate();
         }
         
         public void ChangeState(BaseState newState)
@@ -51,6 +51,15 @@ namespace Controller.Enemy
             StateCurrent.Exit();
             StateCurrent = newState;
             StateCurrent.Enter();
+        }
+        
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, EnemyConfig.detectionRange);
+            
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, EnemyConfig.attackRange);
         }
     }   
 }
