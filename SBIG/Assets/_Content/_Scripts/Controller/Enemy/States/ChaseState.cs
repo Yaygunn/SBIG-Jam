@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Controller.Enemy.States
 {
-    public class ChaseState : BaseState
+    public class ChaseState : ActiveState
     {
         public ChaseState(EnemyController enemy) : base(enemy) { }
         
@@ -78,16 +78,6 @@ namespace Controller.Enemy.States
             }
         }
 
-        public override void PhysicUpdate()
-        {
-            base.PhysicUpdate();
-        }
-
-        public override void Exit()
-        {
-            base.Exit();
-        }
-
         private void CheckForPlayer()
         {
             if (_enemy.EnemyConfig.prioritizePlayer)
@@ -121,8 +111,7 @@ namespace Controller.Enemy.States
 
                 }
             }
-
-            // If crops are not null and not empty
+            
             if (crops != null && crops.Length > 0)
             {
                 foreach (GameObject crop in crops)

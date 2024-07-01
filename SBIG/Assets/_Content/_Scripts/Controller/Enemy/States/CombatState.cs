@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Controller.Enemy.States
 {
-    public class CombatState: BaseState
+    public class CombatState: ActiveState
     {
         public CombatState(EnemyController enemy) : base(enemy)
         {
@@ -41,16 +41,6 @@ namespace Controller.Enemy.States
                 lastAttackTime = Time.time;
             }
 
-        }
-
-        public override void PhysicUpdate()
-        {
-            base.PhysicUpdate();
-        }
-
-        public override void Exit()
-        {
-            base.Exit();
         }
         
         private void Attack()

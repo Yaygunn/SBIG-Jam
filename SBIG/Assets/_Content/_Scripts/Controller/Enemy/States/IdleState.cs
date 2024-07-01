@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Controller.Enemy.States
 {
-    public class IdleState: BaseState
+    public class IdleState: ActiveState
     {
         public IdleState(EnemyController enemy) : base(enemy) {}
         public override void Enter()
@@ -20,16 +20,6 @@ namespace Controller.Enemy.States
             {
                 _enemy.ChangeState(_enemy.StateChase);
             }
-        }
-
-        public override void PhysicUpdate()
-        {
-            base.PhysicUpdate();
-        }
-
-        public override void Exit()
-        {
-            base.Exit();
         }
     }
 }
