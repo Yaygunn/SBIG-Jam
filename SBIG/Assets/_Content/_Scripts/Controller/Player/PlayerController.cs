@@ -10,15 +10,16 @@ namespace Controller.Player
     public class PlayerController : MonoBehaviour
     {
         #region States
-        public CombatState StateCombat {  get; private set; } 
+        public CombatState StateCombat { get; private set; }
         public CraftState StateCraft { get; private set; }
         #endregion
 
         #region Components
+        public CharacterController CharController { get; private set; }
         public IMoveComponent CompMove { get; private set; }
         public IRotateComponent CompRotate { get; private set; }
         public IWeaponHandle CompWeaponHandle { get; private set; }
-        public ICarryComp CompCarry {  get; private set; }
+        public ICarryComp CompCarry { get; private set; }
         #endregion
 
         public BaseState StateCurrent { get; private set; }
@@ -31,6 +32,7 @@ namespace Controller.Player
             #endregion
 
             #region Get Components
+            CharController = GetComponent<CharacterController>();
             CompMove = GetComponent<IMoveComponent>();
             CompRotate = GetComponent<IRotateComponent>();
             CompWeaponHandle = GetComponent<IWeaponHandle>();
@@ -39,7 +41,6 @@ namespace Controller.Player
 
             StateCurrent = StateCraft;
             StateCurrent.Enter();
-
         }
 
         private void Update()
@@ -54,7 +55,7 @@ namespace Controller.Player
 
         public void ChangeState(BaseState newState)
         {
-            if(StateCurrent == newState) 
+            if (StateCurrent == newState)
                 return;
 
             StateCurrent.Exit();

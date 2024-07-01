@@ -9,7 +9,7 @@ namespace YInput
         protected override void Awake()
         {
             base.Awake();
-            if(Instance == this)
+            if (Instance == this)
             {
                 Initialize();
             }
@@ -18,13 +18,13 @@ namespace YInput
 
         #region inputs
 
-        public Vector2 MoveInput {  get; private set; } 
+        public Vector2 MoveInput { get; private set; }
 
-        public Vector2 MousePositionChange {  get; private set; }
+        public Vector2 MousePositionChange { get; private set; }
 
-        public InputState LeftClick {  get; private set; }
+        public InputState LeftClick { get; private set; }
 
-        public InputState Interact {  get; private set; }
+        public InputState Interact { get; private set; }
 
         public InputState ActivateCauldron { get; private set; }
 
