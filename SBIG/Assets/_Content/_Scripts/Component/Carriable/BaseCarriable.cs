@@ -1,12 +1,12 @@
 using UnityEngine;
 
-namespace Components.Carriable
+namespace Components.Carriables
 {
-    public class BaseCarriable : MonoBehaviour
+    public abstract class BaseCarriable : MonoBehaviour
     {
-        [field:SerializeField] public Vector3 CarryPosition { get; private set; }
-        public bool IsBeingCarried { get; private set; }
-        public virtual void PickUp() { }
+        [field: SerializeField] public bool IsPickable { get; protected set; } = true;
+        public virtual string GetUiText() { return "____"; }
+        public abstract BaseCarriable PickUp(Transform camera);
         public virtual void Drop() { }
         public virtual void CarryUpdate() { }
     }
