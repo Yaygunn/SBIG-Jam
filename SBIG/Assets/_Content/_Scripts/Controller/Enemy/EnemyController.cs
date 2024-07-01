@@ -17,9 +17,12 @@ namespace Controller.Enemy
         public IdleState StateIdle { get; private set; }
         public ChaseState StateChase { get; private set; }
         public CombatState StateCombat { get; private set; }
+        public EnterGardenState StateEnterGarden { get; private set; }
+        public LeaveGardenState StateLeaveGarden { get; private set; }
         #endregion
         
         public NavMeshAgent NavMeshAgent;
+        public Transform EntrancePoint;
 
         private void Start()
         {
@@ -28,8 +31,11 @@ namespace Controller.Enemy
             StateIdle = new IdleState(this);
             StateChase = new ChaseState(this);
             StateCombat = new CombatState(this);
+            StateEnterGarden = new EnterGardenState(this);
+            StateLeaveGarden = new LeaveGardenState(this);
             
-            StateCurrent = StateIdle;
+            // Spawned enemies will default to EnterGardenState
+            StateCurrent = StateEnterGarden;
             StateCurrent.Enter();
         }
 
