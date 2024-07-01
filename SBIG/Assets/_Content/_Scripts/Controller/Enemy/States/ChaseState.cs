@@ -14,18 +14,17 @@ namespace Controller.Enemy.States
         
         public override void Enter()
         {
-            // Enter Chase State
-            Debug.Log("Enter Chase State");
+            base.Enter();
             
             GameObject playerObject = null;
             GameObject[] cropObjects = null;
             
-            if (enemy.EnemyConfig.targetPlayer)
+            if (_enemy.EnemyConfig.targetPlayer)
             {
                 playerObject = GlobalObject.Player;
             }
 
-            if (enemy.EnemyConfig.targetCrops)
+            if (_enemy.EnemyConfig.targetCrops)
             {
                 // This needs to be refactored, ideally if we store a reference to all crops in the scene
                 // in the GlobalObject or a Singleton for the CropManager?
@@ -34,71 +33,72 @@ namespace Controller.Enemy.States
             
             if (FindClosestTarget(playerObject, cropObjects, out Transform closestTarget))
             {
-                enemy.Target = closestTarget;
+                _enemy.Target = closestTarget;
             }
             
-            if (enemy.Target == null)
+            if (_enemy.Target == null)
             {
-                enemy.ChangeState(enemy.StateIdle);
+                _enemy.ChangeState(_enemy.StateIdle);
             }
         }
 
         public override void LogicUpdate()
         {
-            // Enter Logic Update
+            base.LogicUpdate();
+            
             if (Time.time >= _nextCheckTime)
             {
                 _nextCheckTime = Time.time + _checkInterval;
 
                 CheckForPlayer();
                 
-                if (enemy.Target != null)
+                if (_enemy.Target != null)
                 {
-                    float targetDistanceSq = (enemy.transform.position - enemy.Target.position).sqrMagnitude;
-                    float detectionRangeSq = enemy.EnemyConfig.detectionRange * enemy.EnemyConfig.detectionRange;
-                    float combatRangeSq = enemy.EnemyConfig.attackRange * enemy.EnemyConfig.attackRange;
+                    float targetDistanceSq = (_enemy.transform.position - _enemy.Target.position).sqrMagnitude;
+                    float detectionRangeSq = _enemy.EnemyConfig.detectionRange * _enemy.EnemyConfig.detectionRange;
+                    float combatRangeSq = _enemy.EnemyConfig.attackRange * _enemy.EnemyConfig.attackRange;
 
                     if (targetDistanceSq <= combatRangeSq)
                     {
-                        enemy.ChangeState(enemy.StateCombat);
+                        _enemy.ChangeState(_enemy.StateCombat);
                     }
                     else if (targetDistanceSq <= detectionRangeSq)
                     {
-                        enemy.NavMeshAgent.SetDestination(enemy.Target.position);
+                        _enemy.NavMeshAgent.SetDestination(_enemy.Target.position);
                     }
                     else
                     {
-                        enemy.ChangeState(enemy.StateIdle);
+                        _enemy.ChangeState(_enemy.StateIdle);
                     }
                 }
                 else
                 {
-                    enemy.ChangeState(enemy.StateIdle);
+                    _enemy.ChangeState(_enemy.StateIdle);
                 }
             }
         }
 
         public override void PhysicUpdate()
         {
-            // Enter Physic Update
+            base.PhysicUpdate();
         }
 
         public override void Exit()
         {
-            // Exit Chase State
+            base.Exit();
         }
 
         private void CheckForPlayer()
         {
-            if (enemy.EnemyConfig.prioritizePlayer)
+            if (_enemy.EnemyConfig.prioritizePlayer)
             {
                 GameObject playerObject = GlobalObject.Player;
                 if (playerObject != null)
                 {
-                    float playerDistance = Vector3.Distance(enemy.transform.position, playerObject.transform.position);
-                    if (playerDistance < Vector3.Distance(enemy.transform.position, enemy.Target.position))
+                    float playerDistance = Vector3.Distance(_enemy.transform.position, playerObject.transform.position);
+                    if (playerDistance < Vector3.Distance(_enemy.transform.position, _enemy.Target.position))
                     {
-                        enemy.Target = playerObject.transform;
+                        _enemy.Target = playerObject.transform;
                     }
                 }
             }
@@ -107,12 +107,12 @@ namespace Controller.Enemy.States
         private bool FindClosestTarget(GameObject player, GameObject[] crops, out Transform target)
         {
             target = null;
-            float closestDistance = enemy.EnemyConfig.detectionRange;
+            float closestDistance = _enemy.EnemyConfig.detectionRange;
             bool foundTarget = false;
 
             if (player != null)
             {
-                float playerDistance = Vector3.Distance(enemy.transform.position, player.transform.position);
+                float playerDistance = Vector3.Distance(_enemy.transform.position, player.transform.position);
                 if (playerDistance < closestDistance)
                 {
                     target = player.transform;
@@ -127,7 +127,7 @@ namespace Controller.Enemy.States
             {
                 foreach (GameObject crop in crops)
                 {
-                    float cropDistance = Vector3.Distance(enemy.transform.position, crop.transform.position);
+                    float cropDistance = Vector3.Distance(_enemy.transform.position, crop.transform.position);
                     if (cropDistance < closestDistance)
                     {
                         target = crop.transform;
