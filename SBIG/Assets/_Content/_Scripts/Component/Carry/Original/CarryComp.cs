@@ -27,9 +27,11 @@ namespace Components.Carry.Original
         }
         public void LogicUpdate()
         {
+            CloseUiTexts();
             RayCastCalculation();
+            OpenUiTexts();
 
-            if(_carriableBeingCarried != null)
+            if (_carriableBeingCarried != null)
                 _carriableBeingCarried.CarryUpdate();
         }
 
@@ -73,8 +75,7 @@ namespace Components.Carry.Original
 
         private void Pick()
         {
-            _carriableInFrontCamera.PickUp(_dependencies.FpsCam.transform);
-            _carriableBeingCarried = _carriableInFrontCamera;
+            _carriableBeingCarried = _carriableInFrontCamera.PickUp(_dependencies.FpsCam.transform);
             _carriableInFrontCamera = null;
 
             _cookableBeingCarried = _carriableBeingCarried.GetComponent<BaseCookable>();
@@ -106,6 +107,27 @@ namespace Components.Carry.Original
                 _cauldronInFront = null;
                 _carriableInFrontCamera = null;
             }
+        }
+
+        private void OpenUiTexts()
+        {
+            if (_cauldronInFront != null)
+            {
+                if (_cookableBeingCarried != null)
+                    EventHub.ShowThrowToCauldronText("throw"); //this is not good;
+
+                else if (_carriableBeingCarried == null)
+                    EventHub.ShowPickableText(_carriableInFrontCamera.GetUiText(), true);
+            }
+
+            else if (_carriableInFrontCamera != null)
+            {
+                    EventHub.ShowPickableText(_carriableInFrontCamera.GetUiText(), _carriableInFrontCamera.IsPickable);
+            }
+        }
+        public void CloseUiTexts()
+        {
+            EventHub.CloseCarryTexts();
         }
 
     }
