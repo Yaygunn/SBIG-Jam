@@ -22,6 +22,7 @@ namespace YInput
 
         public Vector2 MousePositionChange { get; private set; }
 
+
         public InputState LeftClick { get; private set; }
 
         public InputState Interact { get; private set; }

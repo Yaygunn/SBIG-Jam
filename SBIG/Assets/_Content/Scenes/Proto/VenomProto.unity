@@ -435,6 +435,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -1.176
       objectReference: {fileID: 0}
+    - target: {fileID: 8968828244771013507, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: m_VerticalAxis.m_MaxSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968828244771013507, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: m_VerticalAxis.m_AccelTime
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968828244771013507, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: m_VerticalAxis.m_DecelTime
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968828244771013507, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: m_HorizontalAxis.m_MaxSpeed
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968828244771013507, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: m_HorizontalAxis.m_AccelTime
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968828244771013507, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: m_HorizontalAxis.m_DecelTime
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7891326866517593169, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
