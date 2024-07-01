@@ -42,8 +42,8 @@ namespace Controller.Enemy.States
             }
 
         }
-        
-        private void Attack()
+
+        protected override void Attack()
         {
             Debug.Log("Attacking target: " + _enemy.Target.name);
             
