@@ -176,7 +176,7 @@ public partial class @Keys: IInputActionCollection2, IDisposable
                     ""id"": ""8c6cd84d-e5ec-4307-a5dc-3b3885043bf7"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
-                    ""processors"": ""ScaleVector2(x=7,y=7)"",
+                    ""processors"": ""ScaleVector2(x=7,y=7),NormalizeVector2"",
                     ""groups"": """",
                     ""action"": ""MouseMove"",
                     ""isComposite"": false,

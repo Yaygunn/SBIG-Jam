@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2435493487929890902}
   - component: {fileID: 3805124837236854134}
   - component: {fileID: 5543403197741541941}
-  - component: {fileID: 5804961098705655110}
   - component: {fileID: 4855854386875045901}
   - component: {fileID: 5222571080863864086}
   - component: {fileID: 1228167847179502586}
@@ -77,19 +76,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de83b4d7ec7531439dd8aed79ebd038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5804961098705655110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 66311514213484598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a065f74fce2dc1449cbdc3886fb17fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <FpsCam>k__BackingField: {fileID: 3900834924561367610}
 --- !u!114 &4855854386875045901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +163,7 @@ GameObject:
   - component: {fileID: 3900834924561367610}
   - component: {fileID: 2564973323947161854}
   - component: {fileID: 8654594939504096342}
+  - component: {fileID: 1221932720852851539}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -298,6 +285,24 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1221932720852851539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264745959868187262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb2369d73d814c00b3b988c8aaa8941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bobFrequency: 1.5
+  _bobHeight: 0.1
+  _bobSwayAngle: 0.5
+  _bobSideMovement: 0.05
+  _bobHeightMultiplier: 0.3
+  _interpolationSpeed: 5
 --- !u!1 &1993301127324391750
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +347,7 @@ GameObject:
   - component: {fileID: 7027829980472250739}
   - component: {fileID: 8573080716523619966}
   - component: {fileID: 8968828244771013507}
-  - component: {fileID: 8542025797578597707}
+  - component: {fileID: 4573207987679015012}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -439,7 +444,7 @@ MonoBehaviour:
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_ApplyBeforeBody: 0
---- !u!114 &8542025797578597707
+--- !u!114 &4573207987679015012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -451,11 +456,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NoiseProfile: {fileID: 11400000, guid: 46965f9cbaf525742a6da4c2172a99cd, type: 2}
+  m_NoiseProfile: {fileID: 11400000, guid: b241f91b9ccf8ff489abf204b30d3112, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
   m_AmplitudeGain: 1
   m_FrequencyGain: 1
-  mNoiseOffsets: {x: 0, y: 0, z: 0}
+  mNoiseOffsets: {x: -558.49817, y: 352.56882, z: -41.343597}
 --- !u!1 &4906235632769019319
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,6 +831,10 @@ PrefabInstance:
     - target: {fileID: 3270380965842224586, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
       propertyPath: m_Name
       value: Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570956845069644295, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
