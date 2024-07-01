@@ -50,6 +50,9 @@ namespace Controller.Enemy.States
             // ##TODO:
             // Play attack animation
             // Apply damage to target
+            
+            // Temporary move to LeaveGardenState
+            _enemy.ChangeState(_enemy.StateLeaveGarden);
         }
     }
 }

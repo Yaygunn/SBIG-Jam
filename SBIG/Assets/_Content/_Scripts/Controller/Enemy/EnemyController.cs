@@ -1,4 +1,5 @@
 using Controller.Enemy.States;
+using Managers.Global;
 using Scriptables.Enemy;
 using UnityEngine;
 using UnityEngine.AI;
@@ -66,6 +67,25 @@ namespace Controller.Enemy
             
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, EnemyConfig.attackRange);
+        }
+        
+        public void CalculateClosestEntrance()
+        {
+            float closestDistance = float.MaxValue;
+            int closestIndex = 0;
+            
+            for (var i = 0; i < GlobalObject.Entrances.Count; i++)
+            {
+                float distanceToEntrance = Vector3.Distance(transform.position, GlobalObject.Entrances[i].position);
+
+                if (distanceToEntrance < closestDistance)
+                {
+                    closestDistance = distanceToEntrance;
+                    closestIndex = i;
+                }
+            }
+            
+            EntrancePoint = GlobalObject.Entrances[closestIndex];
         }
     }   
 }
