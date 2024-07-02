@@ -32,3 +32,16 @@
     scale: 1.1 1.1;
     background-color: rgba(10, 16, 69, 0.1);
 }
+
+.backButton {
+    margin-bottom: 120px;
+    margin-left: 120px;
+}
+
+.keybindLabel {
+    width: 160px;
+}
+
+.keybindButton {
+    width: 100px;
+}
