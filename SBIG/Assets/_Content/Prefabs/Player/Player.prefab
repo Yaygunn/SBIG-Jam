@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2435493487929890902}
   - component: {fileID: 3805124837236854134}
+  - component: {fileID: 7814890551531164873}
   - component: {fileID: 5543403197741541941}
   - component: {fileID: 4855854386875045901}
   - component: {fileID: 5222571080863864086}
@@ -64,6 +65,19 @@ CapsuleCollider:
   m_Height: 3.6356406
   m_Direction: 1
   m_Center: {x: 0, y: 0.8178203, z: 0}
+--- !u!114 &7814890551531164873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66311514213484598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a065f74fce2dc1449cbdc3886fb17fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <FpsCam>k__BackingField: {fileID: 3900834924561367610}
 --- !u!114 &5543403197741541941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,11 +311,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eb2369d73d814c00b3b988c8aaa8941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bobFrequency: 1.5
-  _bobHeight: 0.1
-  _bobSwayAngle: 0.5
-  _bobSideMovement: 0.05
-  _bobHeightMultiplier: 0.3
+  _defaultBobFrequency: 0.5
+  _defaultBobAmplitude: 1
+  _maxBobFrequency: 1
+  _maxBobAmplitude: 2
+  _targetAmplitude: 0
+  _targetFrequency: 0
+  _maxSpeed: 5
   _interpolationSpeed: 5
 --- !u!1 &1993301127324391750
 GameObject:

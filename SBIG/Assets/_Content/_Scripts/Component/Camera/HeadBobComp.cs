@@ -2,7 +2,7 @@ using UnityEngine;
 using Cinemachine;
 using Managers.MainCamera;
 
-namespace Components.Camera.HeadBob
+namespace Components.Cameras.HeadBob
 {
     public class HeadBobComp : MonoBehaviour
     {
