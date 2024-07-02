@@ -1,17 +1,16 @@
 namespace Controller.Enemy
 {
-    public abstract class BaseState
+    public class BaseState
     {
-        protected EnemyController enemy;
-
+        protected EnemyController _enemy;
         public BaseState(EnemyController enemy)
         {
-            this.enemy = enemy;
+            _enemy = enemy;
         }
 
-        public abstract void Enter();
-        public abstract void LogicUpdate();
-        public abstract void PhysicUpdate();
-        public abstract void Exit();
+        public virtual void Enter() { }
+        public virtual void LogicUpdate() { }
+        public virtual void PhysicUpdate() { }
+        public virtual void Exit() { }
     }
 }
