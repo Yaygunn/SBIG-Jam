@@ -24,4 +24,26 @@ public static class EventHub
     }
 
     #endregion
+    
+    #region Menu
+    public static event Action Event_StartMenu;
+    public static void StartMenu()
+    {
+        Event_StartMenu?.Invoke();
+    }
+    
+    #endregion
+    
+    #region UI
+    public static event Action Event_UIHover;
+    public static void UIHover()
+    {
+        Event_UIHover?.Invoke();
+    }
+    public static event Action Event_UIClick;
+    public static void UIClick()
+    {
+        Event_UIClick?.Invoke();
+    }
+    #endregion
 }
