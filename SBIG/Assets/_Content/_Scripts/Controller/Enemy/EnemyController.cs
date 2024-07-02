@@ -1,4 +1,5 @@
 using Controller.Enemy.States;
+using Managers.Global;
 using Scriptables.Enemy;
 using UnityEngine;
 using UnityEngine.AI;
@@ -17,9 +18,12 @@ namespace Controller.Enemy
         public IdleState StateIdle { get; private set; }
         public ChaseState StateChase { get; private set; }
         public CombatState StateCombat { get; private set; }
+        public EnterGardenState StateEnterGarden { get; private set; }
+        public LeaveGardenState StateLeaveGarden { get; private set; }
         #endregion
         
         public NavMeshAgent NavMeshAgent;
+        public Transform EntrancePoint;
 
         private void Start()
         {
@@ -28,8 +32,11 @@ namespace Controller.Enemy
             StateIdle = new IdleState(this);
             StateChase = new ChaseState(this);
             StateCombat = new CombatState(this);
+            StateEnterGarden = new EnterGardenState(this);
+            StateLeaveGarden = new LeaveGardenState(this);
             
-            StateCurrent = StateIdle;
+            // Spawned enemies will default to EnterGardenState
+            StateCurrent = StateEnterGarden;
             StateCurrent.Enter();
         }
 
@@ -60,6 +67,25 @@ namespace Controller.Enemy
             
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, EnemyConfig.attackRange);
+        }
+        
+        public void CalculateClosestEntrance()
+        {
+            float closestDistance = float.MaxValue;
+            int closestIndex = 0;
+            
+            for (var i = 0; i < GlobalObject.Entrances.Count; i++)
+            {
+                float distanceToEntrance = Vector3.Distance(transform.position, GlobalObject.Entrances[i].position);
+
+                if (distanceToEntrance < closestDistance)
+                {
+                    closestDistance = distanceToEntrance;
+                    closestIndex = i;
+                }
+            }
+            
+            EntrancePoint = GlobalObject.Entrances[closestIndex];
         }
     }   
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Controller.Enemy.States
 {
-    public class CombatState: BaseState
+    public class CombatState: ActiveState
     {
         public CombatState(EnemyController enemy) : base(enemy)
         {
@@ -14,26 +14,26 @@ namespace Controller.Enemy.States
 
         public override void Enter()
         {
-            // Enter Combat State
-            Debug.Log("Enter Combat State");
+            base.Enter();
 
             lastAttackTime = -attackCooldown;
         }
 
         public override void LogicUpdate()
         {
-            // Enter Logic Update
-            if (enemy.Target == null)
+            base.LogicUpdate();
+            
+            if (_enemy.Target == null)
             {
-                enemy.ChangeState(enemy.StateIdle);
+                _enemy.ChangeState(_enemy.StateIdle);
                 return;
             }
             
-            float targetDistanceSq = (enemy.transform.position - enemy.Target.position).sqrMagnitude;
+            float targetDistanceSq = (_enemy.transform.position - _enemy.Target.position).sqrMagnitude;
 
-            if (targetDistanceSq > ( enemy.EnemyConfig.attackRange * enemy.EnemyConfig.attackRange + 1.5f))
+            if (targetDistanceSq > ( _enemy.EnemyConfig.attackRange * _enemy.EnemyConfig.attackRange + 1.5f))
             {
-                enemy.ChangeState(enemy.StateChase);
+                _enemy.ChangeState(_enemy.StateChase);
             }
             else if (Time.time >= lastAttackTime + attackCooldown)
             {
@@ -43,23 +43,16 @@ namespace Controller.Enemy.States
 
         }
 
-        public override void PhysicUpdate()
+        protected override void Attack()
         {
-            // Enter Physic Update
-        }
-
-        public override void Exit()
-        {
-            // Exit Combat State
-        }
-        
-        private void Attack()
-        {
-            Debug.Log("Attacking target: " + enemy.Target.name);
+            Debug.Log("Attacking target: " + _enemy.Target.name);
             
             // ##TODO:
             // Play attack animation
             // Apply damage to target
+            
+            // Temporary move to LeaveGardenState
+            _enemy.ChangeState(_enemy.StateLeaveGarden);
         }
     }
 }

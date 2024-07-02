@@ -2,34 +2,24 @@ using UnityEngine;
 
 namespace Controller.Enemy.States
 {
-    public class IdleState: BaseState
+    public class IdleState: ActiveState
     {
         public IdleState(EnemyController enemy) : base(enemy) {}
         public override void Enter()
         {
-            // Enter Idle State
-            Debug.Log("Enter Idle State");
+            base.Enter();
             
-            enemy.Target = null;
+            _enemy.Target = null;
         }
 
         public override void LogicUpdate()
         {
-            // Enter Logic Update
-            if (enemy.EnemyConfig.targetPlayer || enemy.EnemyConfig.targetCrops)
+            base.LogicUpdate();
+            
+            if (_enemy.EnemyConfig.targetPlayer || _enemy.EnemyConfig.targetCrops)
             {
-                enemy.ChangeState(enemy.StateChase);
+                _enemy.ChangeState(_enemy.StateChase);
             }
-        }
-
-        public override void PhysicUpdate()
-        {
-            // Enter Physic Update
-        }
-
-        public override void Exit()
-        {
-            // Exit Idle State
         }
     }
 }
