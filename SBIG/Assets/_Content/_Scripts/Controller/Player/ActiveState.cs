@@ -1,4 +1,3 @@
-using UnityEngine;
 using YInput;
 
 namespace Controller.Player
@@ -11,27 +10,38 @@ namespace Controller.Player
         {
             _player.CompMove.Move(InputHandler.Instance.MoveInput);
         }
+
         protected virtual void Rotate()
         {
-            _player.CompRotate.Rotate(InputHandler.Instance.MousePositionChange);
+            _player.CompRotate.Rotate();
         }
+
         protected virtual void GunUsage()
         {
             FireOp();
         }
+
         protected virtual void FireOp()
         {
             if (InputHandler.Instance.LeftClick.IsPressed)
                 _player.CompWeaponHandle.Fire();
         }
+
         protected virtual void Interaction()
         {
             _player.CompCarry.LogicUpdate();
 
             if (InputHandler.Instance.Interact.IsPressed)
                 _player.CompCarry.OnInteractButton();
-            if(InputHandler.Instance.ActivateCauldron.IsPressed)
+            if (InputHandler.Instance.ActivateCauldron.IsPressed)
                 _player.CompCarry.OnActivateCauldronButton();
+        }
+
+        public override void LogicUpdate()
+        {
+            base.LogicUpdate();
+            Rotate();
+            Move();
         }
     }
 }

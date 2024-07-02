@@ -71,6 +71,15 @@ public partial class @Keys: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""StickMove"",
+                    ""type"": ""Value"",
+                    ""id"": ""581f5a9f-3b32-47ad-b250-a3916dbfad5f"",
+                    ""expectedControlType"": ""Stick"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -131,6 +140,17 @@ public partial class @Keys: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""f0f567c5-0aa9-4ee6-b16e-7c3d9aa75a86"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""e8f62208-bd90-4e3e-b684-663184b6ba04"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
@@ -146,6 +166,17 @@ public partial class @Keys: IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8c6cd84d-e5ec-4307-a5dc-3b3885043bf7"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": ""ScaleVector2(x=7,y=7),NormalizeVector2"",
                     ""groups"": """",
                     ""action"": ""MouseMove"",
                     ""isComposite"": false,
@@ -172,6 +203,17 @@ public partial class @Keys: IInputActionCollection2, IDisposable
                     ""action"": ""ActivateCauldron"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""85f7dc26-1484-4b00-9918-ddf475d90121"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""StickMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -185,6 +227,7 @@ public partial class @Keys: IInputActionCollection2, IDisposable
         m_gameplay_MouseMove = m_gameplay.FindAction("MouseMove", throwIfNotFound: true);
         m_gameplay_Interact = m_gameplay.FindAction("Interact", throwIfNotFound: true);
         m_gameplay_ActivateCauldron = m_gameplay.FindAction("ActivateCauldron", throwIfNotFound: true);
+        m_gameplay_StickMove = m_gameplay.FindAction("StickMove", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -251,6 +294,7 @@ public partial class @Keys: IInputActionCollection2, IDisposable
     private readonly InputAction m_gameplay_MouseMove;
     private readonly InputAction m_gameplay_Interact;
     private readonly InputAction m_gameplay_ActivateCauldron;
+    private readonly InputAction m_gameplay_StickMove;
     public struct GameplayActions
     {
         private @Keys m_Wrapper;
@@ -260,6 +304,7 @@ public partial class @Keys: IInputActionCollection2, IDisposable
         public InputAction @MouseMove => m_Wrapper.m_gameplay_MouseMove;
         public InputAction @Interact => m_Wrapper.m_gameplay_Interact;
         public InputAction @ActivateCauldron => m_Wrapper.m_gameplay_ActivateCauldron;
+        public InputAction @StickMove => m_Wrapper.m_gameplay_StickMove;
         public InputActionMap Get() { return m_Wrapper.m_gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -284,6 +329,9 @@ public partial class @Keys: IInputActionCollection2, IDisposable
             @ActivateCauldron.started += instance.OnActivateCauldron;
             @ActivateCauldron.performed += instance.OnActivateCauldron;
             @ActivateCauldron.canceled += instance.OnActivateCauldron;
+            @StickMove.started += instance.OnStickMove;
+            @StickMove.performed += instance.OnStickMove;
+            @StickMove.canceled += instance.OnStickMove;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -303,6 +351,9 @@ public partial class @Keys: IInputActionCollection2, IDisposable
             @ActivateCauldron.started -= instance.OnActivateCauldron;
             @ActivateCauldron.performed -= instance.OnActivateCauldron;
             @ActivateCauldron.canceled -= instance.OnActivateCauldron;
+            @StickMove.started -= instance.OnStickMove;
+            @StickMove.performed -= instance.OnStickMove;
+            @StickMove.canceled -= instance.OnStickMove;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -327,5 +378,6 @@ public partial class @Keys: IInputActionCollection2, IDisposable
         void OnMouseMove(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnActivateCauldron(InputAction.CallbackContext context);
+        void OnStickMove(InputAction.CallbackContext context);
     }
 }
