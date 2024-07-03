@@ -17,10 +17,10 @@ public static class EventHub
         Ev_ShowPickableText?.Invoke(text, isPickable);
     }
 
-    public static event Action<string> Ev_ShowThrowToCauldronText;
-    public static void ShowThrowToCauldronText(string text)
+    public static event Action<string> Ev_ShowCookInCauldronText;
+    public static void ShowCookInCauldronText(string text)
     {
-        Ev_ShowThrowToCauldronText?.Invoke(text);
+        Ev_ShowCookInCauldronText?.Invoke(text);
     }
 
     #endregion
