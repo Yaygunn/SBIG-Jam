@@ -86,7 +86,7 @@
             <ui:Label tabindex="-1" text="Credits" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ScreenTitle" class="gameTitle" style="margin-bottom: 40px; -unity-text-align: upper-center; margin-left: 4px;" />
         </ui:VisualElement>
         <ui:VisualElement name="CreditsScroller" style="flex-grow: 1; width: 800px; height: 800px; align-self: center;">
-            <ui:ListView name="ListView" />
+            <ui:ListView name="creditsListView" />
         </ui:VisualElement>
         <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BackButtonCredits" class="menuButton backButton" style="margin-top: 20px;" />
     </ui:VisualElement>

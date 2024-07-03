@@ -1,6 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using Scriptables.Credits;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -10,6 +10,10 @@ public class MenuEvents : MonoBehaviour
     private VisualElement _menuContainer;
     private VisualElement _settingsContainer;
     private VisualElement _creditsContainer;
+    
+    [SerializeField] VisualTreeAsset _creditItemTemplate;
+    [SerializeField] private List<CreditData> _creditDataList = new List<CreditData>();
+    private ListView _creditsListView;
     
     #region Menu Buttons
     private Button _playButton;
@@ -36,6 +40,11 @@ public class MenuEvents : MonoBehaviour
         _backButtonCredits = _document.rootVisualElement.Q("BackButtonCredits") as Button;
 
         RegisterButtonCallbacks();
+    }
+
+    private void OnEnable()
+    {
+        
     }
 
     private void RegisterButtonCallbacks()
@@ -82,6 +91,43 @@ public class MenuEvents : MonoBehaviour
         
         // Show relevant container
         _creditsContainer.style.display = DisplayStyle.Flex;
+        
+        InitializeCreditsListView();
+    }
+
+    private void InitializeCreditsListView()
+    {
+        if (_creditsListView == null)
+        {
+            _creditsListView = _creditsContainer.Q<ListView>("creditsListView");
+
+            if (_creditsListView != null)
+            {
+                _creditsListView.itemsSource = _creditDataList;
+                _creditsListView.makeItem = MakeItem;
+                _creditsListView.bindItem = BindItem;
+                _creditsListView.fixedItemHeight = 45;
+            }
+        }
+    }
+
+    VisualElement MakeItem()
+    {
+        return _creditItemTemplate.CloneTree();
+    }
+
+    void BindItem(VisualElement element, int index)
+    {
+        var positionLabel = element.Q<Label>("Position");
+        var nameLabel = element.Q<Label>("Name");
+        var flagImage = element.Q<VisualElement>("Flag");
+
+        var creditData = _creditDataList[index];
+
+        positionLabel.text = creditData.Position;
+        nameLabel.text = creditData.Name;
+        
+        flagImage.style.backgroundImage = new StyleBackground(creditData.Flag);
     }
 
     private void OnBackButtonClick(ClickEvent evt)

@@ -184,6 +184,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4ad221b01d49247872a30b0b674c01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _creditItemTemplate: {fileID: 9197481963319205126, guid: f15064f1f88fb8748846cd0d8b4cfb7b, type: 3}
+  _creditDataList:
+  - {fileID: 11400000, guid: d909eb2b1bdfef24f8260dbc75e5bd78, type: 2}
+  - {fileID: 11400000, guid: 4b7526fcaa491be4caed3517148aedb0, type: 2}
 --- !u!1 &1448857000
 GameObject:
   m_ObjectHideFlags: 0
