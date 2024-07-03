@@ -23,8 +23,9 @@ namespace Controller.Player
 
         protected virtual void FireOp()
         {
-            if (InputHandler.Instance.LeftClick.IsPressed)
-                _player.CompWeaponHandle.Fire();
+            _player.CompWeaponHandle.SendFireInput(InputHandler.Instance.LeftClick);
+            if (InputHandler.Instance.ActivateCauldron.IsPressed)
+                _player.CompWeaponHandle.Reload();
         }
 
         protected virtual void Interaction()
