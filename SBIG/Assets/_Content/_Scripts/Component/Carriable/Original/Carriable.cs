@@ -24,11 +24,7 @@ namespace Components.Carriables.Original
 
             return this;
         }
-        public override bool Drop(Transform camera)
-        {
-            return HandlePlaceOnGround(camera);
 
-        }
 
         public override string GetUiText()
         {
@@ -44,48 +40,67 @@ namespace Components.Carriables.Original
             GetComponent<Collider>().enabled = false;
         }
 
-        private bool HandlePlaceOnGround(Transform camera)
+        public override bool Drop(Transform camera)
+        {
+            if (!CanBePlacedOnGround(camera, out Vector3 dropPosition))
+            {
+                return false;
+            }
+
+            transform.SetParent(null);
+            transform.localScale = StartScale;
+
+            PlaceOnGround(dropPosition);
+            OpenCollider();
+
+            return true;
+        }
+
+        private bool CanBePlacedOnGround(Transform camera, out Vector3 dropPosition)
         {
             const float MaxDropDistance = 3f;
             const float RaycastDistance = 7f;
             const float PaddingDistanceFromPlayer = 0.25f;
 
-            Vector3 dropPosition;
+            dropPosition = Vector3.zero;
 
             // Check if the item can be placed in front of the player
             if (Physics.Raycast(camera.position, camera.forward, out RaycastHit forwardHit, RaycastDistance))
             {
-                Debug.DrawRay(camera.position, camera.forward * forwardHit.distance, Color.red, 300.0f);
 
                 dropPosition = forwardHit.distance > MaxDropDistance
                     ? camera.position + camera.forward * MaxDropDistance
                     : forwardHit.point + camera.forward * PaddingDistanceFromPlayer;
+
+                // Check if the item can be placed on the ground
+                if (GetRaycastToDownwardSurface(dropPosition, Vector3.down, out RaycastHit downwardHit))
+                {
+                    dropPosition = downwardHit.point;
+                    return true;
+                }
             }
-            // If not, place it at the maximum distance
+            // If the item cannot be placed in front of the player, drop it directly below 
             else
             {
-                Debug.DrawRay(camera.position, camera.forward * RaycastDistance, Color.yellow, 300.0f);
 
                 dropPosition = camera.position + camera.forward * MaxDropDistance;
+                if (GetRaycastToDownwardSurface(dropPosition, Vector3.down, out RaycastHit downwardHit))
+                {
+                    dropPosition = downwardHit.point;
+                    return true;
+                }
             }
 
-            if (GetRaycastToDownwardSurface(dropPosition, Vector3.down, out RaycastHit downwardHit))
-            {
-                dropPosition = downwardHit.point;
-            }
+            return false;
+        }
 
+        private void PlaceOnGround(Vector3 dropPosition)
+        {
             Collider itemCollider = GetComponent<Collider>();
             Bounds itemBounds = itemCollider.bounds;
             dropPosition.y += itemBounds.extents.y + 0.01f;
 
-            transform.position = dropPosition;
-            transform.SetParent(null);
-            transform.localScale = StartScale;
-            transform.rotation = Quaternion.identity;
-
-            OpenCollider();
-
-            return true;
+            transform.SetPositionAndRotation(dropPosition, Quaternion.identity);
         }
 
         private bool GetRaycastToDownwardSurface(Vector3 position, Vector3 direction, out RaycastHit downwardHit)
@@ -96,8 +111,10 @@ namespace Components.Carriables.Original
             }
 
             downwardHit = new RaycastHit();
-
             return false;
         }
+
+
+
     }
 }
