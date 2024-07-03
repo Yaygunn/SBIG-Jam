@@ -58,19 +58,17 @@ namespace Components.Carry.Original
 
             else if (_carriableInFrontCamera != null)
             {
-                if (_carriableBeingCarried != null)
+                if (_carriableBeingCarried == null)
                 {
-                    Drop();
+                    Pick();
                 }
-
-                Pick();
             }
 
-            else if(_carriableBeingCarried != null)
+            else if (_carriableBeingCarried != null)
             {
                 Drop();
             }
-            
+
         }
 
         private void Pick()
@@ -84,10 +82,16 @@ namespace Components.Carry.Original
 
         private void Drop()
         {
-            _carriableBeingCarried.Drop();
-            _carriableBeingCarried = null;
-            _cookableBeingCarried = null;
+            bool _isDropped = _carriableBeingCarried.Drop(_dependencies.FpsCam.transform);
+
+            if (_isDropped)
+            {
+                _carriableBeingCarried = null;
+                _cookableBeingCarried = null;
+
+            }
         }
+
 
         private void ThrowToCauldron()
         {
@@ -122,6 +126,7 @@ namespace Components.Carry.Original
 
             else if (_carriableInFrontCamera != null)
             {
+                if(_carriableBeingCarried == null)
                     EventHub.ShowPickableText(_carriableInFrontCamera.GetUiText(), _carriableInFrontCamera.IsPickable);
             }
         }
