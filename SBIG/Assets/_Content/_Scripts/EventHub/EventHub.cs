@@ -24,7 +24,22 @@ public static class EventHub
     }
 
     #endregion
-    
+
+    #region Weapon
+
+    public static event Action Ev_MagazineEnded;
+    public static void MagazineEnded()
+    {
+        Ev_MagazineEnded?.Invoke();
+    }
+
+    public static event Action Ev_ForceEndMagazine;
+    public static void ForceEndMagazine()
+    {
+        ForceEndMagazine();
+    }
+    #endregion
+
     #region Menu
     public static event Action Event_StartMenu;
     public static void StartMenu()
