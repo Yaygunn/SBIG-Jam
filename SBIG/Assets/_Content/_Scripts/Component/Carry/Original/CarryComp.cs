@@ -58,12 +58,10 @@ namespace Components.Carry.Original
 
             else if (_carriableInFrontCamera != null)
             {
-                if (_carriableBeingCarried != null)
+                if (_carriableBeingCarried == null)
                 {
-                    Drop();
+                    Pick();
                 }
-
-                Pick();
             }
 
             else if (_carriableBeingCarried != null)
@@ -128,7 +126,8 @@ namespace Components.Carry.Original
 
             else if (_carriableInFrontCamera != null)
             {
-                EventHub.ShowPickableText(_carriableInFrontCamera.GetUiText(), _carriableInFrontCamera.IsPickable);
+                if(_carriableBeingCarried == null)
+                    EventHub.ShowPickableText(_carriableInFrontCamera.GetUiText(), _carriableInFrontCamera.IsPickable);
             }
         }
         public void CloseUiTexts()
