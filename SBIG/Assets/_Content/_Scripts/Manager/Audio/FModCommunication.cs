@@ -89,5 +89,38 @@ namespace Audio
             }
             return false;
         }
+        
+        public static void SetMusicVolume(float volume)
+        {
+            // Set the volume
+        }
+        
+        public static void SetNarratorVolume(float volume)
+        {
+            // Set the volume
+        }
+        
+        public static void SetSfxVolume(float volume)
+        {
+            // Set the volume
+        }
+        
+        public static float GetMusicVolume()
+        {
+            // Get the volume
+            return 0f;
+        }
+        
+        public static float GetNarratorVolume()
+        {
+            // Get the volume
+            return 0f;
+        }
+
+        public static float GetSfxVolume()
+        {
+            // Get the volume
+            return 0f;
+        }
     }
 }

@@ -14,6 +14,43 @@ namespace Manager.Audio
         private FModCommunication _fmodCommunication;
         private MusicAudio _musicAudio;
         
+        #region Volume Controls
+
+        public float MusicVolume
+        {
+            get => _musicVolume;
+            set
+            {
+                _musicVolume = value;
+                // UPDATE FMOD
+            }
+        }
+        
+        public float NarratorVolume
+        {
+            get => _narratorVolume;
+            set
+            {
+                _narratorVolume = value;
+                // UPDATE FMOD
+            }
+        }
+        
+        public float SfxVolume
+        {
+            get => _sfxVolume;
+            set
+            {
+                _sfxVolume = value;
+                // UPDATE FMOD
+            }
+        }
+        
+        private float _musicVolume;
+        private float _narratorVolume;
+        private float _sfxVolume;
+        #endregion
+        
         private void Awake()
         {
             if(Instance == null)
@@ -32,6 +69,10 @@ namespace Manager.Audio
             RegisterAudioEvents();
             
             _musicAudio.Activate();
+            
+            _musicVolume = FModCommunication.GetMusicVolume();
+            _narratorVolume = FModCommunication.GetNarratorVolume();
+            _sfxVolume = FModCommunication.GetSfxVolume();
         }
 
         private void RegisterAudioEvents()
