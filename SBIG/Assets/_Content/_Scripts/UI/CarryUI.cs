@@ -15,14 +15,14 @@ namespace UI
         void Start()
         {
             EventHub.Ev_ShowPickableText += ShowPickText;
-            EventHub.Ev_CookInCauldron += ShowCookInCauldron;
+            EventHub.Ev_ShowCookInCauldronText += ShowCookInCauldron;
             EventHub.Ev_CloseCarryTexts += CloseTexts;
         }
 
         private void OnDestroy()
         {
             EventHub.Ev_ShowPickableText -= ShowPickText;
-            EventHub.Ev_CookInCauldron -= ShowCookInCauldron;
+            EventHub.Ev_ShowCookInCauldronText -= ShowCookInCauldron;
             EventHub.Ev_CloseCarryTexts -= CloseTexts;
         }
 
@@ -32,7 +32,7 @@ namespace UI
             _pickText.text = text;
         }
 
-        private void CookInCauldron(string text)
+        private void ShowCookInCauldron(string text)
         {
             _cauldronBackground.SetActive(true);
             _cauldronText.text = text;

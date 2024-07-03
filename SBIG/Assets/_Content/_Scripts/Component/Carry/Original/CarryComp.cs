@@ -118,7 +118,7 @@ namespace Components.Carry.Original
             if (_cauldronInFront != null)
             {
                 if (_cookableBeingCarried != null)
-                    EventHub.ShowThrowToCauldronText("throw"); //this is not good;
+                    EventHub.ShowCookInCauldronText("throw"); //this is not good;
 
                 else if (_carriableBeingCarried == null)
                     EventHub.ShowPickableText(_carriableInFrontCamera.GetUiText(), true);
