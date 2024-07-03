@@ -964,6 +964,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4610109104772800108, guid: 3ba854817c6fd884ab3795967d70d1e2, type: 3}
+      propertyPath: <GroundLayer>k__BackingField.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4686350273933101308, guid: 3ba854817c6fd884ab3795967d70d1e2, type: 3}
       propertyPath: m_Name
       value: DontDestroy
@@ -984,6 +988,10 @@ PrefabInstance:
     - target: {fileID: 3618885080192912711, guid: 3e2b9453b0f1e22418af5450c80dc130, type: 3}
       propertyPath: m_Name
       value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 7627666494772179978, guid: 3e2b9453b0f1e22418af5450c80dc130, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8966883017850129295, guid: 3e2b9453b0f1e22418af5450c80dc130, type: 3}
       propertyPath: m_LocalPosition.x
