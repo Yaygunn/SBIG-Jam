@@ -221,17 +221,26 @@ namespace UI
     
     private void OnSliderChangeEvent_music(ChangeEvent<float> evt)
     {
-        AudioManager.Instance.MusicVolume = evt.newValue;
+        float volume = evt.newValue;
+
+        AudioManager.Instance.MusicVolume = volume;
+        PlayerPrefs.SetFloat("MusicVolume", volume);
     }
     
     private void OnSliderChangeEvent_narrator(ChangeEvent<float> evt)
     {
-        AudioManager.Instance.NarratorVolume = evt.newValue; 
+        float volume = evt.newValue;
+        
+        AudioManager.Instance.NarratorVolume = volume; 
+        PlayerPrefs.SetFloat("NarrationVolume", volume);
     }
     
     private void OnSliderChangeEvent_sfx(ChangeEvent<float> evt)
     {
-        AudioManager.Instance.SfxVolume = evt.newValue;
+        float volume = evt.newValue;
+        
+        AudioManager.Instance.SfxVolume = volume;
+        PlayerPrefs.SetFloat("SFXVolume", volume);
     }
 
     private void OnButtonHover(MouseEnterEvent evt)

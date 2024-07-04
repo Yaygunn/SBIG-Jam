@@ -74,9 +74,15 @@ namespace Manager.Audio
             _uiAudio.Activate();
             
             // Fetch the current volume settings from FMOD
-            _musicVolume = _fmodCommunication.GetMusicVolume();
-            _narratorVolume = _fmodCommunication.GetNarratorVolume();
-            _sfxVolume = _fmodCommunication.GetSfxVolume();
+
+            _musicVolume = PlayerPrefs.GetFloat("MusicVolume", _fmodCommunication.GetMusicVolume());
+            _narratorVolume = PlayerPrefs.GetFloat("NarrationVolume", _fmodCommunication.GetNarratorVolume());
+            _sfxVolume = PlayerPrefs.GetFloat("SFXVolume", _fmodCommunication.GetSfxVolume());
+            
+            // Set the starting volume
+            _fmodCommunication.SetMusicVolume(_musicVolume);
+            _fmodCommunication.SetNarratorVolume(_narratorVolume);
+            _fmodCommunication.SetSfxVolume(_sfxVolume);
         }
 
         private void RegisterAudioEvents()
