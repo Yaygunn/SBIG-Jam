@@ -41,6 +41,9 @@ public class MenuEvents : MonoBehaviour
         _quitButton = _document.rootVisualElement.Q("QuitButton") as Button;
         _backButtonSettings = _document.rootVisualElement.Q("BackButtonSettings") as Button;
         _backButtonCredits = _document.rootVisualElement.Q("BackButtonCredits") as Button;
+        
+        // ##TODO: Fix this, it is null because the settings container is probably set to hidden
+        _volumeSlider = _document.rootVisualElement.Q<Slider>("VolumeSlider");
 
         RegisterButtonCallbacks();
     }
