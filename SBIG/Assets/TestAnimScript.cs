@@ -12,6 +12,14 @@ public class TestAnimScript : MonoBehaviour
         DIZZY
     }
 
+    public enum ETempAnim
+    {
+        HEADBUTT,
+        CHARGE,
+        WALK,
+        IDLE
+    }
+
     public enum EGolemType
     {
         FIRE,
@@ -21,11 +29,10 @@ public class TestAnimScript : MonoBehaviour
     }
 
     private SkinnedMeshRenderer _skinnedMeshRenderer;
-
-
+    private Animator _animator;
     public EGolemState GolemState;
     public EGolemType GolemType;
-
+    public ETempAnim TempAnim;
 
 
     void Awake()
@@ -35,18 +42,21 @@ public class TestAnimScript : MonoBehaviour
     void Start()
     {
         HandleChangeTexture();
+        HandleChangeAnimation();
     }
 
     void OnValidate()
     {
         AssignComponents();
         HandleChangeTexture();
+        HandleChangeAnimation();
     }
 
 
     void Update()
     {
         HandleChangeTexture();
+        HandleChangeAnimation();
     }
 
 
@@ -57,9 +67,44 @@ public class TestAnimScript : MonoBehaviour
         _skinnedMeshRenderer.material.SetTexture("_MainTex", Resources.Load<Texture>(baseTexturePath));
     }
 
+
+    void HandleChangeAnimation()
+    {
+
+        void ResetAllTriggers()
+        {
+            _animator.ResetTrigger("isHeadbutt");
+            _animator.ResetTrigger("isCharge");
+            _animator.SetFloat("speed", 0);
+        }
+
+        switch (TempAnim)
+        {
+            case ETempAnim.HEADBUTT:
+                ResetAllTriggers();
+                _animator.SetTrigger("isHeadbutt");
+                break;
+            case ETempAnim.CHARGE:
+                ResetAllTriggers();
+                _animator.SetBool("isCharge", true);
+                break;
+            case ETempAnim.WALK:
+                ResetAllTriggers();
+                _animator.SetFloat("speed", 1);
+                break;
+            case ETempAnim.IDLE:
+                ResetAllTriggers();
+                break;
+            default:
+                break;
+        }
+
+    }
+
     void AssignComponents()
     {
         _skinnedMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
+        _animator = GetComponent<Animator>();
     }
 
 }
