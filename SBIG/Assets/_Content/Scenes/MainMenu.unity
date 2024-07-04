@@ -186,11 +186,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _creditItemTemplate: {fileID: 9197481963319205126, guid: f15064f1f88fb8748846cd0d8b4cfb7b, type: 3}
   _creditDataList:
+  - {fileID: 11400000, guid: 2d34841677754fc4597ba8d4a60a272e, type: 2}
+  - {fileID: 11400000, guid: cd440bd7b83e20f43af59619dcdd7d03, type: 2}
   - {fileID: 11400000, guid: d909eb2b1bdfef24f8260dbc75e5bd78, type: 2}
+  - {fileID: 11400000, guid: e5af2c6aadeb71d4b91a175788ce23ec, type: 2}
   - {fileID: 11400000, guid: 4b7526fcaa491be4caed3517148aedb0, type: 2}
   - {fileID: 11400000, guid: f32b516937c650d429950e4eb2c0d577, type: 2}
-  - {fileID: 11400000, guid: e5af2c6aadeb71d4b91a175788ce23ec, type: 2}
-  - {fileID: 11400000, guid: cd440bd7b83e20f43af59619dcdd7d03, type: 2}
 --- !u!1001 &1102729131
 PrefabInstance:
   m_ObjectHideFlags: 0

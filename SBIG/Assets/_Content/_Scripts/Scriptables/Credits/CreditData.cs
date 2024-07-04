@@ -8,5 +8,6 @@ namespace Scriptables.Credits
         public string Position;
         public string Name;
         public Sprite Flag;
+        public string ItchProfile;
     }   
 }
