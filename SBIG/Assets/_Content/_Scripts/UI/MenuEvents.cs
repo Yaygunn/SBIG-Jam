@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Scriptables.Credits;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class MenuEvents : MonoBehaviour
@@ -23,6 +24,8 @@ public class MenuEvents : MonoBehaviour
     // I don't know who to hook multiple buttons to the same callback
     private Button _backButtonSettings;
     private Button _backButtonCredits;
+    private Slider _volumeSlider;
+    
     #endregion
     private void Awake()
     {
@@ -42,9 +45,14 @@ public class MenuEvents : MonoBehaviour
         RegisterButtonCallbacks();
     }
 
-    private void OnEnable()
+    private void Start()
     {
-        
+        PlayMusic();
+    }
+
+    private void PlayMusic()
+    {
+        EventHub.StartMenu();
     }
 
     private void RegisterButtonCallbacks()
@@ -55,6 +63,13 @@ public class MenuEvents : MonoBehaviour
         _quitButton.RegisterCallback<ClickEvent>(OnQuitButtonClick);
         _backButtonSettings.RegisterCallback<ClickEvent>(OnBackButtonClick);
         _backButtonCredits.RegisterCallback<ClickEvent>(OnBackButtonClick);
+        
+        _playButton.RegisterCallback<MouseEnterEvent>(OnButtonHover);
+        _settingsButton.RegisterCallback<MouseEnterEvent>(OnButtonHover);
+        _creditsButton.RegisterCallback<MouseEnterEvent>(OnButtonHover);
+        _quitButton.RegisterCallback<MouseEnterEvent>(OnButtonHover);
+        _backButtonSettings.RegisterCallback<MouseEnterEvent>(OnButtonHover);
+        _backButtonCredits.RegisterCallback<MouseEnterEvent>(OnButtonHover);
     }
 
     private void OnDisable()
@@ -65,26 +80,42 @@ public class MenuEvents : MonoBehaviour
         _quitButton.UnregisterCallback<ClickEvent>(OnQuitButtonClick);
         _backButtonSettings.UnregisterCallback<ClickEvent>(OnBackButtonClick);
         _backButtonCredits.UnregisterCallback<ClickEvent>(OnBackButtonClick);
+        
+        _playButton.UnregisterCallback<MouseEnterEvent>(OnButtonHover);
+        _settingsButton.UnregisterCallback<MouseEnterEvent>(OnButtonHover);
+        _creditsButton.UnregisterCallback<MouseEnterEvent>(OnButtonHover);
+        _quitButton.UnregisterCallback<MouseEnterEvent>(OnButtonHover);
+        _backButtonSettings.UnregisterCallback<MouseEnterEvent>(OnButtonHover);
+        _backButtonCredits.UnregisterCallback<MouseEnterEvent>(OnButtonHover);
     }
     
     private void OnPlayButtonClick(ClickEvent evt)
     {
+        EventHub.UIClick();
+        
         // Load game scene
         Debug.Log("Load Game Scene");
     }
     
     private void OnSettingsButtonClick(ClickEvent evt)
     {
+        EventHub.UIClick();
+        
         // Hide all other containers
         _menuContainer.style.display = DisplayStyle.None;
         _creditsContainer.style.display = DisplayStyle.None;
         
         // Show relevant container
         _settingsContainer.style.display = DisplayStyle.Flex;
+        
+        _volumeSlider = _document.rootVisualElement.Q<Slider>("MusicSlider");
+        _volumeSlider.RegisterCallback<ChangeEvent<float>>(OnSliderValueChanged);
     }
     
     private void OnCreditsButtonClick(ClickEvent evt)
     {
+        EventHub.UIClick();
+        
         // Hide all other containers
         _menuContainer.style.display = DisplayStyle.None;
         _settingsContainer.style.display = DisplayStyle.None;
@@ -132,6 +163,8 @@ public class MenuEvents : MonoBehaviour
 
     private void OnBackButtonClick(ClickEvent evt)
     {
+        EventHub.UIClick();
+        
         // Hide all other containers
         _settingsContainer.style.display = DisplayStyle.None;
         _creditsContainer.style.display = DisplayStyle.None;
@@ -139,9 +172,21 @@ public class MenuEvents : MonoBehaviour
         // Show relevant container
         _menuContainer.style.display = DisplayStyle.Flex;
     }
+
+    private void OnSliderValueChanged(ChangeEvent<float> evt)
+    {
+        EventHub.UISlider();
+    }
+
+    private void OnButtonHover(MouseEnterEvent evt)
+    {
+        EventHub.UIHover();
+    }
     
     private void OnQuitButtonClick(ClickEvent evt)
     {
+        EventHub.UIClick();
+        
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else

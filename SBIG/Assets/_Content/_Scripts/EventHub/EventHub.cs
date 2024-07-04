@@ -45,5 +45,10 @@ public static class EventHub
     {
         Event_UIClick?.Invoke();
     }
+    public static event Action Event_UISlider;
+    public static void UISlider()
+    {
+        Event_UISlider?.Invoke();
+    }
     #endregion
 }

@@ -14,22 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Music>k__BackingField:
     Guid:
-      Data1: 986698167
-      Data2: 1280780250
-      Data3: 1572133281
-      Data4: 1368205797
-    Path: event:/test
+      Data1: 1193926637
+      Data2: 1298017705
+      Data3: -1086277207
+      Data4: 9087478
+    Path: event:/SFX/Objects/Cauldron/CauldronIdle
   <UIHover>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1841213679
+      Data2: 1137782189
+      Data3: -2104620409
+      Data4: 708391925
+    Path: event:/SFX/UI/MenuSelect
   <UIClick>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -641478652
+      Data2: 1308343636
+      Data3: -1663283321
+      Data4: 646569888
+    Path: event:/SFX/UI/MenuClick
+  <UISlider>k__BackingField:
+    Guid:
+      Data1: -98647017
+      Data2: 1295629770
+      Data3: -1193047422
+      Data4: -714896284
+    Path: event:/SFX/UI/MenuSlider
