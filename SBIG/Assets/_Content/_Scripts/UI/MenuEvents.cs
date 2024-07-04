@@ -108,13 +108,19 @@ public class MenuEvents : MonoBehaviour
         // Show relevant container
         _settingsContainer.style.display = DisplayStyle.Flex;
         
-        // ##TODO: Fix this, it is null because the settings container is probably set to hidden
-        _volumeSlider = _document.rootVisualElement.Q("MusicSlider") as Slider;
-
-        if (_volumeSlider == null)
+        _settingsContainer.schedule.Execute(() =>
         {
-            Debug.Log("Volume Slider is null");
-        }
+            _volumeSlider = _settingsContainer.Q<Slider>("MusicSlider");
+
+            if (_volumeSlider == null)
+            {
+                Debug.LogError("Volume Slider is null");
+            }
+            else
+            {
+                _volumeSlider.RegisterCallback<ChangeEvent<float>>(OnSliderValueChanged);
+            }
+        }).StartingIn(0);
     }
     
     private void OnCreditsButtonClick(ClickEvent evt)
