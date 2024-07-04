@@ -24,7 +24,6 @@ namespace Components.BulletMove.Basketball
 
         private void OnCollisionEnter(Collision collision)
         {
-            Debug.Log("Collision!");
             if (_bounceCount >= maxBounces)
             {
                 Destroy(gameObject);
