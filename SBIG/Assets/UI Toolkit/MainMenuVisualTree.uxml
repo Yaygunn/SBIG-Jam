@@ -21,9 +21,9 @@
                 <ui:Label tabindex="-1" text="Volume" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="font-size: 20px; color: rgb(250, 250, 255); height: 32px; width: 220px; padding-left: 20px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; -unity-text-align: middle-left;" />
             </ui:VisualElement>
             <ui:VisualElement name="VolumeSettings" style="flex-grow: 1;">
-                <ui:SliderInt label="Music" high-value="100" name="MusicSlider" style="color: rgb(250, 250, 255);" />
-                <ui:SliderInt label="Narrator" high-value="100" name="NarratorSlider" style="color: rgb(250, 250, 255);" />
-                <ui:SliderInt label="Sfx" high-value="100" name="SfxSlider" style="color: rgb(250, 250, 255);" />
+                <ui:Slider label="Music" high-value="1" name="MusicSlider" style="color: rgb(250, 250, 255);" />
+                <ui:Slider label="Narrator" high-value="1" name="NarratorSlider" style="color: rgb(250, 250, 255);" />
+                <ui:Slider label="Sfx" high-value="1" name="SfxSlider" style="color: rgb(250, 250, 255);" />
             </ui:VisualElement>
             <ui:VisualElement name="MouseHeading" style="flex-grow: 1; flex-direction: row; height: 32px; margin-top: 40px;">
                 <ui:VisualElement name="Icon" style="flex-grow: 0; width: 32px; height: 32px; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/Settings/icon-mouse.png?fileID=21300000&amp;guid=e41ff6e808e2e70498e904e833b20d93&amp;type=3#icon-mouse&quot;); -unity-background-scale-mode: scale-to-fit;" />

@@ -24,7 +24,10 @@ public class MenuEvents : MonoBehaviour
     // I don't know who to hook multiple buttons to the same callback
     private Button _backButtonSettings;
     private Button _backButtonCredits;
-    private Slider _volumeSlider;
+    
+    private Slider _musicSlider;
+    private Slider _narratorSlider;
+    private Slider _sfxSlider;
     
     #endregion
     private void Awake()
@@ -87,6 +90,10 @@ public class MenuEvents : MonoBehaviour
         _quitButton.UnregisterCallback<MouseEnterEvent>(OnButtonHover);
         _backButtonSettings.UnregisterCallback<MouseEnterEvent>(OnButtonHover);
         _backButtonCredits.UnregisterCallback<MouseEnterEvent>(OnButtonHover);
+        
+        _musicSlider?.UnregisterCallback<ChangeEvent<float>>(OnSliderValueChanged);
+        _narratorSlider?.UnregisterCallback<ChangeEvent<float>>(OnSliderValueChanged);
+        _sfxSlider?.UnregisterCallback<ChangeEvent<float>>(OnSliderValueChanged);
     }
     
     private void OnPlayButtonClick(ClickEvent evt)
@@ -110,16 +117,13 @@ public class MenuEvents : MonoBehaviour
         
         _settingsContainer.schedule.Execute(() =>
         {
-            _volumeSlider = _settingsContainer.Q<Slider>("MusicSlider");
-
-            if (_volumeSlider == null)
-            {
-                Debug.LogError("Volume Slider is null");
-            }
-            else
-            {
-                _volumeSlider.RegisterCallback<ChangeEvent<float>>(OnSliderValueChanged);
-            }
+            _musicSlider = _settingsContainer.Q<Slider>("MusicSlider");
+            _narratorSlider = _settingsContainer.Q<Slider>("NarratorSlider");
+            _sfxSlider = _settingsContainer.Q<Slider>("SfxSlider");
+            
+            _musicSlider.RegisterCallback<ChangeEvent<float>>(OnSliderValueChanged);
+            _narratorSlider.RegisterCallback<ChangeEvent<float>>(OnSliderValueChanged);
+            _sfxSlider.RegisterCallback<ChangeEvent<float>>(OnSliderValueChanged);
         }).StartingIn(0);
     }
     
@@ -186,6 +190,7 @@ public class MenuEvents : MonoBehaviour
 
     private void OnSliderValueChanged(ChangeEvent<float> evt)
     {
+        // ##TODO: Add a slider cooldown audio queue
         EventHub.UISlider();
     }
 
