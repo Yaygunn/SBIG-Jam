@@ -20,10 +20,11 @@ namespace Audio
             eventInstance = RuntimeManager.CreateInstance(eventReference);
             
             // Fetch the Bus for overall volume control
-            // _musicBus = RuntimeManager.GetBus("bus:/Master/Music");
-            // _narratorBus = RuntimeManager.GetBus("bus:/Master/Narrator");
-            // _sfxBus = RuntimeManager.GetBus("bus:/Master/SFX");
+            _musicBus = RuntimeManager.GetBus("bus:/Music");
+            _narratorBus = RuntimeManager.GetBus("bus:/Narration");
+            _sfxBus = RuntimeManager.GetBus("bus:/SFX");
         }
+        
         public void SetInstanceAndPlay(ref EventInstance eventInstance, EventReference eventReference)
         {
             SetInstance(ref eventInstance, eventReference);
@@ -101,37 +102,34 @@ namespace Audio
         
         public void SetMusicVolume(float volume)
         {
-            // _musicBus.setVolume(volume);
+            _musicBus.setVolume(volume);
         }
         
         public void SetNarratorVolume(float volume)
         {
-            // _narratorBus.setVolume(volume);
+            _narratorBus.setVolume(volume);
         }
         
         public void SetSfxVolume(float volume)
         {
-            // _sfxBus.setVolume(volume);
+            _sfxBus.setVolume(volume);
         }
         
         public float GetMusicVolume()
         {
-            //_musicBus.getVolume(out float volume);
-            float volume = 1.0f;
+            _musicBus.getVolume(out float volume);
             return volume;
         }
         
         public float GetNarratorVolume()
         {
-            // _narratorBus.getVolume(out float volume);
-            float volume = 1.0f;
+            _narratorBus.getVolume(out float volume);
             return volume;
         }
 
         public float GetSfxVolume()
         {
-            // _sfxBus.getVolume(out float volume);
-            float volume = 1.0f;
+            _sfxBus.getVolume(out float volume);
             return volume;
         }
     }

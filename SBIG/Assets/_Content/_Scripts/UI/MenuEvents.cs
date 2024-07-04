@@ -34,10 +34,6 @@ namespace UI
     
     #endregion
     
-    #region Timers for Sliders
-    private float _cooldown = 5f;
-    private float _lastPlayTime = 0f;
-    #endregion
     private void Awake()
     {
         _document = GetComponent<UIDocument>();
@@ -103,9 +99,9 @@ namespace UI
         _narratorSlider?.UnregisterCallback<PointerDownEvent>(OnSliderPointerDown);
         _sfxSlider?.UnregisterCallback<PointerDownEvent>(OnSliderPointerDown);
         
-        _musicSlider?.UnregisterCallback<PointerUpEvent>(OnSliderPointerUp_music);
-        _narratorSlider?.UnregisterCallback<PointerUpEvent>(OnSliderPointerUp_narrator);
-        _sfxSlider?.UnregisterCallback<PointerUpEvent>(OnSliderPointerUp_sfx);
+        _musicSlider?.UnregisterCallback<ChangeEvent<float>>(OnSliderChangeEvent_music);
+        _narratorSlider?.UnregisterCallback<ChangeEvent<float>>(OnSliderChangeEvent_narrator);
+        _sfxSlider?.UnregisterCallback<ChangeEvent<float>>(OnSliderChangeEvent_sfx);
     }
     
     private void OnPlayButtonClick(ClickEvent evt)
@@ -137,9 +133,9 @@ namespace UI
             _narratorSlider.RegisterCallback<PointerDownEvent>(OnSliderPointerDown);
             _sfxSlider.RegisterCallback<PointerDownEvent>(OnSliderPointerDown);
             
-            _musicSlider.RegisterCallback<PointerUpEvent>(OnSliderPointerUp_music);
-            _narratorSlider.RegisterCallback<PointerUpEvent>(OnSliderPointerUp_narrator);
-            _sfxSlider.RegisterCallback<PointerUpEvent>(OnSliderPointerUp_sfx);
+            _musicSlider.RegisterCallback<ChangeEvent<float>>(OnSliderChangeEvent_music);
+            _narratorSlider.RegisterCallback<ChangeEvent<float>>(OnSliderChangeEvent_narrator);
+            _sfxSlider.RegisterCallback<ChangeEvent<float>>(OnSliderChangeEvent_sfx);
             
             // Update initial slider values
             _musicSlider.value = AudioManager.Instance.MusicVolume;
@@ -173,7 +169,7 @@ namespace UI
                 _creditsListView.itemsSource = _creditDataList;
                 _creditsListView.makeItem = MakeItem;
                 _creditsListView.bindItem = BindItem;
-                _creditsListView.fixedItemHeight = 45;
+                _creditsListView.fixedItemHeight = 80;
             }
         }
     }
@@ -194,6 +190,15 @@ namespace UI
         positionLabel.text = creditData.Position;
         nameLabel.text = creditData.Name;
         
+        if (!string.IsNullOrEmpty(creditData.ItchProfile))
+        {
+            element.RegisterCallback<ClickEvent>(evt =>
+            {
+                EventHub.UIClick();
+                Application.OpenURL(creditData.ItchProfile);
+            });
+        }
+        
         flagImage.style.backgroundImage = new StyleBackground(creditData.Flag);
     }
 
@@ -211,29 +216,31 @@ namespace UI
     
     private void OnSliderPointerDown(PointerDownEvent evt)
     {
-        float currentTime = Time.time;
+        EventHub.UISlider();
+    }
+    
+    private void OnSliderChangeEvent_music(ChangeEvent<float> evt)
+    {
+        float volume = evt.newValue;
+
+        AudioManager.Instance.MusicVolume = volume;
+        PlayerPrefs.SetFloat("MusicVolume", volume);
+    }
+    
+    private void OnSliderChangeEvent_narrator(ChangeEvent<float> evt)
+    {
+        float volume = evt.newValue;
         
-        if (currentTime - _lastPlayTime >= _cooldown)
-        {
-            _lastPlayTime = currentTime;
-            
-            EventHub.UISlider();
-        }
+        AudioManager.Instance.NarratorVolume = volume; 
+        PlayerPrefs.SetFloat("NarrationVolume", volume);
     }
     
-    private void OnSliderPointerUp_music(PointerUpEvent evt)
+    private void OnSliderChangeEvent_sfx(ChangeEvent<float> evt)
     {
-        AudioManager.Instance.MusicVolume = _musicSlider.value;
-    }
-    
-    private void OnSliderPointerUp_narrator(PointerUpEvent evt)
-    {
-        AudioManager.Instance.NarratorVolume = _narratorSlider.value; 
-    }
-    
-    private void OnSliderPointerUp_sfx(PointerUpEvent evt)
-    {
-        AudioManager.Instance.SfxVolume = _sfxSlider.value;
+        float volume = evt.newValue;
+        
+        AudioManager.Instance.SfxVolume = volume;
+        PlayerPrefs.SetFloat("SFXVolume", volume);
     }
 
     private void OnButtonHover(MouseEnterEvent evt)
