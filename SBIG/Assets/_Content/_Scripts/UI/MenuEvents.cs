@@ -99,9 +99,9 @@ namespace UI
         _narratorSlider?.UnregisterCallback<PointerDownEvent>(OnSliderPointerDown);
         _sfxSlider?.UnregisterCallback<PointerDownEvent>(OnSliderPointerDown);
         
-        _musicSlider?.UnregisterCallback<PointerUpEvent>(OnSliderPointerUp_music);
-        _narratorSlider?.UnregisterCallback<PointerUpEvent>(OnSliderPointerUp_narrator);
-        _sfxSlider?.UnregisterCallback<PointerUpEvent>(OnSliderPointerUp_sfx);
+        _musicSlider?.UnregisterCallback<ChangeEvent<float>>(OnSliderChangeEvent_music);
+        _narratorSlider?.UnregisterCallback<ChangeEvent<float>>(OnSliderChangeEvent_narrator);
+        _sfxSlider?.UnregisterCallback<ChangeEvent<float>>(OnSliderChangeEvent_sfx);
     }
     
     private void OnPlayButtonClick(ClickEvent evt)
@@ -133,9 +133,9 @@ namespace UI
             _narratorSlider.RegisterCallback<PointerDownEvent>(OnSliderPointerDown);
             _sfxSlider.RegisterCallback<PointerDownEvent>(OnSliderPointerDown);
             
-            _musicSlider.RegisterCallback<PointerUpEvent>(OnSliderPointerUp_music);
-            _narratorSlider.RegisterCallback<PointerUpEvent>(OnSliderPointerUp_narrator);
-            _sfxSlider.RegisterCallback<PointerUpEvent>(OnSliderPointerUp_sfx);
+            _musicSlider.RegisterCallback<ChangeEvent<float>>(OnSliderChangeEvent_music);
+            _narratorSlider.RegisterCallback<ChangeEvent<float>>(OnSliderChangeEvent_narrator);
+            _sfxSlider.RegisterCallback<ChangeEvent<float>>(OnSliderChangeEvent_sfx);
             
             // Update initial slider values
             _musicSlider.value = AudioManager.Instance.MusicVolume;
@@ -219,19 +219,19 @@ namespace UI
         EventHub.UISlider();
     }
     
-    private void OnSliderPointerUp_music(PointerUpEvent evt)
+    private void OnSliderChangeEvent_music(ChangeEvent<float> evt)
     {
-        AudioManager.Instance.MusicVolume = _musicSlider.value;
+        AudioManager.Instance.MusicVolume = evt.newValue;
     }
     
-    private void OnSliderPointerUp_narrator(PointerUpEvent evt)
+    private void OnSliderChangeEvent_narrator(ChangeEvent<float> evt)
     {
-        AudioManager.Instance.NarratorVolume = _narratorSlider.value; 
+        AudioManager.Instance.NarratorVolume = evt.newValue; 
     }
     
-    private void OnSliderPointerUp_sfx(PointerUpEvent evt)
+    private void OnSliderChangeEvent_sfx(ChangeEvent<float> evt)
     {
-        AudioManager.Instance.SfxVolume = _sfxSlider.value;
+        AudioManager.Instance.SfxVolume = evt.newValue;
     }
 
     private void OnButtonHover(MouseEnterEvent evt)

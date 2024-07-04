@@ -51,33 +51,6 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &-8557355906584227761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Objects/Crops/Drop
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Objects/Crops/Drop
-  Guid:
-    Data1: 2046499080
-    Data2: 1320775823
-    Data3: -1333264731
-    Data4: 124714646
-  Banks:
-  - {fileID: 2690339585343514002}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-8526308306276493327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,6 +69,60 @@ MonoBehaviour:
     Data2: 1219053943
     Data3: -127952725
     Data4: 508042227
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8265537793952664928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Golems/Water/WaterCharge
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Golems/Water/WaterCharge
+  Guid:
+    Data1: -1394409420
+    Data2: 1156719453
+    Data3: -1823675775
+    Data4: 1735468790
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8105926217724306250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Golems/Wood/WoodCharge
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Golems/Wood/WoodCharge
+  Guid:
+    Data1: -1574957569
+    Data2: 1340374800
+    Data3: -903515758
+    Data4: -2042270609
   Banks:
   - {fileID: 2690339585343514002}
   IsStream: 0
@@ -174,92 +201,11 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638556990870237534
+  lastModified: 638557038323357686
   FileSizes:
   - Name: 
-    Value: 2994
+    Value: 2940
   Exists: 1
---- !u!114 &-7487096554815061259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Golems/Fire/FireFootsteps
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Golems/Fire/FireFootsteps
-  Guid:
-    Data1: 2035230209
-    Data2: 1218927873
-    Data3: -138435685
-    Data4: 520794169
-  Banks:
-  - {fileID: 2690339585343514002}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-7431903495233665172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Golems/Stone/StoneIdle
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Golems/Stone/StoneIdle
-  Guid:
-    Data1: -400953116
-    Data2: 1178103392
-    Data3: -1939176270
-    Data4: -483076046
-  Banks:
-  - {fileID: 2690339585343514002}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-7410772752175404986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Golems/Wood/WoodFootsteps
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Golems/Wood/WoodFootsteps
-  Guid:
-    Data1: -1574957569
-    Data2: 1340374800
-    Data3: -903515758
-    Data4: -2042270609
-  Banks:
-  - {fileID: 2690339585343514002}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-7210150842544809154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,6 +224,33 @@ MonoBehaviour:
     Data2: 1218668290
     Data3: -797367622
     Data4: -58974726
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 69189
+--- !u!114 &-7058644423077852677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Objects/Crops/CropHarvest
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Objects/Crops/CropHarvest
+  Guid:
+    Data1: -594014927
+    Data2: 1181015098
+    Data3: -1306935379
+    Data4: 333386318
   Banks:
   - {fileID: 2690339585343514002}
   IsStream: 0
@@ -825,19 +798,14 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -3220260043952040972}
   - {fileID: -7210150842544809154}
-  - {fileID: -7487096554815061259}
   - {fileID: 1280436688795016141}
   - {fileID: 7313967773702296485}
-  - {fileID: -8557355906584227761}
   - {fileID: -6182649125500955056}
   - {fileID: -4477983905588199297}
   - {fileID: -6673040273890946137}
   - {fileID: -5784454906605412437}
-  - {fileID: 6056609245723716421}
-  - {fileID: 5961280578542691932}
   - {fileID: -8526308306276493327}
   - {fileID: -2848662523031457279}
-  - {fileID: 5860757804704856615}
   - {fileID: -4370111391082621412}
   - {fileID: -6237482186818095562}
   - {fileID: 189813031278888772}
@@ -855,15 +823,19 @@ MonoBehaviour:
   - {fileID: 334757215955590311}
   - {fileID: 3847003799674526549}
   - {fileID: -6982533128289698057}
-  - {fileID: -7431903495233665172}
   - {fileID: -2464297655051887829}
   - {fileID: 7645311800917779713}
   - {fileID: -5566090447818168025}
-  - {fileID: -7410772752175404986}
   - {fileID: 5272113225028794724}
   - {fileID: -8072164982803968701}
   - {fileID: 5034060423833237173}
   - {fileID: -3594125168628110454}
+  - {fileID: 3303042177172122614}
+  - {fileID: 6170205917273038786}
+  - {fileID: -7058644423077852677}
+  - {fileID: -8265537793952664928}
+  - {fileID: 6104907583504744198}
+  - {fileID: -8105926217724306250}
   EditorParameters:
   - {fileID: -8832090744829655098}
   - {fileID: -2971804783865992327}
@@ -871,7 +843,7 @@ MonoBehaviour:
   - {fileID: 2690339585343514002}
   StringsBanks:
   - {fileID: -7549739970555532702}
-  cacheTime: 638556990870237534
+  cacheTime: 638557038323357686
   cacheVersion: 131618
 --- !u!114 &189813031278888772
 MonoBehaviour:
@@ -996,9 +968,36 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638556990870217374
+  lastModified: 638557038323337400
   FileSizes: []
   Exists: 1
+--- !u!114 &3303042177172122614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Golems/Fire/FireCharge
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Golems/Fire/FireCharge
+  Guid:
+    Data1: 2035230209
+    Data2: 1218927873
+    Data3: -138435685
+    Data4: 520794169
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3847003799674526549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1073,13 +1072,13 @@ MonoBehaviour:
     Data4: 2132198297
   Banks:
   - {fileID: 2690339585343514002}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  MaxDistance: 60
+  Length: 12072
 --- !u!114 &5272113225028794724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1158,7 +1157,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &5860757804704856615
+--- !u!114 &6104907583504744198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1168,14 +1167,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Player/CrossingFoliage
+  m_Name: event:/SFX/Golems/Stone/StoneCharge
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Player/CrossingFoliage
+  Path: event:/SFX/Golems/Stone/StoneCharge
   Guid:
-    Data1: -145459390
-    Data2: 1095852174
-    Data3: -1162195292
-    Data4: 1367936006
+    Data1: 1230631586
+    Data2: 1257274317
+    Data3: 141964208
+    Data4: 1467529828
   Banks:
   - {fileID: 2690339585343514002}
   IsStream: 0
@@ -1185,7 +1184,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &5961280578542691932
+--- !u!114 &6170205917273038786
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1195,41 +1194,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Golems/Water/WaterFootsteps
+  m_Name: event:/SFX/Objects/Crops/CropInteraction
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Golems/Water/WaterFootsteps
+  Path: event:/SFX/Objects/Crops/CropInteraction
   Guid:
-    Data1: -1394409420
-    Data2: 1156719453
-    Data3: -1823675775
-    Data4: 1735468790
-  Banks:
-  - {fileID: 2690339585343514002}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &6056609245723716421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Objects/Crops/Harvest
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Objects/Crops/Harvest
-  Guid:
-    Data1: -594014927
-    Data2: 1181015098
-    Data3: -1306935379
-    Data4: 333386318
+    Data1: 2046499080
+    Data2: 1320775823
+    Data3: -1333264731
+    Data4: 124714646
   Banks:
   - {fileID: 2690339585343514002}
   IsStream: 0
@@ -1291,7 +1263,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 200
+  MaxDistance: 55
   Length: 7920
 --- !u!114 &8196024328058826691
 MonoBehaviour:
@@ -1307,19 +1279,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Golems/Water/WaterIdle
   Guid:
-    Data1: 1564613210
-    Data2: 1233561437
-    Data3: -824032380
-    Data4: 1292315626
+    Data1: -1780259785
+    Data2: 1094894400
+    Data3: -1674385272
+    Data4: 104417337
   Banks:
   - {fileID: 2690339585343514002}
   IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
+  Is3D: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  MaxDistance: 60
+  Length: 6792
 --- !u!114 &8410402308133256829
 MonoBehaviour:
   m_ObjectHideFlags: 0
