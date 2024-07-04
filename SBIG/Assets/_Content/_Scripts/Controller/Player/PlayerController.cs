@@ -39,7 +39,7 @@ namespace Controller.Player
             CompCarry = GetComponent<ICarryComp>();
             #endregion
 
-            StateCurrent = StateCombat;
+            StateCurrent = StateCraft;
             StateCurrent.Enter();
         }
 

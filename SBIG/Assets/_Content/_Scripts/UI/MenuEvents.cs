@@ -4,6 +4,7 @@ using Manager.Audio;
 using Scriptables.Credits;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 namespace UI
@@ -108,8 +109,7 @@ namespace UI
     {
         EventHub.UIClick();
         
-        // Load game scene
-        Debug.Log("Load Game Scene");
+        SceneManager.LoadScene(1);
     }
     
     private void OnSettingsButtonClick(ClickEvent evt)
