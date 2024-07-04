@@ -1,22 +1,31 @@
 using Components.Weapons;
 using UnityEngine;
+using YInput;
 
 namespace Components.WeaponHandles
 {
     public class WeaponHandle : MonoBehaviour, IWeaponHandle
     {
         private BaseWeapon _weapon;
-        private void OnEnable()
+        private bool _isMagazineEnded = true;
+
+        private void Start()
         {
             _weapon = GetComponentInChildren<BaseWeapon>();
+
+            EventHub.Ev_MagazineEnded += MagazineEnded;
+        }
+        private void OnDestroy()
+        {
+            EventHub.Ev_MagazineEnded -= MagazineEnded;
         }
         public void EquipWeapon()
         {
         }
 
-        public void Fire()
+        public void SendFireInput(InputState inputState)
         {
-            _weapon.Fire();
+            _weapon.SendFireInput(inputState);
         }
 
         public void HideWeapon()
@@ -26,7 +35,20 @@ namespace Components.WeaponHandles
 
         public void Reload()
         {
-            _weapon.Reload();
+            if (_isMagazineEnded)
+            {
+                _isMagazineEnded = false;
+                _weapon.Reload();
+                print("Reload");
+            }
+            else
+            {
+                print("Magazine is not over");
+            }
+        }
+        private void MagazineEnded()
+        {
+            _isMagazineEnded = true;
         }
 
     }
