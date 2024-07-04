@@ -13,6 +13,44 @@ namespace Manager.Audio
 
         private FModCommunication _fmodCommunication;
         private MusicAudio _musicAudio;
+        private UIAudio _uiAudio;
+        
+        #region Volume Controls
+
+        public float MusicVolume
+        {
+            get => _musicVolume;
+            set
+            {
+                _musicVolume = value;
+                _fmodCommunication.SetMusicVolume(_musicVolume);
+            }
+        }
+        
+        public float NarratorVolume
+        {
+            get => _narratorVolume;
+            set
+            {
+                _narratorVolume = value;
+                _fmodCommunication.SetNarratorVolume(_narratorVolume);
+            }
+        }
+        
+        public float SfxVolume
+        {
+            get => _sfxVolume;
+            set
+            {
+                _sfxVolume = value;
+                _fmodCommunication.SetSfxVolume(_sfxVolume);
+            }
+        }
+        
+        private float _musicVolume;
+        private float _narratorVolume;
+        private float _sfxVolume;
+        #endregion
         
         private void Awake()
         {
@@ -28,10 +66,17 @@ namespace Manager.Audio
         {
             _fmodCommunication = new FModCommunication();
             _musicAudio = new MusicAudio(_fmodCommunication, _eventBindingSO);
+            _uiAudio = new UIAudio(_fmodCommunication, _eventBindingSO);
 
             RegisterAudioEvents();
             
             _musicAudio.Activate();
+            _uiAudio.Activate();
+            
+            // Fetch the current volume settings from FMOD
+            _musicVolume = _fmodCommunication.GetMusicVolume();
+            _narratorVolume = _fmodCommunication.GetNarratorVolume();
+            _sfxVolume = _fmodCommunication.GetSfxVolume();
         }
 
         private void RegisterAudioEvents()

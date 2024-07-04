@@ -15,6 +15,7 @@ namespace Audio.Events
         #region UI
         [field: SerializeField] public EventReference UIHover { get; private set; }
         [field: SerializeField] public EventReference UIClick { get; private set; }
+        [field: SerializeField] public EventReference UISlider { get; private set; }
         #endregion
     }   
 }

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 860a13d05e9adac498d7037dcc25852e, type: 3}
+  m_Name: SoundEventRef
+  m_EditorClassIdentifier: 
+  <Music>k__BackingField:
+    Guid:
+      Data1: 1193926637
+      Data2: 1298017705
+      Data3: -1086277207
+      Data4: 9087478
+    Path: event:/SFX/Objects/Cauldron/CauldronIdle
+  <UIHover>k__BackingField:
+    Guid:
+      Data1: -1841213679
+      Data2: 1137782189
+      Data3: -2104620409
+      Data4: 708391925
+    Path: event:/SFX/UI/MenuSelect
+  <UIClick>k__BackingField:
+    Guid:
+      Data1: -641478652
+      Data2: 1308343636
+      Data3: -1663283321
+      Data4: 646569888
+    Path: event:/SFX/UI/MenuClick
+  <UISlider>k__BackingField:
+    Guid:
+      Data1: -98647017
+      Data2: 1295629770
+      Data3: -1193047422
+      Data4: -714896284
+    Path: event:/SFX/UI/MenuSlider
