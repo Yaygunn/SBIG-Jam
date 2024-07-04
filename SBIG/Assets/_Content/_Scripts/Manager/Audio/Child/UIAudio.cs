@@ -40,7 +40,7 @@ namespace Audio.Child
         
         private void UISlider()
         {
-            _com.PlayOneShot(_data.UIClick);
+            _com.PlayOneShot(_data.UISlider);
         }
     }
 }

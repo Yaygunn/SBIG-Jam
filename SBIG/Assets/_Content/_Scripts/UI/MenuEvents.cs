@@ -34,10 +34,6 @@ namespace UI
     
     #endregion
     
-    #region Timers for Sliders
-    private float _cooldown = 5f;
-    private float _lastPlayTime = 0f;
-    #endregion
     private void Awake()
     {
         _document = GetComponent<UIDocument>();
@@ -173,7 +169,7 @@ namespace UI
                 _creditsListView.itemsSource = _creditDataList;
                 _creditsListView.makeItem = MakeItem;
                 _creditsListView.bindItem = BindItem;
-                _creditsListView.fixedItemHeight = 45;
+                _creditsListView.fixedItemHeight = 80;
             }
         }
     }
@@ -194,6 +190,15 @@ namespace UI
         positionLabel.text = creditData.Position;
         nameLabel.text = creditData.Name;
         
+        if (!string.IsNullOrEmpty(creditData.ItchProfile))
+        {
+            element.RegisterCallback<ClickEvent>(evt =>
+            {
+                EventHub.UIClick();
+                Application.OpenURL(creditData.ItchProfile);
+            });
+        }
+        
         flagImage.style.backgroundImage = new StyleBackground(creditData.Flag);
     }
 
@@ -211,14 +216,7 @@ namespace UI
     
     private void OnSliderPointerDown(PointerDownEvent evt)
     {
-        float currentTime = Time.time;
-        
-        if (currentTime - _lastPlayTime >= _cooldown)
-        {
-            _lastPlayTime = currentTime;
-            
-            EventHub.UISlider();
-        }
+        EventHub.UISlider();
     }
     
     private void OnSliderPointerUp_music(PointerUpEvent evt)
