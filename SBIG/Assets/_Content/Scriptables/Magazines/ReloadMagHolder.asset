@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _magList:
   - <Mag>k__BackingField: {fileID: 11400000, guid: 0ee695a7fcb9f4d45a3ec1402f936466, type: 2}
-    <RandomRate>k__BackingField: 2
+    <RandomRate>k__BackingField: 0
   - <Mag>k__BackingField: {fileID: 11400000, guid: 2a07b71c3ff8fec41864ba9f5be3a931, type: 2}
     <RandomRate>k__BackingField: 1
+  - <Mag>k__BackingField: {fileID: 11400000, guid: e0c46a73c00c6594ca17fc44ba134169, type: 2}
+    <RandomRate>k__BackingField: 2
