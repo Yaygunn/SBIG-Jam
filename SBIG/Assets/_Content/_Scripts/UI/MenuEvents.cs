@@ -41,9 +41,6 @@ public class MenuEvents : MonoBehaviour
         _quitButton = _document.rootVisualElement.Q("QuitButton") as Button;
         _backButtonSettings = _document.rootVisualElement.Q("BackButtonSettings") as Button;
         _backButtonCredits = _document.rootVisualElement.Q("BackButtonCredits") as Button;
-        
-        // ##TODO: Fix this, it is null because the settings container is probably set to hidden
-        _volumeSlider = _document.rootVisualElement.Q<Slider>("VolumeSlider");
 
         RegisterButtonCallbacks();
     }
@@ -110,6 +107,14 @@ public class MenuEvents : MonoBehaviour
         
         // Show relevant container
         _settingsContainer.style.display = DisplayStyle.Flex;
+        
+        // ##TODO: Fix this, it is null because the settings container is probably set to hidden
+        _volumeSlider = _document.rootVisualElement.Q("MusicSlider") as Slider;
+
+        if (_volumeSlider == null)
+        {
+            Debug.Log("Volume Slider is null");
+        }
     }
     
     private void OnCreditsButtonClick(ClickEvent evt)

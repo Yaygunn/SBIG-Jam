@@ -81,7 +81,7 @@
         </ui:VisualElement>
         <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BackButtonSettings" class="menuButton backButton" style="margin-top: 20px;" />
     </ui:VisualElement>
-    <ui:VisualElement name="CreditsContainer" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/739a6867-3fe4-4744-8f05-963b994a9d79.png?fileID=2800000&amp;guid=b7dcc3574d1bf154881f78e765b451f1&amp;type=3#739a6867-3fe4-4744-8f05-963b994a9d79&quot;); -unity-background-image-tint-color: rgb(10, 16, 69); position: absolute; left: 0; top: 0; right: 0; bottom: 0; display: none;">
+    <ui:VisualElement name="CreditsContainer" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/739a6867-3fe4-4744-8f05-963b994a9d79.png?fileID=2800000&amp;guid=b7dcc3574d1bf154881f78e765b451f1&amp;type=3#739a6867-3fe4-4744-8f05-963b994a9d79&quot;); -unity-background-image-tint-color: rgb(10, 16, 69); position: absolute; left: 0; top: 0; right: 0; bottom: 0; display: none; opacity: 1;">
         <ui:VisualElement name="TitleDiv" style="flex-grow: 1;">
             <ui:Label tabindex="-1" text="Credits" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ScreenTitle" class="gameTitle" style="margin-bottom: 40px; -unity-text-align: upper-center; margin-left: 4px;" />
         </ui:VisualElement>
