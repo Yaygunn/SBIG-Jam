@@ -6,6 +6,10 @@ namespace Audio
 {
     public class FModCommunication
     {
+        private Bus _musicBus;
+        private Bus _narratorBus;
+        private Bus _sfxBus;
+        
         public void PlayOneShot(EventReference eventReference)
         {
             RuntimeManager.PlayOneShot(eventReference);
@@ -14,6 +18,11 @@ namespace Audio
         {
             RelaeseInstance(ref eventInstance);
             eventInstance = RuntimeManager.CreateInstance(eventReference);
+            
+            // Fetch the Bus for overall volume control
+            // _musicBus = RuntimeManager.GetBus("bus:/Master/Music");
+            // _narratorBus = RuntimeManager.GetBus("bus:/Master/Narrator");
+            // _sfxBus = RuntimeManager.GetBus("bus:/Master/SFX");
         }
         public void SetInstanceAndPlay(ref EventInstance eventInstance, EventReference eventReference)
         {
@@ -90,37 +99,40 @@ namespace Audio
             return false;
         }
         
-        public static void SetMusicVolume(float volume)
+        public void SetMusicVolume(float volume)
         {
-            // Set the volume
+            // _musicBus.setVolume(volume);
         }
         
-        public static void SetNarratorVolume(float volume)
+        public void SetNarratorVolume(float volume)
         {
-            // Set the volume
+            // _narratorBus.setVolume(volume);
         }
         
-        public static void SetSfxVolume(float volume)
+        public void SetSfxVolume(float volume)
         {
-            // Set the volume
+            // _sfxBus.setVolume(volume);
         }
         
-        public static float GetMusicVolume()
+        public float GetMusicVolume()
         {
-            // Get the volume
-            return 0f;
+            //_musicBus.getVolume(out float volume);
+            float volume = 1.0f;
+            return volume;
         }
         
-        public static float GetNarratorVolume()
+        public float GetNarratorVolume()
         {
-            // Get the volume
-            return 0f;
+            // _narratorBus.getVolume(out float volume);
+            float volume = 1.0f;
+            return volume;
         }
 
-        public static float GetSfxVolume()
+        public float GetSfxVolume()
         {
-            // Get the volume
-            return 0f;
+            // _sfxBus.getVolume(out float volume);
+            float volume = 1.0f;
+            return volume;
         }
     }
 }

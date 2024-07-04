@@ -23,7 +23,7 @@ namespace Manager.Audio
             set
             {
                 _musicVolume = value;
-                // UPDATE FMOD
+                _fmodCommunication.SetMusicVolume(_musicVolume);
             }
         }
         
@@ -33,7 +33,7 @@ namespace Manager.Audio
             set
             {
                 _narratorVolume = value;
-                // UPDATE FMOD
+                _fmodCommunication.SetNarratorVolume(_narratorVolume);
             }
         }
         
@@ -43,7 +43,7 @@ namespace Manager.Audio
             set
             {
                 _sfxVolume = value;
-                // UPDATE FMOD
+                _fmodCommunication.SetSfxVolume(_sfxVolume);
             }
         }
         
@@ -73,9 +73,10 @@ namespace Manager.Audio
             _musicAudio.Activate();
             _uiAudio.Activate();
             
-            _musicVolume = FModCommunication.GetMusicVolume();
-            _narratorVolume = FModCommunication.GetNarratorVolume();
-            _sfxVolume = FModCommunication.GetSfxVolume();
+            // Fetch the current volume settings from FMOD
+            _musicVolume = _fmodCommunication.GetMusicVolume();
+            _narratorVolume = _fmodCommunication.GetNarratorVolume();
+            _sfxVolume = _fmodCommunication.GetSfxVolume();
         }
 
         private void RegisterAudioEvents()

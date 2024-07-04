@@ -50,5 +50,6 @@ public static class EventHub
     {
         Event_UISlider?.Invoke();
     }
+        
     #endregion
 }

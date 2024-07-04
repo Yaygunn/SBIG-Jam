@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Manager.Audio;
 using Scriptables.Credits;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -101,6 +102,10 @@ namespace UI
         _musicSlider?.UnregisterCallback<PointerDownEvent>(OnSliderPointerDown);
         _narratorSlider?.UnregisterCallback<PointerDownEvent>(OnSliderPointerDown);
         _sfxSlider?.UnregisterCallback<PointerDownEvent>(OnSliderPointerDown);
+        
+        _musicSlider?.UnregisterCallback<PointerUpEvent>(OnSliderPointerUp_music);
+        _narratorSlider?.UnregisterCallback<PointerUpEvent>(OnSliderPointerUp_narrator);
+        _sfxSlider?.UnregisterCallback<PointerUpEvent>(OnSliderPointerUp_sfx);
     }
     
     private void OnPlayButtonClick(ClickEvent evt)
@@ -131,6 +136,15 @@ namespace UI
             _musicSlider.RegisterCallback<PointerDownEvent>(OnSliderPointerDown);
             _narratorSlider.RegisterCallback<PointerDownEvent>(OnSliderPointerDown);
             _sfxSlider.RegisterCallback<PointerDownEvent>(OnSliderPointerDown);
+            
+            _musicSlider.RegisterCallback<PointerUpEvent>(OnSliderPointerUp_music);
+            _narratorSlider.RegisterCallback<PointerUpEvent>(OnSliderPointerUp_narrator);
+            _sfxSlider.RegisterCallback<PointerUpEvent>(OnSliderPointerUp_sfx);
+            
+            // Update initial slider values
+            _musicSlider.value = AudioManager.Instance.MusicVolume;
+            _narratorSlider.value = AudioManager.Instance.NarratorVolume;
+            _sfxSlider.value = AudioManager.Instance.SfxVolume;
         }).StartingIn(0);
     }
     
@@ -205,6 +219,21 @@ namespace UI
             
             EventHub.UISlider();
         }
+    }
+    
+    private void OnSliderPointerUp_music(PointerUpEvent evt)
+    {
+        AudioManager.Instance.MusicVolume = _musicSlider.value;
+    }
+    
+    private void OnSliderPointerUp_narrator(PointerUpEvent evt)
+    {
+        AudioManager.Instance.NarratorVolume = _narratorSlider.value; 
+    }
+    
+    private void OnSliderPointerUp_sfx(PointerUpEvent evt)
+    {
+        AudioManager.Instance.SfxVolume = _sfxSlider.value;
     }
 
     private void OnButtonHover(MouseEnterEvent evt)
