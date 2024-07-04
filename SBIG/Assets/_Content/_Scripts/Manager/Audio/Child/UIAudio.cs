@@ -14,13 +14,15 @@ namespace Audio.Child
         public void Activate()
         {
             EventHub.Event_UIHover += UIHover;
-            EventHub.Event_UIClick += UIBack;
+            EventHub.Event_UIClick += UIClick;
+            EventHub.Event_UISlider += UISlider;
         }
 
         public void DeActivate()
         {
             EventHub.Event_UIHover -= UIHover;
-            EventHub.Event_UIClick -= UIBack;
+            EventHub.Event_UIClick -= UIClick;
+            EventHub.Event_UISlider -= UISlider;
         }
 
         private FModCommunication _com { get; }
@@ -31,7 +33,12 @@ namespace Audio.Child
         {
             _com.PlayOneShot(_data.UIHover);
         }
-        private void UIBack()
+        private void UIClick()
+        {
+            _com.PlayOneShot(_data.UIClick);
+        }
+        
+        private void UISlider()
         {
             _com.PlayOneShot(_data.UIClick);
         }

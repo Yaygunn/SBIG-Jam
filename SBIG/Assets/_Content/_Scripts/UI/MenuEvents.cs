@@ -5,7 +5,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
-public class MenuEvents : MonoBehaviour
+namespace UI
+{
+    public class MenuEvents : MonoBehaviour
 {
     private UIDocument _document;
     private VisualElement _menuContainer;
@@ -29,6 +31,11 @@ public class MenuEvents : MonoBehaviour
     private Slider _narratorSlider;
     private Slider _sfxSlider;
     
+    #endregion
+    
+    #region Timers for Sliders
+    private float _cooldown = 5f;
+    private float _lastPlayTime = 0f;
     #endregion
     private void Awake()
     {
@@ -91,9 +98,9 @@ public class MenuEvents : MonoBehaviour
         _backButtonSettings.UnregisterCallback<MouseEnterEvent>(OnButtonHover);
         _backButtonCredits.UnregisterCallback<MouseEnterEvent>(OnButtonHover);
         
-        _musicSlider?.UnregisterCallback<ChangeEvent<float>>(OnSliderValueChanged);
-        _narratorSlider?.UnregisterCallback<ChangeEvent<float>>(OnSliderValueChanged);
-        _sfxSlider?.UnregisterCallback<ChangeEvent<float>>(OnSliderValueChanged);
+        _musicSlider?.UnregisterCallback<PointerDownEvent>(OnSliderPointerDown);
+        _narratorSlider?.UnregisterCallback<PointerDownEvent>(OnSliderPointerDown);
+        _sfxSlider?.UnregisterCallback<PointerDownEvent>(OnSliderPointerDown);
     }
     
     private void OnPlayButtonClick(ClickEvent evt)
@@ -121,9 +128,9 @@ public class MenuEvents : MonoBehaviour
             _narratorSlider = _settingsContainer.Q<Slider>("NarratorSlider");
             _sfxSlider = _settingsContainer.Q<Slider>("SfxSlider");
             
-            _musicSlider.RegisterCallback<ChangeEvent<float>>(OnSliderValueChanged);
-            _narratorSlider.RegisterCallback<ChangeEvent<float>>(OnSliderValueChanged);
-            _sfxSlider.RegisterCallback<ChangeEvent<float>>(OnSliderValueChanged);
+            _musicSlider.RegisterCallback<PointerDownEvent>(OnSliderPointerDown);
+            _narratorSlider.RegisterCallback<PointerDownEvent>(OnSliderPointerDown);
+            _sfxSlider.RegisterCallback<PointerDownEvent>(OnSliderPointerDown);
         }).StartingIn(0);
     }
     
@@ -187,11 +194,17 @@ public class MenuEvents : MonoBehaviour
         // Show relevant container
         _menuContainer.style.display = DisplayStyle.Flex;
     }
-
-    private void OnSliderValueChanged(ChangeEvent<float> evt)
+    
+    private void OnSliderPointerDown(PointerDownEvent evt)
     {
-        // ##TODO: Add a slider cooldown audio queue
-        EventHub.UISlider();
+        float currentTime = Time.time;
+        
+        if (currentTime - _lastPlayTime >= _cooldown)
+        {
+            _lastPlayTime = currentTime;
+            
+            EventHub.UISlider();
+        }
     }
 
     private void OnButtonHover(MouseEnterEvent evt)
@@ -209,4 +222,5 @@ public class MenuEvents : MonoBehaviour
         Application.Quit();
 #endif
     }
+}   
 }

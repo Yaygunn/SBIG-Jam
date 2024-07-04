@@ -13,6 +13,7 @@ namespace Manager.Audio
 
         private FModCommunication _fmodCommunication;
         private MusicAudio _musicAudio;
+        private UIAudio _uiAudio;
         
         #region Volume Controls
 
@@ -65,10 +66,12 @@ namespace Manager.Audio
         {
             _fmodCommunication = new FModCommunication();
             _musicAudio = new MusicAudio(_fmodCommunication, _eventBindingSO);
+            _uiAudio = new UIAudio(_fmodCommunication, _eventBindingSO);
 
             RegisterAudioEvents();
             
             _musicAudio.Activate();
+            _uiAudio.Activate();
             
             _musicVolume = FModCommunication.GetMusicVolume();
             _narratorVolume = FModCommunication.GetNarratorVolume();
