@@ -107,9 +107,6 @@ public class MenuEvents : MonoBehaviour
         
         // Show relevant container
         _settingsContainer.style.display = DisplayStyle.Flex;
-        
-        _volumeSlider = _document.rootVisualElement.Q<Slider>("MusicSlider");
-        _volumeSlider.RegisterCallback<ChangeEvent<float>>(OnSliderValueChanged);
     }
     
     private void OnCreditsButtonClick(ClickEvent evt)
