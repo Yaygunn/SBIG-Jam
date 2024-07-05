@@ -156,6 +156,9 @@ MonoBehaviour:
   _spawnPoint: {fileID: 1407570179}
   _enemyDataList:
   - {fileID: 11400000, guid: 96c350760abed02458d96e7001c0ae42, type: 2}
+  - {fileID: 11400000, guid: 416a31cfad4966b48aaa7ec988c082ca, type: 2}
+  - {fileID: 11400000, guid: 144735128f6376d4ebe2cfc6b77df7cb, type: 2}
+  - {fileID: 11400000, guid: f1dcd4c93e27e5c49ae9857e8cae9d1b, type: 2}
 --- !u!4 &162606066
 Transform:
   m_ObjectHideFlags: 0
