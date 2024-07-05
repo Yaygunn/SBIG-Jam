@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Components.BulletHit
 {
     public interface IWaterHit
@@ -6,7 +8,7 @@ namespace Components.BulletHit
     }
     public interface IBasketBallHit
     {
-        public void OnBasketBallHit();
+        public void OnBasketBallHit(Vector3 direction);
     }
     public interface ISlapHit
     {

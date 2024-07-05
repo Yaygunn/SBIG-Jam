@@ -22,7 +22,8 @@ namespace Components.BulletHit
             {
                 if (other.gameObject.TryGetComponent(out IBasketBallHit basketBallHit))
                 {
-                    basketBallHit.OnBasketBallHit();
+                    Vector3 direction = other.contacts[0].point - transform.position;
+                    basketBallHit.OnBasketBallHit(direction);
                 }
                 
                 return;

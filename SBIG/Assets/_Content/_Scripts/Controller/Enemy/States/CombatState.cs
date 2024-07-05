@@ -48,6 +48,7 @@ namespace Controller.Enemy.States
         {
             // ##TODO:
             _enemy.GolemAnimator.SetTrigger(HeadButHash);
+            _enemy.SetFaceState(Enums.Golem.EGolemState.ANGRY);
             
             // Apply damage to target
             

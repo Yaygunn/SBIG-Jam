@@ -23,17 +23,25 @@ namespace Controller.Enemy
         public CombatState StateCombat { get; private set; }
         public EnterGardenState StateEnterGarden { get; private set; }
         public LeaveGardenState StateLeaveGarden { get; private set; }
+        public KnockedBackState StateKnockedBack { get; private set; }
         #endregion
         
         public NavMeshAgent NavMeshAgent;
         public Transform EntrancePoint;
         public SkinnedMeshRenderer MeshRenderer;
         public Animator GolemAnimator;
+        public Rigidbody RB;
+        
+        public Vector3 hitDirection;
 
         private void Start()
         {
             NavMeshAgent = GetComponent<NavMeshAgent>();
             GolemAnimator = GetComponent<Animator>();
+            RB = GetComponent<Rigidbody>();
+            
+            // Ensure we don't affect the Enemy movement
+            RB.isKinematic = true;
         }
 
         public void Initialize(EnemyData data)
@@ -54,6 +62,7 @@ namespace Controller.Enemy
             StateCombat = new CombatState(this);
             StateEnterGarden = new EnterGardenState(this);
             StateLeaveGarden = new LeaveGardenState(this);
+            StateKnockedBack = new KnockedBackState(this);
             
             // Spawned enemies will default to EnterGardenState
             StateCurrent = StateEnterGarden;
@@ -120,24 +129,49 @@ namespace Controller.Enemy
             MeshRenderer.material.SetTexture("_MainTex", Resources.Load<Texture>(baseTexturePath));
         }
 
+        public void SetFaceState(EGolemState state)
+        {
+            EnemyConfig.golemState = state;
+
+            HandleChangeTexture();
+        }
+
         public void OnWaterHit()
         {
             Debug.Log("Enemy hit by water!");
+            // If you hit Wood or Water golem, it gets bigger (does normal damage)
+            // If you hit fire golum, it takes extra damage
+            // If you hit rock golem, nothing happens (does no damage)
         }
         
-        public void OnBasketBallHit()
+        public void OnBasketBallHit(Vector3 direction)
         {
-            Debug.Log("Enemy hit by basketball!");
+            hitDirection = direction;
+            
+            ChangeState(StateKnockedBack);
+            
+            // Does small damage
         }
         
         public void OnSlapHit()
         {
             Debug.Log("Enemy hit by slap!");
+            
+            // Pause actions
+            // Look at Player
+            // Notify all other golems on level to do the same
+            // Wait X time
+            // Set state to LeaveGarden
         }
         
         public void OnGolemHit()
         {
             Debug.Log("Enemy hit by golem!");
+            
+            // Knock backs golum
+            // Set state to dizzy
+            // Wait for X time
+            // Spawn a new golem
         }
     }   
 }
