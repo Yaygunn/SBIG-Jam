@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Enums.Bullet;
+using Scriptables.Enemy;
 using UnityEngine;
 
 namespace Components.BulletHit
@@ -9,6 +10,13 @@ namespace Components.BulletHit
         public EBulletType BulletType;
         public int DamageAmount = 5;
         private HashSet<GameObject> _hitTargets = new HashSet<GameObject>();
+        private Collider _collider;
+        
+        private void Awake()
+        {
+            _collider = GetComponent<Collider>();
+        }
+        
         private void OnCollisionEnter(Collision other)
         {
             // Don't allow a bullet to do damage to the same target more than once
@@ -23,7 +31,7 @@ namespace Components.BulletHit
             {
                 if (other.gameObject.TryGetComponent(out IWaterHit waterHit))
                 {
-                    waterHit.OnWaterHit();
+                    waterHit.OnWaterHit(DamageAmount);
                 }
 
                 return;
@@ -54,10 +62,12 @@ namespace Components.BulletHit
             {
                 if (other.gameObject.TryGetComponent(out IGolemHit golemHit))
                 {
-                    golemHit.OnGolemHit();
+                    _collider.enabled = false; // Safety measure
+                    Vector3 direction = other.contacts[0].point - transform.position;
+                    golemHit.OnGolemHit(DamageAmount, direction, other.contacts[0].point);
                 }
                 
-                return;
+                Destroy(gameObject);
             }
         }
     }   

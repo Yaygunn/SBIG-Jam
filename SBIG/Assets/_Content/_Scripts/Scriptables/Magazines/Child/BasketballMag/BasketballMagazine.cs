@@ -9,9 +9,8 @@ namespace Scriptables.Magazines.Child.BasketballMag
         protected override void OnButtonPressed()
         {
             base.OnButtonPressed();
-            Debug.Log("Basketball Fire");
             Weapon.Fire(InstantiateBullet(_basketballBullet));
             EndMagazine();
-        }       
+        }
     }
 }

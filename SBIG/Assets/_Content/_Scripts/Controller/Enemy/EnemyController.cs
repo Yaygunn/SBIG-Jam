@@ -4,6 +4,7 @@ using Components.BulletHit;
 using Controller.Enemy.States;
 using Enums;
 using Enums.Golem;
+using Manager.Enemy;
 using Managers.Global;
 using Scriptables.Enemy;
 using UnityEngine;
@@ -152,12 +153,22 @@ namespace Controller.Enemy
             HandleChangeTexture();
         }
 
-        public void OnWaterHit()
+        public void OnWaterHit(int damageAmount)
         {
-            Debug.Log("Enemy hit by water!");
-            // If you hit Wood or Water golem, it gets bigger (does normal damage)
-            // If you hit fire golum, it takes extra damage
-            // If you hit rock golem, nothing happens (does no damage)
+            if (EnemyConfig.golemType == EGolemType.WOOD || EnemyConfig.golemType == EGolemType.WATER)
+            {
+                transform.localScale += new Vector3(0.5f, 0.5f, 0.5f);
+                
+                TakeDamage(damageAmount);
+            }
+            else if (EnemyConfig.golemType == EGolemType.FIRE)
+            {
+                TakeDamage(damageAmount * 2);
+            }
+            else if (EnemyConfig.golemType == EGolemType.ROCK)
+            {
+                SetFaceState(EGolemState.HUNGRY);
+            }
         }
         
         public void OnBasketBallHit(int damageAmount, Vector3 direction)
@@ -178,16 +189,15 @@ namespace Controller.Enemy
             // Set state to LeaveGarden
         }
         
-        public void OnGolemHit()
+        public void OnGolemHit(int damageAmount, Vector3 direction, Vector3 spawnPoint)
         {
-            Debug.Log("Enemy hit by golem!");
-            
-            // Knock backs golum
-            // Set state to dizzy
-            // Wait for X time
-            // Spawn a new golem
+            hitDirection = direction;
+            TakeDamage(damageAmount);
+            ChangeState(StateKnockedBack);
+            EnemyController theRock = EnemyManager.Instance.SpawnEnemy(EGolemType.ROCK, spawnPoint);
+            theRock.ChangeState(theRock.StateIdle);
         }
-        
+
         private void SetHealth(int amount)
         {
             Health = amount;

@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04028b684e91c704394e7cdc658888de, type: 3}
-  m_Name: ReloadMagHolder
+  m_Script: {fileID: 11500000, guid: ffb9a7f146d099f47aad9518268d0015, type: 3}
+  m_Name: GolemMag
   m_EditorClassIdentifier: 
-  _magList:
-  - <Mag>k__BackingField: {fileID: 11400000, guid: 0ee695a7fcb9f4d45a3ec1402f936466, type: 2}
-    <RandomRate>k__BackingField: 0
+  <MagName>k__BackingField: Golem
+  _golemBullet: {fileID: 8743788246640384336, guid: 3d724c2b4942cff4d9b48a01407f1281, type: 3}

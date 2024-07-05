@@ -4,7 +4,7 @@ namespace Components.BulletHit
 {
     public interface IWaterHit
     {
-        public void OnWaterHit();
+        public void OnWaterHit(int damageAmount);
     }
     public interface IBasketBallHit
     {
@@ -16,6 +16,6 @@ namespace Components.BulletHit
     }
     public interface IGolemHit
     {
-        public void OnGolemHit();
+        public void OnGolemHit(int damageAmount, Vector3 direction, Vector3 hitPoint);
     }
 }
