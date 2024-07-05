@@ -11,7 +11,7 @@ namespace Components.Carry.Original
     {
         private Dependencies _dependencies;
 
-        private float _rayDistance = 2.6f;
+        private float _rayDistance = 3f;
 
         private BaseCarriable _carriableInFrontCamera;
 
@@ -60,7 +60,8 @@ namespace Components.Carry.Original
             {
                 if (_carriableBeingCarried == null)
                 {
-                    Pick();
+                    if(_carriableInFrontCamera.IsPickable)
+                        Pick();
                 }
             }
 
