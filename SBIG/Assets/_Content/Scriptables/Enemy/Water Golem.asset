@@ -20,7 +20,7 @@ MonoBehaviour:
   targetCrops: 1
   prioritizePlayer: 1
   canBeInterrupted: 0
-  baseHealth: 25
+  baseHealth: 10
   baseDamage: 2
-  golemState: 3
+  golemState: 2
   golemType: 3

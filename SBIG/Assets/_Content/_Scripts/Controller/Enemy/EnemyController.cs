@@ -1,6 +1,8 @@
 using System.Collections;
+using System.Collections.Generic;
 using Components.BulletHit;
 using Controller.Enemy.States;
+using Enums;
 using Enums.Golem;
 using Managers.Global;
 using Scriptables.Enemy;
@@ -33,6 +35,18 @@ namespace Controller.Enemy
         public Rigidbody RB;
         
         public Vector3 hitDirection;
+        public ETargetType TargetType;
+        
+        #region Health
+        public int Health { get; private set; }
+        private List<Color> _damageColors = new List<Color>
+        {
+            new Color(0.45f, 0.27f, 0.54f),
+            new Color(0, 0.67f, 0.73f),
+            new Color(0.61f, 0.85f, 0.62f),
+            new Color(1, 0.92f, 0.65f),
+        };
+        #endregion
 
         private void Start()
         {
@@ -48,13 +62,15 @@ namespace Controller.Enemy
         {
             EnemyConfig = data;
             
-            HandleChangeTexture();
             StartCoroutine(SetupStates());
         }
 
         private IEnumerator SetupStates()
         {
             yield return 0;
+            
+            HandleChangeTexture();
+            SetHealth(EnemyConfig.baseHealth);
             
             // wait till next frame
             StateIdle = new IdleState(this);
@@ -144,13 +160,11 @@ namespace Controller.Enemy
             // If you hit rock golem, nothing happens (does no damage)
         }
         
-        public void OnBasketBallHit(Vector3 direction)
+        public void OnBasketBallHit(int damageAmount, Vector3 direction)
         {
             hitDirection = direction;
-            
+            TakeDamage(damageAmount);
             ChangeState(StateKnockedBack);
-            
-            // Does small damage
         }
         
         public void OnSlapHit()
@@ -172,6 +186,40 @@ namespace Controller.Enemy
             // Set state to dizzy
             // Wait for X time
             // Spawn a new golem
+        }
+        
+        private void SetHealth(int amount)
+        {
+            Health = amount;
+        }
+
+        public void TakeDamage(int amount)
+        {
+            Health -= amount;
+            
+            if (Health <= 0)
+            {
+                // TODO: Spawn in a smaller version of the golem
+                StartCoroutine(KillAndSpawnDeath());
+                return;
+            }
+            
+            StartCoroutine(ShowVisualDamage());
+        }
+        
+        private IEnumerator KillAndSpawnDeath()
+        {
+            yield return new WaitForSeconds(StateKnockedBack.KnockbackDuration);
+            
+            // Spawn a mini golem
+            Destroy(gameObject);
+        }
+        
+        private IEnumerator ShowVisualDamage()
+        {
+            MeshRenderer.material.SetColor("_Color", _damageColors[Random.Range(0, _damageColors.Count)]);
+            yield return new WaitForSeconds(0.1f);
+            MeshRenderer.material.SetColor("_Color", Color.white);
         }
     }   
 }

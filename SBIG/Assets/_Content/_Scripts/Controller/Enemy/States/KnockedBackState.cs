@@ -5,9 +5,10 @@ namespace Controller.Enemy.States
 { 
     public class KnockedBackState: ActiveState
     {
-        private float _force = 10f;
+        public float KnockbackDuration = 5f;
+        
+        private float _force = 3f;
         private float _knockbackTime;
-        private float _knockbackDuration = 5f;
         private Quaternion _initialRotation;
             
         public KnockedBackState(EnemyController enemy) : base(enemy) {}
@@ -20,7 +21,7 @@ namespace Controller.Enemy.States
             _enemy.NavMeshAgent.isStopped = true;
             _enemy.NavMeshAgent.enabled = false;
             _enemy.RB.isKinematic = false;
-            _knockbackTime = Time.time + _knockbackDuration;
+            _knockbackTime = Time.time + KnockbackDuration;
             _enemy.RB.AddForce(_enemy.hitDirection * _force, ForceMode.Impulse);
             _enemy.SetFaceState(EGolemState.DIZZY);
         }

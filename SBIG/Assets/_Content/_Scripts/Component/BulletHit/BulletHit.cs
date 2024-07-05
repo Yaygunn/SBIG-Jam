@@ -6,6 +6,7 @@ namespace Components.BulletHit
     public class BulletHit : MonoBehaviour
     {
         public EBulletType BulletType;
+        public int DamageAmount;
         private void OnCollisionEnter(Collision other)
         {
             if (BulletType == EBulletType.Water)
@@ -23,7 +24,7 @@ namespace Components.BulletHit
                 if (other.gameObject.TryGetComponent(out IBasketBallHit basketBallHit))
                 {
                     Vector3 direction = other.contacts[0].point - transform.position;
-                    basketBallHit.OnBasketBallHit(direction);
+                    basketBallHit.OnBasketBallHit(DamageAmount, direction);
                 }
                 
                 return;
