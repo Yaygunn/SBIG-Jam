@@ -5,9 +5,9 @@ namespace Controller.Enemy.States
 { 
     public class KnockedBackState: ActiveState
     {
-        public float KnockbackDuration = 5f;
+        public float KnockbackDuration = 8f;
         
-        private float _force = 3f;
+        private float _force = 5f;
         private float _knockbackTime;
         private Quaternion _initialRotation;
             
