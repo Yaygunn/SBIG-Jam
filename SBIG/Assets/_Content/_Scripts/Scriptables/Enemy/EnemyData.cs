@@ -16,5 +16,23 @@ namespace Scriptables.Enemy
         public bool canBeInterrupted;
         public int baseHealth;
         public int baseDamage;
+        public EGolemState golemState;
+        public EGolemType golemType;
+    }
+
+    public enum EGolemState
+    {
+        HAPPY,
+        HUNGRY,
+        ANGRY,
+        DIZZY
+    }
+
+    public enum EGolemType
+    {
+        FIRE,
+        WOOD,
+        ROCK,
+        WATER
     }
 }

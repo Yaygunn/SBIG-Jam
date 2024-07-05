@@ -1,3 +1,4 @@
+using System.Collections;
 using Controller.Enemy.States;
 using Managers.Global;
 using Scriptables.Enemy;
@@ -24,11 +25,26 @@ namespace Controller.Enemy
         
         public NavMeshAgent NavMeshAgent;
         public Transform EntrancePoint;
+        public SkinnedMeshRenderer MeshRenderer;
 
         private void Start()
         {
             NavMeshAgent = GetComponent<NavMeshAgent>();
+        }
+
+        public void Initialize(EnemyData data)
+        {
+            EnemyConfig = data;
             
+            HandleChangeTexture();
+            StartCoroutine(SetupStates());
+        }
+
+        private IEnumerator SetupStates()
+        {
+            yield return 0;
+            
+            // wait till next frame
             StateIdle = new IdleState(this);
             StateChase = new ChaseState(this);
             StateCombat = new CombatState(this);
@@ -37,17 +53,19 @@ namespace Controller.Enemy
             
             // Spawned enemies will default to EnterGardenState
             StateCurrent = StateEnterGarden;
-            StateCurrent.Enter();
+            StateCurrent?.Enter();
+
+            yield break;
         }
 
         private void Update()
         {
-            StateCurrent.LogicUpdate();
+            StateCurrent?.LogicUpdate();
         }
         
         private void FixedUpdate()
         {
-            StateCurrent.PhysicUpdate();
+            StateCurrent?.PhysicUpdate();
         }
         
         public void ChangeState(BaseState newState)
@@ -62,6 +80,9 @@ namespace Controller.Enemy
         
         private void OnDrawGizmosSelected()
         {
+            if (EnemyConfig == null)
+                return;
+            
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(transform.position, EnemyConfig.detectionRange);
             
@@ -86,6 +107,13 @@ namespace Controller.Enemy
             }
             
             EntrancePoint = GlobalObject.Entrances[closestIndex];
+        }
+        
+        private void HandleChangeTexture()
+        {
+            string baseTexturePath = $"Art/Golem/{EnemyConfig.golemType.ToString().ToLower()}/{EnemyConfig.golemType.ToString().ToLower()}_{EnemyConfig.golemState.ToString().ToLower()}";
+
+            MeshRenderer.material.SetTexture("_MainTex", Resources.Load<Texture>(baseTexturePath));
         }
     }   
 }

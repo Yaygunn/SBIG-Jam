@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6dee51fa3de2a64aa330edfc3fce214, type: 3}
-  m_Name: Golem
+  m_Name: Rock Golem
   m_EditorClassIdentifier: 
-  enemyName: Golem
+  enemyName: Rock Golem
   detectionRange: 20
   attackRange: 3
   attackCooldown: 1.5
@@ -22,3 +22,5 @@ MonoBehaviour:
   canBeInterrupted: 0
   baseHealth: 25
   baseDamage: 2
+  golemState: 0
+  golemType: 2

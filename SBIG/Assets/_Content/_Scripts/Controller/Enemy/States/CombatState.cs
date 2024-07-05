@@ -4,13 +4,13 @@ namespace Controller.Enemy.States
 {
     public class CombatState: ActiveState
     {
+        private float attackCooldown;
+        private float lastAttackTime;
+        
         public CombatState(EnemyController enemy) : base(enemy)
         {
             attackCooldown = enemy.EnemyConfig.attackCooldown;
         }
-
-        private float attackCooldown;
-        private float lastAttackTime;
 
         public override void Enter()
         {
