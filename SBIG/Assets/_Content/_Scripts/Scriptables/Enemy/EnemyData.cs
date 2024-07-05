@@ -1,3 +1,4 @@
+using Enums.Golem;
 using UnityEngine;
 
 namespace Scriptables.Enemy
@@ -18,21 +19,5 @@ namespace Scriptables.Enemy
         public int baseDamage;
         public EGolemState golemState;
         public EGolemType golemType;
-    }
-
-    public enum EGolemState
-    {
-        HAPPY,
-        HUNGRY,
-        ANGRY,
-        DIZZY
-    }
-
-    public enum EGolemType
-    {
-        FIRE,
-        WOOD,
-        ROCK,
-        WATER
     }
 }
