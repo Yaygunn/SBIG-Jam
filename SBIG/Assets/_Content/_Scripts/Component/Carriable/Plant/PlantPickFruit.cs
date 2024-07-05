@@ -8,7 +8,7 @@ namespace Components.Carriables.Plant
         Crop _crop;
 
         [SerializeField] private string _cropName;
-        private string _noFriutText;
+        private string _noFriutText = "no fruit";
 
         public override bool IsPickable => _crop.HasFruit;
 
