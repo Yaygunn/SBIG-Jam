@@ -9,6 +9,7 @@ namespace Components.Weapons.Original
     public class Weapon : BaseWeapon
     {
         private BaseMagazine _currentMagazine;
+        public BaseMagazine CurrentMagazine => _currentMagazine;
 
         private void Start()
         {
@@ -26,6 +27,8 @@ namespace Components.Weapons.Original
         public override void Reload()
         {
             EquipNewMagazine(ReloadManager.Instance.GetNewMagazine());
+            
+            EventHub.ReloadFinished();
         }
 
         private void EquipCauldronMagazine(BaseMagazine magazine)

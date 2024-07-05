@@ -26,6 +26,12 @@ public static class EventHub
     #endregion
 
     #region Weapon
+    
+    public static event Action Ev_ReloadFinished;
+    public static void ReloadFinished()
+    {
+        Ev_ReloadFinished?.Invoke();
+    }
 
     public static event Action Ev_MagazineEnded;
     public static void MagazineEnded()
