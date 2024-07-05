@@ -25,6 +25,14 @@ public static class EventHub
 
     #endregion
 
+    #region Turn
+    public static event Action Ev_TurnChange;
+    public static void TurnChange()
+    {
+        Ev_TurnChange?.Invoke();
+    }
+    #endregion
+    
     #region Weapon
     
     public static event Action Ev_ReloadFinished;

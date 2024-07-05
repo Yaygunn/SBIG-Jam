@@ -29,6 +29,8 @@ namespace Managers.Turn
 
             _turnHolder[_turnIndex].Enter(SwitchTurn, PlayCoroutine);
             _turnIndex++;
+            
+            EventHub.TurnChange();
         }
     }
 

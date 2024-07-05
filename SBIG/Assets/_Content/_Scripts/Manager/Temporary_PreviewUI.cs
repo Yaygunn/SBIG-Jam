@@ -2,9 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Components.Weapons.Original;
+using Controller.Player;
 using Managers.Global;
 using TMPro;
 using UnityEngine;
+using UnityEngine.TextCore.LowLevel;
+using Random = UnityEngine.Random;
 
 public class Temporary_PreviewUI : MonoBehaviour
 {
@@ -13,23 +16,28 @@ public class Temporary_PreviewUI : MonoBehaviour
 
     private void Start()
     {
-        UpdateGameState("");
+        UpdateGameState();
         UpdateMagazine();
     }
 
     private void OnEnable()
     {
         EventHub.Ev_ReloadFinished += UpdateMagazine;
+        EventHub.Ev_TurnChange += UpdateGameState;
     }
 
     private void OnDisable()
     {
         EventHub.Ev_ReloadFinished -= UpdateMagazine;
+        EventHub.Ev_TurnChange -= UpdateGameState;
     }
 
-    public void UpdateGameState(string state)
+    public void UpdateGameState()
     {
-        _currentState.text = state;
+        PlayerController player = GlobalObject.Player.GetComponent<PlayerController>();
+        String stateText = (player.StateCurrent == player.StateCombat) ? "Combat" : "Craft";
+        
+        _currentState.text = stateText;
     }
 
     public void UpdateMagazine()

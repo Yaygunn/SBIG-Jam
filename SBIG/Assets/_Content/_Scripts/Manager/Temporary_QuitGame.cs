@@ -36,12 +36,10 @@ public class Temporary_QuitGame : MonoBehaviour
         {
             if (playerController.StateCurrent == playerController.StateCombat)
             {
-                _previewUI.UpdateGameState("Craft");
                 playerController.ChangeState(playerController.StateCraft);
             }
             else
             {
-                _previewUI.UpdateGameState("Combat");
                 playerController.ChangeState(playerController.StateCombat);
             }
         }
