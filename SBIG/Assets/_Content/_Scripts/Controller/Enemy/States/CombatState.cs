@@ -6,7 +6,8 @@ namespace Controller.Enemy.States
     {
         private float attackCooldown;
         private float lastAttackTime;
-        
+        private static readonly int HeadButHash = Animator.StringToHash("HeadBut");
+
         public CombatState(EnemyController enemy) : base(enemy)
         {
             attackCooldown = enemy.EnemyConfig.attackCooldown;
@@ -45,14 +46,13 @@ namespace Controller.Enemy.States
 
         protected override void Attack()
         {
-            Debug.Log("Attacking target: " + _enemy.Target.name);
-            
             // ##TODO:
-            // Play attack animation
+            _enemy.GolemAnimator.SetTrigger(HeadButHash);
+            
             // Apply damage to target
             
             // Temporary move to LeaveGardenState
-            _enemy.ChangeState(_enemy.StateLeaveGarden);
+            // _enemy.ChangeState(_enemy.StateLeaveGarden);
         }
     }
 }

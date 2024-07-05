@@ -8,7 +8,8 @@ namespace Controller.Enemy.States
         
         private float _idleTriggerDistance = 1.5f;
         private Vector3 _runoffDirection = Vector3.zero;
-        
+        private static readonly int SpeedHash = Animator.StringToHash("Speed");
+
         public override void Enter()
         {
             base.Enter();
@@ -32,11 +33,13 @@ namespace Controller.Enemy.States
                     }
                     
                     // Just keep on "Running into the woods"
+                    _enemy.GolemAnimator.SetFloat(SpeedHash, _enemy.NavMeshAgent.speed);
                     _enemy.NavMeshAgent.SetDestination(_runoffDirection);
                 }
                 else
                 {
                     // If the enemy is not at the entrance point, it should be moving towards it
+                    _enemy.GolemAnimator.SetFloat(SpeedHash, _enemy.NavMeshAgent.speed);
                     _enemy.NavMeshAgent.SetDestination(_enemy.EntrancePoint.position);
                 }
             }

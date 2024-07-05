@@ -37,7 +37,7 @@ public class Temporary_QuitGame : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
 #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
+            // Do nothing, we might want to access the editor
 #else
         Application.Quit();
 #endif

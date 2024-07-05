@@ -26,10 +26,12 @@ namespace Controller.Enemy
         public NavMeshAgent NavMeshAgent;
         public Transform EntrancePoint;
         public SkinnedMeshRenderer MeshRenderer;
+        public Animator GolemAnimator;
 
         private void Start()
         {
             NavMeshAgent = GetComponent<NavMeshAgent>();
+            GolemAnimator = GetComponent<Animator>();
         }
 
         public void Initialize(EnemyData data)

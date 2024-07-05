@@ -11,7 +11,8 @@ namespace Controller.Enemy.States
         
         private float _checkInterval = 0.5f;
         private float _nextCheckTime = 0f;
-        
+        private static readonly int Charge = Animator.StringToHash("Charge");
+
         public override void Enter()
         {
             base.Enter();
@@ -64,6 +65,7 @@ namespace Controller.Enemy.States
                     }
                     else if (targetDistanceSq <= detectionRangeSq)
                     {
+                        _enemy.GolemAnimator.SetBool(Charge, true);
                         _enemy.NavMeshAgent.SetDestination(_enemy.Target.position);
                     }
                     else
@@ -76,6 +78,13 @@ namespace Controller.Enemy.States
                     _enemy.ChangeState(_enemy.StateIdle);
                 }
             }
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            
+            _enemy.GolemAnimator.SetBool(Charge, false);
         }
 
         private void CheckForPlayer()
