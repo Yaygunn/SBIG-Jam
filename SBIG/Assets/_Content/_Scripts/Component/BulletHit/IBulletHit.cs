@@ -14,6 +14,6 @@ namespace Components.BulletHit
     }
     public interface IGolemHit
     {
-        public void GolemHit();
+        public void OnGolemHit();
     }
 }

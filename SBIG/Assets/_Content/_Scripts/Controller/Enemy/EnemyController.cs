@@ -1,5 +1,7 @@
 using System.Collections;
+using Components.BulletHit;
 using Controller.Enemy.States;
+using Enums.Golem;
 using Managers.Global;
 using Scriptables.Enemy;
 using UnityEngine;
@@ -7,7 +9,7 @@ using UnityEngine.AI;
 
 namespace Controller.Enemy
 {
-    public class EnemyController : MonoBehaviour
+    public class EnemyController : MonoBehaviour, IWaterHit, IGolemHit, ISlapHit, IBasketBallHit
     {
         [Header("Enemy Data")]
         [Tooltip("The Scriptable Object that contains the enemy setup and configuration data.")]
@@ -116,6 +118,26 @@ namespace Controller.Enemy
             string baseTexturePath = $"Art/Golem/{EnemyConfig.golemType.ToString().ToLower()}/{EnemyConfig.golemType.ToString().ToLower()}_{EnemyConfig.golemState.ToString().ToLower()}";
 
             MeshRenderer.material.SetTexture("_MainTex", Resources.Load<Texture>(baseTexturePath));
+        }
+
+        public void OnWaterHit()
+        {
+            Debug.Log("Enemy hit by water!");
+        }
+        
+        public void OnBasketBallHit()
+        {
+            Debug.Log("Enemy hit by basketball!");
+        }
+        
+        public void OnSlapHit()
+        {
+            Debug.Log("Enemy hit by slap!");
+        }
+        
+        public void OnGolemHit()
+        {
+            Debug.Log("Enemy hit by golem!");
         }
     }   
 }

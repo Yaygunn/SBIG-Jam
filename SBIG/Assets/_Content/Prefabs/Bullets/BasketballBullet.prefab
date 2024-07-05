@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 104879745171239989}
   - component: {fileID: 4045238807896682667}
   - component: {fileID: 2134976380735732146}
+  - component: {fileID: 4278205791136732571}
   m_Layer: 0
   m_Name: BasketballBullet
   m_TagString: Untagged
@@ -179,6 +180,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 15
-  maxBounces: 3
-  speedModifier: 0.2
+  maxBounces: 1
   destroyAfter: 15
+--- !u!114 &4278205791136732571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8743788246640384336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 165834387ced0a34d8a4048c59ebd79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletType: 2
