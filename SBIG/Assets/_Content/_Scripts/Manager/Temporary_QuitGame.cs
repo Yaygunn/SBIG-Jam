@@ -13,10 +13,12 @@ public class Temporary_QuitGame : MonoBehaviour
     [SerializeField] private List<EnemyData> _enemyDataList;
     
     private PlayerController playerController;
+    private Temporary_PreviewUI _previewUI;
 
     private void Start()
     {
         playerController = GlobalObject.Player.GetComponent<PlayerController>();
+        _previewUI = FindObjectOfType<Temporary_PreviewUI>();
     }
 
     void Update()
@@ -34,10 +36,12 @@ public class Temporary_QuitGame : MonoBehaviour
         {
             if (playerController.StateCurrent == playerController.StateCombat)
             {
+                _previewUI.UpdateGameState(playerController.StateCraft.ToString());
                 playerController.ChangeState(playerController.StateCraft);
             }
             else
             {
+                _previewUI.UpdateGameState(playerController.StateCombat.ToString());
                 playerController.ChangeState(playerController.StateCombat);
             }
         }
