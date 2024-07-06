@@ -6,6 +6,7 @@ namespace Enums.Bullet
         Water,
         Basketball,
         Slap,
-        Golem
+        Golem,
+        Rock
     }
 }

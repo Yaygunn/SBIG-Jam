@@ -14,7 +14,7 @@ using Random = UnityEngine.Random;
 
 namespace Controller.Enemy
 {
-    public class EnemyController : MonoBehaviour, IWaterHit, IGolemHit, ISlapHit, IBasketBallHit
+    public class EnemyController : MonoBehaviour, IWaterHit, IGolemHit, ISlapHit, IBasketBallHit, IRockHit
     {
         [Header("Enemy Data")]
         [Tooltip("The Scriptable Object that contains the enemy setup and configuration data.")]
@@ -185,8 +185,13 @@ namespace Controller.Enemy
         public void OnBasketBallHit(int damageAmount, Vector3 direction)
         {
             hitDirection = direction;
-            TakeDamage(damageAmount);
+            TakeDamage(damageAmount, false);
             ChangeState(StateKnockedBack);
+        }
+
+        public void OnRockHit(int damageAmount)
+        {
+            TakeDamage(damageAmount);
         }
 
         public void TriggerSlapSequence()
@@ -213,26 +218,25 @@ namespace Controller.Enemy
             Health = amount;
         }
 
-        public void TakeDamage(int amount)
+        public void TakeDamage(int amount, bool allowKilling = true)
         {
             Health -= amount;
-            
-            if (Health <= 0)
+
+            if (Health <= 0 && !allowKilling)
             {
-                // TODO: Spawn in a smaller version of the golem
-                StartCoroutine(KillAndSpawnDeath());
+                Health = 1;
+            }
+            
+            if (Health <= 0 && allowKilling)
+            {
+                EnemyManager.Instance.SpawnMiniEnemy(EnemyConfig.golemType, transform.position);
+            
+                Destroy(gameObject);
+                
                 return;
             }
             
             StartCoroutine(ShowVisualDamage());
-        }
-        
-        private IEnumerator KillAndSpawnDeath()
-        {
-            yield return new WaitForSeconds(StateKnockedBack.KnockbackDuration);
-            
-            // Spawn a mini golem
-            Destroy(gameObject);
         }
         
         private IEnumerator ShowVisualDamage()

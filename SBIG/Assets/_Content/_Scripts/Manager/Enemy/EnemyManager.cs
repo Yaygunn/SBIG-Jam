@@ -10,6 +10,7 @@ namespace Manager.Enemy
     {
         public static EnemyManager Instance { get; private set; }
         public GameObject EnemyPrefab;
+        public GameObject MiniEnemyPrefab;
         
         public List<EnemyDataPair> EnemyDataList = new List<EnemyDataPair>();
         private Dictionary<EGolemType, EnemyData> _enemyDataDictionary;
@@ -52,6 +53,12 @@ namespace Manager.Enemy
             }
             
             return null;
+        }
+        
+        public void SpawnMiniEnemy(EGolemType golemType, Vector3 spawnPoint)
+        {
+            GameObject enemyGO = Instantiate(MiniEnemyPrefab, spawnPoint, Quaternion.identity);
+            enemyGO.GetComponent<EnemyRagdoll>().Initialize( golemType );
         }
     }
     

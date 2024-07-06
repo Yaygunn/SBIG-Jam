@@ -18,7 +18,6 @@ namespace Controller.Enemy.States
         
             _initialRotation = _enemy.transform.rotation;
             _enemy.Target = null;
-            _enemy.NavMeshAgent.isStopped = true;
             _enemy.NavMeshAgent.enabled = false;
             _enemy.RB.isKinematic = false;
             _knockbackTime = Time.time + KnockbackDuration;
