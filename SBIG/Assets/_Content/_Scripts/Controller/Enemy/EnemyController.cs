@@ -224,20 +224,14 @@ namespace Controller.Enemy
             
             if (Health <= 0)
             {
-                // TODO: Spawn in a smaller version of the golem
-                StartCoroutine(KillAndSpawnDeath());
+                EnemyManager.Instance.SpawnMiniEnemy(EnemyConfig.golemType, transform.position);
+            
+                Destroy(gameObject);
+                
                 return;
             }
             
             StartCoroutine(ShowVisualDamage());
-        }
-        
-        private IEnumerator KillAndSpawnDeath()
-        {
-            yield return new WaitForSeconds(StateKnockedBack.KnockbackDuration);
-            
-            // Spawn a mini golem
-            Destroy(gameObject);
         }
         
         private IEnumerator ShowVisualDamage()
