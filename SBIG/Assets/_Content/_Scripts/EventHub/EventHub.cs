@@ -39,10 +39,22 @@ public static class EventHub
     {
         Ev_TurnChange?.Invoke();
     }
+
+    public static event Action Ev_CombatStart;
+    public static void CombatStart()
+    {
+        Ev_CombatStart?.Invoke();
+    }
+
+    public static event Action Ev_CraftStart;
+    public static void CraftStart()
+    {
+        Ev_CraftStart?.Invoke();
+    }
     #endregion
-    
+
     #region Weapon
-    
+
     public static event Action Ev_SlapHit;
     public static void SlapHit()
     {
