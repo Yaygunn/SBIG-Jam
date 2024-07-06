@@ -28,6 +28,10 @@ namespace UI
 
         private void ShowPickText(string text, bool isPickable)
         {
+            if(isPickable)
+            {
+                text += " [E]";
+            }
             _pickBackground.SetActive(isPickable);
             _pickText.text = text;
         }
@@ -35,7 +39,7 @@ namespace UI
         private void ShowCookInCauldron(string text)
         {
             _cauldronBackground.SetActive(true);
-            _cauldronText.text = text;
+            _cauldronText.text = "cook [R]";
         }
 
         private void CloseTexts()

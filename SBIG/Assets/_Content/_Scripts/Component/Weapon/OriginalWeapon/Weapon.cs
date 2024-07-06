@@ -1,5 +1,6 @@
 using Components.BulletMove;
 using Managers.Magazines;
+using Managers.MainCamera;
 using Scriptables.Magazines;
 using UnityEngine;
 using YInput;
@@ -60,7 +61,7 @@ namespace Components.Weapons.Original
         {
             print("fire " + bullet.name);
             bullet.transform.position = FireLocation.transform.position;
-            bullet.transform.rotation = FireLocation.transform.rotation;
+            bullet.transform.rotation = CameraManager.Instance.MainCamera.transform.rotation;
             bullet.GetComponent<IBulletMove>().Initialize();
         }
     }
