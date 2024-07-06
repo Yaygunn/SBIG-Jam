@@ -13,7 +13,7 @@ namespace Controller.Player
 
         protected virtual void Rotate()
         {
-            _player.CompRotate.Rotate();
+            _player.CompRotate.Rotate(InputHandler.Instance.MousePositionChange);
         }
 
         protected virtual void GunUsage()
