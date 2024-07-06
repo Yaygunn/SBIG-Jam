@@ -93,6 +93,17 @@ public static class EventHub
     {
         Event_UISlider?.Invoke();
     }
-        
+
     #endregion
+
+    #region
+
+    public static event Action Ev_GrowPlants;
+    public static void GrowPlant()
+    {
+        Ev_GrowPlants?.Invoke();
+    }
+
+    #endregion
+
 }
