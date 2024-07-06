@@ -32,6 +32,8 @@ namespace YInput
         #endregion
 
         private Keys _keys;
+
+        public float MouseSensitivity { get; private set; } = 1f;
         private void Initialize()
         {
             _keys = new Keys();
@@ -46,7 +48,7 @@ namespace YInput
         private void Update()
         {
             MoveInput = _keys.gameplay.move.ReadValue<Vector2>();
-            MousePositionChange = _keys.gameplay.MouseMove.ReadValue<Vector2>();
+            MousePositionChange = _keys.gameplay.MouseMove.ReadValue<Vector2>() * MouseSensitivity;
         }
         private void LateUpdate()
         {
@@ -55,9 +57,20 @@ namespace YInput
             ActivateCauldron.ResetInputInfo();
         }
 
-        private void EnableGameplayMod()
+        public void EnableGameplayMod()
         {
             _keys.gameplay.Enable();
+            Cursor.visible = false;
+        }
+        public void EnableUIMod()
+        {
+            _keys.gameplay.Disable();
+            Cursor.visible = true;
+        }
+
+        public void SetMouseSensitivity(float sensitivity)
+        {
+            MouseSensitivity = sensitivity;
         }
 
         private void OnDisable()

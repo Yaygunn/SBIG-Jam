@@ -4,6 +4,6 @@ namespace Components.Rotate
 {
     public interface IRotateComponent
     {
-        void Rotate();
+        void Rotate(Vector2 rotateInput);
     }
 }
