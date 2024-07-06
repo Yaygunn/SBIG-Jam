@@ -130,9 +130,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd319e7d97347a4c8ad9fc273f41fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ragdollForce: 320
-  _rotationForce: 1
-  _maxAngleDeviation: 5
+  _ragdollForce: 280
+  _rotationForce: 1.5
+  _maxAngleDeviation: 12
 --- !u!1 &2084585804601636824
 GameObject:
   m_ObjectHideFlags: 0

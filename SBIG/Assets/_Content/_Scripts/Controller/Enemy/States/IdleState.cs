@@ -1,4 +1,5 @@
 using Enums;
+using Enums.Golem;
 using Managers.Global;
 using UnityEngine;
 
@@ -19,6 +20,7 @@ namespace Controller.Enemy.States
             
             _enemy.Target = null;
             _enemy.GolemAnimator.SetFloat(SpeedHash, 0f);
+            _enemy.SetFaceState(EGolemState.HUNGRY);
         }
 
         public override void LogicUpdate()

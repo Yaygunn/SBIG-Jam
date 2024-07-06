@@ -185,7 +185,7 @@ namespace Controller.Enemy
         public void OnBasketBallHit(int damageAmount, Vector3 direction)
         {
             hitDirection = direction;
-            TakeDamage(damageAmount);
+            TakeDamage(damageAmount, false);
             ChangeState(StateKnockedBack);
         }
 
@@ -218,11 +218,16 @@ namespace Controller.Enemy
             Health = amount;
         }
 
-        public void TakeDamage(int amount)
+        public void TakeDamage(int amount, bool allowKilling = true)
         {
             Health -= amount;
+
+            if (Health <= 0 && !allowKilling)
+            {
+                Health = 1;
+            }
             
-            if (Health <= 0)
+            if (Health <= 0 && allowKilling)
             {
                 EnemyManager.Instance.SpawnMiniEnemy(EnemyConfig.golemType, transform.position);
             
