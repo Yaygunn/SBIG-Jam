@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/USS/gameTitle.uss?fileID=7433441132597879392&amp;guid=2473dcf5407e1984395e88a9972ffe13&amp;type=3#gameTitle" />
+    <Style src="project://database/Assets/_Content/UI%20Toolkit/USS/gameTitle.uss?fileID=7433441132597879392&amp;guid=2473dcf5407e1984395e88a9972ffe13&amp;type=3#gameTitle" />
     <ui:VisualElement name="MenuContainer" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/739a6867-3fe4-4744-8f05-963b994a9d79.png?fileID=2800000&amp;guid=b7dcc3574d1bf154881f78e765b451f1&amp;type=3#739a6867-3fe4-4744-8f05-963b994a9d79&quot;); position: absolute; left: 0; top: 0; right: 0; bottom: 0;">
         <ui:VisualElement name="TitleDiv" style="flex-grow: 1;">
             <ui:Label tabindex="-1" text="Magic Slinger" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ScreenTitle" class="gameTitle" />
@@ -30,7 +30,7 @@
                 <ui:Label tabindex="-1" text="Mouse" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="font-size: 20px; color: rgb(250, 250, 255); height: 32px; width: 220px; padding-left: 20px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; -unity-text-align: middle-left;" />
             </ui:VisualElement>
             <ui:VisualElement name="MouseSettings" style="flex-grow: 1;">
-                <ui:Slider label="Sensitivity" high-value="5" low-value="0.1" style="color: rgb(250, 250, 255);" />
+                <ui:Slider label="Sensitivity" high-value="5" low-value="0.1" name="MouseSensitivitySlider" style="color: rgb(250, 250, 255);" />
             </ui:VisualElement>
             <ui:VisualElement name="KeyboardHeading" style="flex-grow: 1; flex-direction: row; height: 32px; margin-top: 40px;">
                 <ui:VisualElement name="Icon" style="flex-grow: 0; width: 32px; height: 32px; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/Settings/icon-keyboard.png?fileID=21300000&amp;guid=324e7afb2fb644d4881dd552a03d2e71&amp;type=3#icon-keyboard&quot;); -unity-background-scale-mode: scale-to-fit;" />
