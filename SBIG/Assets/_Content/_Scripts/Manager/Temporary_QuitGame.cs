@@ -53,6 +53,7 @@ public class Temporary_QuitGame : MonoBehaviour
         
         // Start color #5363AC
         // End color #571215
+        
     }
 
     private void QuitGame()
