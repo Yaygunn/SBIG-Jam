@@ -1,3 +1,4 @@
+using Components.Dependency.Player;
 using Managers.MainCamera;
 using UnityEngine;
 
@@ -9,9 +10,12 @@ namespace Components.Move.Player
 
         private CharacterController _charController;
 
+        private Dependencies _dependencies;
+
         void Awake()
         {
             _charController = GetComponent<CharacterController>();
+            _dependencies = GetComponent<Dependencies>();
         }
 
         public void Move(Vector2 moveDirection)
@@ -24,6 +28,8 @@ namespace Components.Move.Player
             direction.Normalize();
 
             _charController.Move(speed * Time.deltaTime * direction);
+
+            _dependencies.Headbob.Bob(moveDirection);
         }
     }
 }

@@ -77,6 +77,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <FpsCam>k__BackingField: {fileID: 3900834924561367610}
+  <Headbob>k__BackingField: {fileID: 6577485821224413865}
 --- !u!114 &5543403197741541941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +176,7 @@ GameObject:
   - component: {fileID: 5081188617408303971}
   - component: {fileID: 3900834924561367610}
   - component: {fileID: 2564973323947161854}
+  - component: {fileID: 6577485821224413865}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -262,6 +264,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 0}
+--- !u!114 &6577485821224413865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264745959868187262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdc473a6255581740a74fa7e3c8fe5f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bobbingSpeed: 0.02
+  _bobbingAmount: 0.05
+  _midpoint: 1.6
 --- !u!1 &1993301127324391750
 GameObject:
   m_ObjectHideFlags: 0
