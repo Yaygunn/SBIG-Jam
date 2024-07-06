@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1211072725398445322}
   - component: {fileID: 3248312101486547755}
   m_Layer: 0
-  m_Name: Fence_A
+  m_Name: Fence_Broken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
