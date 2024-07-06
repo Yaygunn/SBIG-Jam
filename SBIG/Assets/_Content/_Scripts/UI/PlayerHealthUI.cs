@@ -8,7 +8,6 @@ public class PlayerHealthUI : MonoBehaviour
     [SerializeField] private RectMask2D _healthMask;
     private float _endPadding = 460f;
     private float _startPadding = 25f;
-    private float _duration = 5f;
     private float _targetPadding;
     void Start()
     {
@@ -26,8 +25,6 @@ public class PlayerHealthUI : MonoBehaviour
     {
         float playerHealth = (float) GlobalObject.Player.GetComponent<PlayerController>().PlayerHealth;
         _targetPadding = MapHealthToSlider(playerHealth);
-        
-        Debug.Log("Player health: " + playerHealth + " Target padding: " + _targetPadding);
         
         Vector4 initialPadding = _healthMask.padding;
         _healthMask.padding = new Vector4(initialPadding.x, initialPadding.y, _targetPadding, initialPadding.w);

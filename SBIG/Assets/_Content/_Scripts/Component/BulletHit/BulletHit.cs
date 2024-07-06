@@ -36,6 +36,16 @@ namespace Components.BulletHit
 
                 return;
             }
+            
+            if (BulletType == EBulletType.Rock)
+            {
+                if (other.gameObject.TryGetComponent(out IRockHit rockHit))
+                {
+                    rockHit.OnRockHit(DamageAmount);
+                }
+
+                return;
+            }
 
             if (BulletType == EBulletType.Basketball)
             {

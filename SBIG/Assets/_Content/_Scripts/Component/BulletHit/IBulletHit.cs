@@ -18,4 +18,10 @@ namespace Components.BulletHit
     {
         public void OnGolemHit(int damageAmount, Vector3 direction, Vector3 hitPoint);
     }
+
+    public interface IRockHit
+    {
+        public void OnRockHit(int damageAmount);
+    }
+    
 }

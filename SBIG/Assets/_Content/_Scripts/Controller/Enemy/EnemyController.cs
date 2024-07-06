@@ -14,7 +14,7 @@ using Random = UnityEngine.Random;
 
 namespace Controller.Enemy
 {
-    public class EnemyController : MonoBehaviour, IWaterHit, IGolemHit, ISlapHit, IBasketBallHit
+    public class EnemyController : MonoBehaviour, IWaterHit, IGolemHit, ISlapHit, IBasketBallHit, IRockHit
     {
         [Header("Enemy Data")]
         [Tooltip("The Scriptable Object that contains the enemy setup and configuration data.")]
@@ -187,6 +187,11 @@ namespace Controller.Enemy
             hitDirection = direction;
             TakeDamage(damageAmount);
             ChangeState(StateKnockedBack);
+        }
+
+        public void OnRockHit(int damageAmount)
+        {
+            TakeDamage(damageAmount);
         }
 
         public void TriggerSlapSequence()
