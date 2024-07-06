@@ -16,6 +16,7 @@ namespace Controller.Enemy.States
         private Vector3 _lookDirection;
         private Quaternion _lookRotation;
         private static readonly int Speed = Animator.StringToHash("Speed");
+        private static readonly int Stunned = Animator.StringToHash("Stunned");
 
         public override void Enter()
         {
@@ -28,6 +29,7 @@ namespace Controller.Enemy.States
             _enemy.SetFaceState(EGolemState.ANGRY);
             _enemy.NavMeshAgent.velocity = Vector3.zero;
             _enemy.GolemAnimator.SetFloat(Speed, 0);
+            _enemy.GolemAnimator.SetBool(Stunned, true);
             
             _slapWaitTime = Time.time + _slapWaitTimer;
             
@@ -55,6 +57,8 @@ namespace Controller.Enemy.States
         public override void Exit()
         {
             base.Exit();
+            
+            _enemy.GolemAnimator.SetBool(Stunned, false);
         }
     }   
 }
