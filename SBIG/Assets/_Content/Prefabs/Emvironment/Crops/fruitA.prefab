@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4866644389938326455}
   - component: {fileID: 2104092152651535844}
   - component: {fileID: 7530337116797913385}
+  - component: {fileID: -2640023796261862808}
   m_Layer: 6
   m_Name: fruitA
   m_TagString: Untagged
@@ -71,6 +72,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.7, y: 2, z: 1.7}
   m_Center: {x: 0, y: 0.3, z: 0}
+--- !u!114 &-2640023796261862808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342137680253863642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced85a32a929e4c42ad67de8f32e01b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <type>k__BackingField: 0
 --- !u!1 &3242705543179362542
 GameObject:
   m_ObjectHideFlags: 0

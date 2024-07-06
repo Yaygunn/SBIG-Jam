@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3530159182880759436}
   - component: {fileID: 8229860582427457369}
   - component: {fileID: 5411925615883937533}
+  - component: {fileID: -2198128307913514657}
   m_Layer: 6
   m_Name: FruitC
   m_TagString: Untagged
@@ -71,6 +72,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-2198128307913514657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2167801757201245801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced85a32a929e4c42ad67de8f32e01b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <type>k__BackingField: 0
 --- !u!1 &5610186888506473629
 GameObject:
   m_ObjectHideFlags: 0
