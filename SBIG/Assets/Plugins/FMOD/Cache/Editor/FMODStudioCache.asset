@@ -37,10 +37,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/holdingCauldron
+  m_Name: parameter:/HoldingCauldron
   m_EditorClassIdentifier: 
-  Name: holdingCauldron
-  StudioPath: parameter:/holdingCauldron
+  Name: HoldingCauldron
+  StudioPath: parameter:/HoldingCauldron
   Min: 0
   Max: 1
   Default: 0
@@ -51,7 +51,7 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &-8526308306276493327
+--- !u!114 &-8693169200446121558
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,24 +60,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambiance/MeadowAmbiance
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LevelAmbiance/LocationX
   m_EditorClassIdentifier: 
-  Path: event:/Ambiance/MeadowAmbiance
-  Guid:
-    Data1: 1401240630
-    Data2: 1219053943
-    Data3: -127952725
-    Data4: 508042227
-  Banks:
-  - {fileID: 2690339585343514002}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Name: LocationX
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0.5
+  ID:
+    data1: 2257061892
+    data2: 731038323
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-8265537793952664928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,11 +96,11 @@ MonoBehaviour:
   Banks:
   - {fileID: 2690339585343514002}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 60
   Length: 0
 --- !u!114 &-8105926217724306250
 MonoBehaviour:
@@ -126,11 +123,11 @@ MonoBehaviour:
   Banks:
   - {fileID: 2690339585343514002}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 60
   Length: 0
 --- !u!114 &-8072164982803968701
 MonoBehaviour:
@@ -180,11 +177,11 @@ MonoBehaviour:
   Banks:
   - {fileID: 2690339585343514002}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 90
   Length: 0
 --- !u!114 &-7549739970555532702
 MonoBehaviour:
@@ -201,10 +198,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638557038323357686
+  lastModified: 638558715771487663
   FileSizes:
   - Name: 
-    Value: 2940
+    Value: 2930
   Exists: 1
 --- !u!114 &-7210150842544809154
 MonoBehaviour:
@@ -232,7 +229,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 69189
+  Length: 83076
 --- !u!114 &-7058644423077852677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,19 +271,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Golems/Wood/WoodIdle
   Guid:
-    Data1: 256764129
-    Data2: 1279020594
-    Data3: -1655796813
-    Data4: -121622455
+    Data1: -1129956630
+    Data2: 1212452032
+    Data3: 165351325
+    Data4: -1277521655
   Banks:
   - {fileID: 2690339585343514002}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  MaxDistance: 60
+  Length: 11328
 --- !u!114 &-6806580946330089270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,33 +338,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 360
---- !u!114 &-6356061900925180549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambiance/JungleAmbiance
-  m_EditorClassIdentifier: 
-  Path: event:/Ambiance/JungleAmbiance
-  Guid:
-    Data1: 1261863830
-    Data2: 1335459719
-    Data3: -1390921556
-    Data4: -2047461124
-  Banks:
-  - {fileID: 2690339585343514002}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-6237482186818095562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,11 +359,11 @@ MonoBehaviour:
   Banks:
   - {fileID: 2690339585343514002}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 65
   Length: 0
 --- !u!114 &-6182649125500955056
 MonoBehaviour:
@@ -504,33 +474,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1500
---- !u!114 &-5465290601305420485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Golems/Stone/StoneFootsteps
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Golems/Stone/StoneFootsteps
-  Guid:
-    Data1: 1603786097
-    Data2: 1217089436
-    Data3: 990855068
-    Data4: -710498600
-  Banks:
-  - {fileID: 2690339585343514002}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-4857680286833619765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,6 +501,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 95
   Length: 17304
+--- !u!114 &-4518729911613517211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LocationX
+  m_EditorClassIdentifier: 
+  Name: LocationX
+  StudioPath: parameter:/LocationX
+  Min: 0
+  Max: 1
+  Default: 0.5
+  ID:
+    data1: 2257061892
+    data2: 731038323
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-4477983905588199297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,13 +572,14 @@ MonoBehaviour:
     Data4: -1682089873
   Banks:
   - {fileID: 2690339585343514002}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
-  Parameters: []
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1308994494978642776}
   MinDistance: 1
   MaxDistance: 20
-  Length: 36055
+  Length: 142824
 --- !u!114 &-3594125168628110454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -700,6 +668,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2978194445450152833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LocationY
+  m_EditorClassIdentifier: 
+  Name: LocationY
+  StudioPath: parameter:/LocationY
+  Min: 0
+  Max: 1
+  Default: 0.5
+  ID:
+    data1: 2372959600
+    data2: 2037454170
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-2971804783865992327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -747,11 +739,11 @@ MonoBehaviour:
   Banks:
   - {fileID: 2690339585343514002}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 60
   Length: 0
 --- !u!114 &-2464297655051887829
 MonoBehaviour:
@@ -780,6 +772,58 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 9316
+--- !u!114 &-1308994494978642776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level1/MusicState
+  m_EditorClassIdentifier: 
+  Name: MusicState
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4090509097
+    data2: 611756436
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Gathering
+  - Combat
+  Exists: 1
+--- !u!114 &-1048857087425405064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicState
+  m_EditorClassIdentifier: 
+  Name: MusicState
+  StudioPath: parameter:/MusicState
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4090509097
+    data2: 611756436
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Gathering
+  - Combat
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -804,20 +848,17 @@ MonoBehaviour:
   - {fileID: -4477983905588199297}
   - {fileID: -6673040273890946137}
   - {fileID: -5784454906605412437}
-  - {fileID: -8526308306276493327}
   - {fileID: -2848662523031457279}
   - {fileID: -4370111391082621412}
   - {fileID: -6237482186818095562}
   - {fileID: 189813031278888772}
   - {fileID: 8196024328058826691}
   - {fileID: 8410402308133256829}
-  - {fileID: -5465290601305420485}
   - {fileID: -8927205575373770488}
   - {fileID: 5813617361938218948}
   - {fileID: 311478322724539241}
   - {fileID: -4857680286833619765}
   - {fileID: 5248452163814541185}
-  - {fileID: -6356061900925180549}
   - {fileID: -6806580946330089270}
   - {fileID: -7779550831224759045}
   - {fileID: 334757215955590311}
@@ -834,16 +875,19 @@ MonoBehaviour:
   - {fileID: 6170205917273038786}
   - {fileID: -7058644423077852677}
   - {fileID: -8265537793952664928}
-  - {fileID: 6104907583504744198}
   - {fileID: -8105926217724306250}
+  - {fileID: 6563492739937293856}
   EditorParameters:
   - {fileID: -8832090744829655098}
   - {fileID: -2971804783865992327}
+  - {fileID: -4518729911613517211}
+  - {fileID: -2978194445450152833}
+  - {fileID: -1048857087425405064}
   MasterBanks:
   - {fileID: 2690339585343514002}
   StringsBanks:
   - {fileID: -7549739970555532702}
-  cacheTime: 638557038323357686
+  cacheTime: 638558715771487663
   cacheVersion: 131618
 --- !u!114 &189813031278888772
 MonoBehaviour:
@@ -968,7 +1012,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638557038323337400
+  lastModified: 638558715771457671
   FileSizes: []
   Exists: 1
 --- !u!114 &3303042177172122614
@@ -992,11 +1036,11 @@ MonoBehaviour:
   Banks:
   - {fileID: 2690339585343514002}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 60
   Length: 0
 --- !u!114 &3847003799674526549
 MonoBehaviour:
@@ -1019,11 +1063,11 @@ MonoBehaviour:
   Banks:
   - {fileID: 2690339585343514002}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 650
   Length: 0
 --- !u!114 &5034060423833237173
 MonoBehaviour:
@@ -1116,9 +1160,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/FootstepsGeneral/holdingCauldron
+  m_Name: parameter:/FootstepsGeneral/HoldingCauldron
   m_EditorClassIdentifier: 
-  Name: holdingCauldron
+  Name: HoldingCauldron
   StudioPath: 
   Min: 0
   Max: 1
@@ -1151,38 +1195,11 @@ MonoBehaviour:
   Banks:
   - {fileID: 2690339585343514002}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &6104907583504744198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Golems/Stone/StoneCharge
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Golems/Stone/StoneCharge
-  Guid:
-    Data1: 1230631586
-    Data2: 1257274317
-    Data3: 141964208
-    Data4: 1467529828
-  Banks:
-  - {fileID: 2690339585343514002}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 60
   Length: 0
 --- !u!114 &6170205917273038786
 MonoBehaviour:
@@ -1211,6 +1228,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6563492739937293856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/LevelAmbiance
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/LevelAmbiance
+  Guid:
+    Data1: 1261863830
+    Data2: 1335459719
+    Data3: -1390921556
+    Data4: -2047461124
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8672899726751609470}
+  - {fileID: -8693169200446121558}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 32160
 --- !u!114 &7313967773702296485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1313,9 +1359,33 @@ MonoBehaviour:
   Banks:
   - {fileID: 2690339585343514002}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 60
   Length: 0
+--- !u!114 &8672899726751609470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LevelAmbiance/LocationY
+  m_EditorClassIdentifier: 
+  Name: LocationY
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0.5
+  ID:
+    data1: 2372959600
+    data2: 2037454170
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
