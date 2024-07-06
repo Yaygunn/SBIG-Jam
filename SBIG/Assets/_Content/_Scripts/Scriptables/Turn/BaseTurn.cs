@@ -5,7 +5,7 @@ using UnityEngine;
 public class BaseTurn : ScriptableObject
 {
     protected Action _endAction { get; private set; }
-    public void Enter(Action endAction)
+    public virtual void Enter(Action endAction)
     {
         _endAction = endAction;
     }
@@ -17,6 +17,7 @@ public class BaseTurn : ScriptableObject
 
     protected virtual void EndTurn()
     {
+        EventHub.TurnChange();
         _endAction();
     }
 }
