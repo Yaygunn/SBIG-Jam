@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04028b684e91c704394e7cdc658888de, type: 3}
-  m_Name: ReloadMagHolder
+  m_Script: {fileID: 11500000, guid: 2afb0c387bceeae43b59726d4980c501, type: 3}
+  m_Name: SlapMag
   m_EditorClassIdentifier: 
-  _magList:
-  - <Mag>k__BackingField: {fileID: 11400000, guid: e76841aa754d77c4887205e627bb5b9a, type: 2}
-    <RandomRate>k__BackingField: 0
+  <MagName>k__BackingField: Slap
+  _slapBullet: {fileID: 8584552860148516545, guid: 881e0f7e9883ba8488a1bf5ee865ee17, type: 3}

@@ -53,6 +53,7 @@ namespace Components.BulletHit
                 if (other.gameObject.TryGetComponent(out ISlapHit slapHit))
                 {
                     slapHit.OnSlapHit();
+                    Destroy(gameObject);
                 }   
                 
                 return;

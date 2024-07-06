@@ -35,6 +35,12 @@ public static class EventHub
     
     #region Weapon
     
+    public static event Action Ev_SlapHit;
+    public static void SlapHit()
+    {
+        Ev_SlapHit?.Invoke();
+    }
+    
     public static event Action Ev_ReloadFinished;
     public static void ReloadFinished()
     {

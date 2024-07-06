@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Components.BulletHit;
@@ -9,6 +10,7 @@ using Managers.Global;
 using Scriptables.Enemy;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 namespace Controller.Enemy
 {
@@ -27,6 +29,7 @@ namespace Controller.Enemy
         public EnterGardenState StateEnterGarden { get; private set; }
         public LeaveGardenState StateLeaveGarden { get; private set; }
         public KnockedBackState StateKnockedBack { get; private set; }
+        public SlapState StateSlap { get; private set; }
         #endregion
         
         public NavMeshAgent NavMeshAgent;
@@ -59,6 +62,11 @@ namespace Controller.Enemy
             RB.isKinematic = true;
         }
 
+        private void OnDisable()
+        {
+            EventHub.Ev_SlapHit -= TriggerSlapSequence;
+        }
+
         public void Initialize(EnemyData data)
         {
             EnemyConfig = data;
@@ -80,10 +88,13 @@ namespace Controller.Enemy
             StateEnterGarden = new EnterGardenState(this);
             StateLeaveGarden = new LeaveGardenState(this);
             StateKnockedBack = new KnockedBackState(this);
+            StateSlap = new SlapState(this);
             
             // Spawned enemies will default to EnterGardenState
             StateCurrent = StateEnterGarden;
             StateCurrent?.Enter();
+
+            EventHub.Ev_SlapHit += TriggerSlapSequence;
 
             yield break;
         }
@@ -177,16 +188,15 @@ namespace Controller.Enemy
             TakeDamage(damageAmount);
             ChangeState(StateKnockedBack);
         }
+
+        public void TriggerSlapSequence()
+        {
+            ChangeState(StateSlap);
+        }
         
         public void OnSlapHit()
         {
-            Debug.Log("Enemy hit by slap!");
-            
-            // Pause actions
-            // Look at Player
-            // Notify all other golems on level to do the same
-            // Wait X time
-            // Set state to LeaveGarden
+            EventHub.SlapHit();
         }
         
         public void OnGolemHit(int damageAmount, Vector3 direction, Vector3 spawnPoint)
