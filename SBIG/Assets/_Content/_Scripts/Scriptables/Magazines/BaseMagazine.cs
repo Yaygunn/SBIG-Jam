@@ -12,11 +12,15 @@ namespace Scriptables.Magazines
         protected Action EndAction { get; private set; }
         protected BaseWeapon Weapon { get; private set; }
 
+        [SerializeField] private int _maxAmmo = 5;
+        private int _currentAmmo;
+        public bool LimitlessAmmo { get; private set; }
         public virtual void Enter(Action endAction, BaseWeapon weapon)
         {
             EndAction = endAction;
             Weapon = weapon;
             IsMagazineOver = false;
+            _currentAmmo = _maxAmmo;
         }
 
         public virtual void InstanceChangeToNewMagazine() 
@@ -52,6 +56,15 @@ namespace Scriptables.Magazines
             Weapon.Fire(bullet);
         }
 
+        protected void ReduceAmmo()
+        {
+            if (LimitlessAmmo)
+                return;
+
+            _currentAmmo--;
+            if(_currentAmmo <= 0)
+                EndMagazine();
+        }
         protected GameObject InstantiateBullet(GameObject prefab)
         {
             return Instantiate(prefab, new Vector3 (-20,-20,-20), Quaternion.identity);
