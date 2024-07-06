@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: WaterMag
   m_EditorClassIdentifier: 
   <MagName>k__BackingField: Water
+  MagMaterial: {fileID: 2100000, guid: 114e1c456b1fb694f9481f00ecbe3682, type: 2}
+  _maxAmmo: 5
   _waterBullet: {fileID: 8584552860148516545, guid: effbb211a279f214f8752a7035db3333, type: 3}

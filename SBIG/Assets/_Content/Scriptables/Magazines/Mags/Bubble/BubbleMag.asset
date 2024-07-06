@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: BubbleMag
   m_EditorClassIdentifier: 
   <MagName>k__BackingField: Bubble
+  MagMaterial: {fileID: 2100000, guid: 90864ef403769d94aa925e0b3fcc1096, type: 2}
+  _maxAmmo: 5
   _bubbleBullet: {fileID: 8584552860148516545, guid: 5c70eae002591584397d274836076e90, type: 3}

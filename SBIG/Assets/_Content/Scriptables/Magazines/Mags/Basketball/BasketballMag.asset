@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: BasketballMag
   m_EditorClassIdentifier: 
   <MagName>k__BackingField: Basketball
+  MagMaterial: {fileID: 2100000, guid: df03c38db6a49374a84b9e40355fbefe, type: 2}
+  _maxAmmo: 5
   _basketballBullet: {fileID: 8743788246640384336, guid: 988c8fa1aa5a2604ebf3f3691546ac36, type: 3}

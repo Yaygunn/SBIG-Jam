@@ -8,6 +8,7 @@ namespace Scriptables.Magazines
     public class BaseMagazine : ScriptableObject
     {
         [field:SerializeField] public string MagName { get; private set; }
+        [field: SerializeField] public Material MagMaterial;
         protected bool IsMagazineOver;
         protected Action EndAction { get; private set; }
         protected BaseWeapon Weapon { get; private set; }
