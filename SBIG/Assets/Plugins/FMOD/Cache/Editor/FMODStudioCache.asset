@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9034997399857877431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/MenuClick
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/MenuClick
+  Guid:
+    Data1: -641478652
+    Data2: 1308343636
+    Data3: -1663283321
+    Data4: 646569888
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-9018248895182362801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Golems/Fire/FireCharge
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Golems/Fire/FireCharge
+  Guid:
+    Data1: 2035230209
+    Data2: 1218927873
+    Data3: -138435685
+    Data4: 520794169
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8927205575373770488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,6 +159,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8214702911052885468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Golems/Stone/StoneFootsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Golems/Stone/StoneFootsteps
+  Guid:
+    Data1: 1603786097
+    Data2: 1217089436
+    Data3: 990855068
+    Data4: -710498600
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8105926217724306250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +240,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7787730726112004538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Narration/Voice
+  m_EditorClassIdentifier: 
+  Path: event:/Narration/Voice
+  Guid:
+    Data1: -245945772
+    Data2: 1102608414
+    Data3: 444433062
+    Data4: 1622544247
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7779550831224759045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +294,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7681358419363484580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Witch'sHut
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Witch'sHut
+  Guid:
+    Data1: 58096789
+    Data2: 1141555817
+    Data3: 620657029
+    Data4: 2107375775
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 95
+  Length: 17304
 --- !u!114 &-7549739970555532702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +340,32 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 2940
+  Exists: 1
+--- !u!114 &-7461831290319217676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CauldronCooking/CookingStatus
+  m_EditorClassIdentifier: 
+  Name: CookingStatus
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3327701192
+    data2: 1416422183
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Ongoing
+  - Finished
   Exists: 1
 --- !u!114 &-7210150842544809154
 MonoBehaviour:
@@ -287,6 +448,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6807295066531815135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Narration/Voice 2
+  m_EditorClassIdentifier: 
+  Path: event:/Narration/Voice 2
+  Guid:
+    Data1: -2003142288
+    Data2: 1234481650
+    Data3: 650195350
+    Data4: -886902641
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6806580946330089270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,6 +529,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 360
+--- !u!114 &-6496839584449315754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Golems/Water/WaterIdle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Golems/Water/WaterIdle
+  Guid:
+    Data1: -1780259785
+    Data2: 1094894400
+    Data3: -1674385272
+    Data4: 104417337
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 6792
 --- !u!114 &-6356061900925180549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,6 +691,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 450
   Length: 27500
+--- !u!114 &-5778451487862884443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Golems/Water/WaterAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Golems/Water/WaterAttack
+  Guid:
+    Data1: -1345024889
+    Data2: 1336972203
+    Data3: -651151743
+    Data4: 497813758
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5566090447818168025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,6 +773,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5335340956901284119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoType1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoType1
+  Guid:
+    Data1: -412175450
+    Data2: 1311126640
+    Data3: -331299196
+    Data4: 1639160600
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4857680286833619765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,6 +827,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 95
   Length: 17304
+--- !u!114 &-4618943650843648375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Narration/Voice 4
+  m_EditorClassIdentifier: 
+  Path: event:/Narration/Voice 4
+  Guid:
+    Data1: -1421847089
+    Data2: 1105867224
+    Data3: 2065662126
+    Data4: 1038993020
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4477983905588199297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -612,6 +908,61 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 36055
+--- !u!114 &-4217583077847774363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Objects/Cauldron/CauldronCooking
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Objects/Cauldron/CauldronCooking
+  Guid:
+    Data1: -1727856103
+    Data2: 1327794080
+    Data3: -52759659
+    Data4: 1822639247
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7461831290319217676}
+  MinDistance: 1
+  MaxDistance: 450
+  Length: 27500
+--- !u!114 &-4015796821316658098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Golems/Wood/WoodCharge
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Golems/Wood/WoodCharge
+  Guid:
+    Data1: -1574957569
+    Data2: 1340374800
+    Data3: -903515758
+    Data4: -2042270609
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3594125168628110454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -632,6 +983,33 @@ MonoBehaviour:
     Data4: -2020507906
   Banks:
   - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3410353113907019364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Golems/Fire/FireAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Golems/Fire/FireAttack
+  Guid:
+    Data1: -2130837411
+    Data2: 1201083958
+    Data3: 1094569856
+    Data4: -1549590936
+  Banks:
+  - {fileID: 212392448345990153}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -753,6 +1131,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2477089260436859606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoSlapFire
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoSlapFire
+  Guid:
+    Data1: -1124362556
+    Data2: 1269932757
+    Data3: -1704311932
+    Data4: 447980235
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2464297655051887829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -780,6 +1185,276 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 9316
+--- !u!114 &-2306279083888782147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Objects/Crops/CropInteraction
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Objects/Crops/CropInteraction
+  Guid:
+    Data1: 2046499080
+    Data2: 1320775823
+    Data3: -1333264731
+    Data4: 124714646
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1819095613381448734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoSlapHitEnemy
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoSlapHitEnemy
+  Guid:
+    Data1: -243743486
+    Data2: 1270115754
+    Data3: -317139788
+    Data4: 1913141041
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5544
+--- !u!114 &-1651617899192806548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Golems/Stone/StoneCharge
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Golems/Stone/StoneCharge
+  Guid:
+    Data1: 1230631586
+    Data2: 1257274317
+    Data3: 141964208
+    Data4: 1467529828
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-970565662620537448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Objects/Cauldron/CauldronIdle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Objects/Cauldron/CauldronIdle
+  Guid:
+    Data1: 1193926637
+    Data2: 1298017705
+    Data3: -1086277207
+    Data4: 9087478
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 55
+  Length: 7920
+--- !u!114 &-935697707728056872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Golems/Wood/WoodAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Golems/Wood/WoodAttack
+  Guid:
+    Data1: 424647480
+    Data2: 1151833791
+    Data3: 657979543
+    Data4: -1861721717
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-745686674149524553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/MeadowAmbiance
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/MeadowAmbiance
+  Guid:
+    Data1: 1401240630
+    Data2: 1219053943
+    Data3: -127952725
+    Data4: 508042227
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-489596681363311760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/WeaponWake
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/WeaponWake
+  Guid:
+    Data1: -830422651
+    Data2: 1136091425
+    Data3: -1850877523
+    Data4: 297155625
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8016
+--- !u!114 &-489200106024729774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Golems/Stone/StoneAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Golems/Stone/StoneAttack
+  Guid:
+    Data1: -1344492210
+    Data2: 1202611359
+    Data3: -1522058847
+    Data4: 144971515
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-208593814255158106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoType2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoType2
+  Guid:
+    Data1: -877788394
+    Data2: 1150996509
+    Data3: -1725016648
+    Data4: 2086551904
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-123507287318967853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Objects/Crops/CropHarvest
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Objects/Crops/CropHarvest
+  Guid:
+    Data1: -594014927
+    Data2: 1181015098
+    Data3: -1306935379
+    Data4: 333386318
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,57 +1468,56 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -7549739970555532702}
-  - {fileID: 2690339585343514002}
+  - {fileID: 769024709444150785}
+  - {fileID: 212392448345990153}
   EditorEvents:
-  - {fileID: -3220260043952040972}
-  - {fileID: -7210150842544809154}
-  - {fileID: 1280436688795016141}
-  - {fileID: 7313967773702296485}
-  - {fileID: -6182649125500955056}
-  - {fileID: -4477983905588199297}
-  - {fileID: -6673040273890946137}
-  - {fileID: -5784454906605412437}
-  - {fileID: -8526308306276493327}
-  - {fileID: -2848662523031457279}
-  - {fileID: -4370111391082621412}
-  - {fileID: -6237482186818095562}
-  - {fileID: 189813031278888772}
-  - {fileID: 8196024328058826691}
-  - {fileID: 8410402308133256829}
-  - {fileID: -5465290601305420485}
-  - {fileID: -8927205575373770488}
-  - {fileID: 5813617361938218948}
-  - {fileID: 311478322724539241}
-  - {fileID: -4857680286833619765}
-  - {fileID: 5248452163814541185}
-  - {fileID: -6356061900925180549}
-  - {fileID: -6806580946330089270}
-  - {fileID: -7779550831224759045}
-  - {fileID: 334757215955590311}
-  - {fileID: 3847003799674526549}
-  - {fileID: -6982533128289698057}
-  - {fileID: -2464297655051887829}
-  - {fileID: 7645311800917779713}
-  - {fileID: -5566090447818168025}
-  - {fileID: 5272113225028794724}
-  - {fileID: -8072164982803968701}
-  - {fileID: 5034060423833237173}
-  - {fileID: -3594125168628110454}
-  - {fileID: 3303042177172122614}
-  - {fileID: 6170205917273038786}
-  - {fileID: -7058644423077852677}
-  - {fileID: -8265537793952664928}
-  - {fileID: 6104907583504744198}
-  - {fileID: -8105926217724306250}
+  - {fileID: 284175028848239183}
+  - {fileID: -9018248895182362801}
+  - {fileID: -1819095613381448734}
+  - {fileID: -9034997399857877431}
+  - {fileID: -2306279083888782147}
+  - {fileID: 414652733957477751}
+  - {fileID: -208593814255158106}
+  - {fileID: 4613538723579956418}
+  - {fileID: -4217583077847774363}
+  - {fileID: 8397335306146448195}
+  - {fileID: -123507287318967853}
+  - {fileID: 8551057685479322457}
+  - {fileID: -745686674149524553}
+  - {fileID: -6496839584449315754}
+  - {fileID: -935697707728056872}
+  - {fileID: 9202995125423025593}
+  - {fileID: -489200106024729774}
+  - {fileID: -7787730726112004538}
+  - {fileID: -3410353113907019364}
+  - {fileID: -6807295066531815135}
+  - {fileID: -8214702911052885468}
+  - {fileID: -489596681363311760}
+  - {fileID: -5778451487862884443}
+  - {fileID: 273262587679462869}
+  - {fileID: -7681358419363484580}
+  - {fileID: 1841440842800096830}
+  - {fileID: 5324694243839434550}
+  - {fileID: -1651617899192806548}
+  - {fileID: -5335340956901284119}
+  - {fileID: 7011793578529084216}
+  - {fileID: -2477089260436859606}
+  - {fileID: -4618943650843648375}
+  - {fileID: 8545044266148254499}
+  - {fileID: 8603647350129655204}
+  - {fileID: 1962568329680552747}
+  - {fileID: 7542064214098471328}
+  - {fileID: -970565662620537448}
+  - {fileID: 5993561524514399571}
+  - {fileID: -4015796821316658098}
   EditorParameters:
-  - {fileID: -8832090744829655098}
-  - {fileID: -2971804783865992327}
+  - {fileID: 7635196700766439838}
+  - {fileID: 620291184335198270}
   MasterBanks:
-  - {fileID: 2690339585343514002}
+  - {fileID: 212392448345990153}
   StringsBanks:
-  - {fileID: -7549739970555532702}
-  cacheTime: 638557038323357686
+  - {fileID: 769024709444150785}
+  cacheTime: 638557758602458265
   cacheVersion: 131618
 --- !u!114 &189813031278888772
 MonoBehaviour:
@@ -872,6 +1546,78 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &212392448345990153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638557758602419159
+  FileSizes: []
+  Exists: 1
+--- !u!114 &273262587679462869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoExplosiveHit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoExplosiveHit
+  Guid:
+    Data1: 1242822541
+    Data2: 1116379039
+    Data3: 66491019
+    Data4: -1494144510
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &284175028848239183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MainMenu
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MainMenu
+  Guid:
+    Data1: -594366208
+    Data2: 1218668290
+    Data3: -797367622
+    Data4: -58974726
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 69189
 --- !u!114 &311478322724539241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -926,6 +1672,79 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &414652733957477751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/MenuSelect
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/MenuSelect
+  Guid:
+    Data1: -1841213679
+    Data2: 1137782189
+    Data3: -2104620409
+    Data4: 708391925
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &620291184335198270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CookingStatus
+  m_EditorClassIdentifier: 
+  Name: CookingStatus
+  StudioPath: parameter:/CookingStatus
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3327701192
+    data2: 1416422183
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Ongoing
+  - Finished
+  Exists: 1
+--- !u!114 &769024709444150785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638557758602458265
+  FileSizes:
+  - Name: 
+    Value: 2940
+  Exists: 1
 --- !u!114 &1280436688795016141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,6 +1772,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5544
+--- !u!114 &1841440842800096830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Golems/Fire/FireIdle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Golems/Fire/FireIdle
+  Guid:
+    Data1: -524695659
+    Data2: 1254824166
+    Data3: -2118940019
+    Data4: 2132198297
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 12072
+--- !u!114 &1962568329680552747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Narration/Voice 5...
+  m_EditorClassIdentifier: 
+  Path: event:/Narration/Voice 5...
+  Guid:
+    Data1: 1119236074
+    Data2: 1320128141
+    Data3: -748772690
+    Data4: -2020507906
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2690339585343514002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,6 +1898,57 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3993511173251808563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/FootstepsGeneral/holdingCauldron
+  m_EditorClassIdentifier: 
+  Name: holdingCauldron
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1890470045
+    data2: 2873233420
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &4613538723579956418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/MenuSlider
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/MenuSlider
+  Guid:
+    Data1: -98647017
+    Data2: 1295629770
+    Data3: -1193047422
+    Data4: -714896284
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 360
 --- !u!114 &5034060423833237173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,6 +2030,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5324694243839434550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/JungleAmbiance
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/JungleAmbiance
+  Guid:
+    Data1: 1261863830
+    Data2: 1335459719
+    Data3: -1390921556
+    Data4: -2047461124
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5755484061344024613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,6 +2108,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5993561524514399571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/FootstepsGeneral
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/FootstepsGeneral
+  Guid:
+    Data1: 1420447229
+    Data2: 1082051950
+    Data3: 177532560
+    Data4: 281668679
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3993511173251808563}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500
 --- !u!114 &6104907583504744198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1211,6 +2190,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7011793578529084216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Objects/GenericObjectCollision
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Objects/GenericObjectCollision
+  Guid:
+    Data1: -907454800
+    Data2: 1206478271
+    Data3: -1715559254
+    Data4: 1537297323
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7313967773702296485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1238,6 +2244,57 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7542064214098471328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/Reload
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/Reload
+  Guid:
+    Data1: -154290195
+    Data2: 1242172331
+    Data3: 2014826400
+    Data4: -177970873
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 9316
+--- !u!114 &7635196700766439838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/holdingCauldron
+  m_EditorClassIdentifier: 
+  Name: holdingCauldron
+  StudioPath: parameter:/holdingCauldron
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1890470045
+    data2: 2873233420
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &7645311800917779713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1292,6 +2349,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 60
   Length: 6792
+--- !u!114 &8397335306146448195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Narration/Voice 3
+  m_EditorClassIdentifier: 
+  Path: event:/Narration/Voice 3
+  Guid:
+    Data1: 863750948
+    Data2: 1134732003
+    Data3: -853322358
+    Data4: -2060685512
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8410402308133256829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1319,3 +2403,111 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8545044266148254499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Golems/GolemDeath
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Golems/GolemDeath
+  Guid:
+    Data1: 1486930384
+    Data2: 1160575081
+    Data3: -1967023951
+    Data4: 54596397
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8551057685479322457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Golems/Water/WaterCharge
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Golems/Water/WaterCharge
+  Guid:
+    Data1: -1394409420
+    Data2: 1156719453
+    Data3: -1823675775
+    Data4: 1735468790
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8603647350129655204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Golems/Wood/WoodIdle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Golems/Wood/WoodIdle
+  Guid:
+    Data1: 256764129
+    Data2: 1279020594
+    Data3: -1655796813
+    Data4: -121622455
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &9202995125423025593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Level1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Level1
+  Guid:
+    Data1: 1220324430
+    Data2: 1093494627
+    Data3: 726392713
+    Data4: -1682089873
+  Banks:
+  - {fileID: 212392448345990153}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 36055
