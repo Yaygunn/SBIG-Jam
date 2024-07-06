@@ -3,6 +3,14 @@ using UnityEngine;
 
 public static class EventHub 
 {
+    #region Player
+    public static event Action Ev_PlayerHealthChange;
+    public static void PlayerHealthChange()
+    {
+        Ev_PlayerHealthChange?.Invoke();
+    }
+    #endregion
+    
     #region CarrySystem
 
     public static event Action Ev_CloseCarryTexts;

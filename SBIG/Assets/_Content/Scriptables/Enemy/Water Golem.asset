@@ -21,6 +21,6 @@ MonoBehaviour:
   prioritizePlayer: 1
   canBeInterrupted: 0
   baseHealth: 10
-  baseDamage: 2
+  baseDamage: 5
   golemState: 2
   golemType: 3

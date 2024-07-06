@@ -1,3 +1,5 @@
+using Controller.Player;
+using Managers.Global;
 using UnityEngine;
 
 namespace Controller.Enemy.States
@@ -46,14 +48,13 @@ namespace Controller.Enemy.States
 
         protected override void Attack()
         {
-            // ##TODO:
             _enemy.GolemAnimator.SetTrigger(HeadButHash);
             _enemy.SetFaceState(Enums.Golem.EGolemState.ANGRY);
             
-            // Apply damage to target
-            
-            // Temporary move to LeaveGardenState
-            // _enemy.ChangeState(_enemy.StateLeaveGarden);
+            // ##TODO
+            // We need to have a TakeDamage method in both Player and the Crop
+            // But for now lets assume its only enemy
+            GlobalObject.Player.GetComponent<PlayerController>().TakeDamage(_enemy.EnemyConfig.baseDamage);
         }
     }
 }
