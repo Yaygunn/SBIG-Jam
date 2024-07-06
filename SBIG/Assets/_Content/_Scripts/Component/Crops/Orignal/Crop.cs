@@ -17,6 +17,8 @@ namespace Components.Crops
 
         private void Awake()
         {
+            EventHub.Ev_GrowPlants += GrowCrop;
+
             if ( _startGrowt>= _requiredGrowtToChangeState)
             {
                 MakeFruit();
@@ -26,6 +28,10 @@ namespace Components.Crops
                 EndFruit();
             }
         }
+        private void OnDestroy()
+        {
+            EventHub.Ev_GrowPlants -= GrowCrop;
+        }
         public override void GrowCrop()
         {
             currentGrowCycle += _growAmountForTurn;
@@ -33,8 +39,11 @@ namespace Components.Crops
             if (HasFruit)
                 return;
 
-            if (currentGrowCycle < _requiredGrowtToChangeState) 
+            if (currentGrowCycle >= _requiredGrowtToChangeState)
+            {
                 MakeFruit();
+                currentGrowCycle -= _requiredGrowtToChangeState;
+            }
                 
         }
         public override void Harvest()
