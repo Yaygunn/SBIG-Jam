@@ -245,5 +245,12 @@ namespace Controller.Enemy
             yield return new WaitForSeconds(0.1f);
             MeshRenderer.material.SetColor("_Color", Color.white);
         }
+
+        public IEnumerator DestroyAfterTime(float f)
+        {
+            yield return new WaitForSeconds(f);
+            
+            Destroy(gameObject);
+        }
     }   
 }

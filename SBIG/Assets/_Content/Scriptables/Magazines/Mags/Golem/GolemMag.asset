@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: GolemMag
   m_EditorClassIdentifier: 
   <MagName>k__BackingField: Golem
+  MagMaterial: {fileID: 2100000, guid: 12e3b4d9a61697342a7db66fe9a3a656, type: 2}
+  _maxAmmo: 5
   _golemBullet: {fileID: 8743788246640384336, guid: 3d724c2b4942cff4d9b48a01407f1281, type: 3}

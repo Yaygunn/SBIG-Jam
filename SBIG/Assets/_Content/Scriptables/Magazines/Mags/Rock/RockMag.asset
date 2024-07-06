@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: RockMag
   m_EditorClassIdentifier: 
   <MagName>k__BackingField: Rock
+  MagMaterial: {fileID: 2100000, guid: dd9332a5979f50142a38a9ecbdbe45b1, type: 2}
+  _maxAmmo: 5
   _rockBullet: {fileID: 8584552860148516545, guid: 19f7112de9a75084fba309730a57ed58, type: 3}
