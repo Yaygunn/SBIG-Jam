@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: BubbleMag
   m_EditorClassIdentifier: 
   <MagName>k__BackingField: Bubble
-  <MagazineSize>k__BackingField: 5
-  <BulletPrefab>k__BackingField: {fileID: 0}
+  _bubbleBullet: {fileID: 8584552860148516545, guid: 5c70eae002591584397d274836076e90, type: 3}
