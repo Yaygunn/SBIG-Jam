@@ -20,6 +20,7 @@ namespace Controller.Enemy.States
             base.Enter();
 
             lastAttackTime = -attackCooldown;
+            _enemy.NavMeshAgent.velocity = Vector3.zero;
         }
 
         public override void LogicUpdate()
@@ -44,6 +45,13 @@ namespace Controller.Enemy.States
                 lastAttackTime = Time.time;
             }
 
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            
+            _enemy.GolemAnimator.ResetTrigger(HeadButHash);
         }
 
         protected override void Attack()

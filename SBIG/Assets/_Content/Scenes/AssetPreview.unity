@@ -286,6 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fe912dcf5df59f4ea058b21c6363979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hdrSkybox: {fileID: 2100000, guid: 91e33943ee774f247b66236b09aa668d, type: 2}
 --- !u!4 &162606066
 Transform:
   m_ObjectHideFlags: 0
