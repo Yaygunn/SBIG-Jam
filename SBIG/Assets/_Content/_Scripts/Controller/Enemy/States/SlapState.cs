@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Controller.Enemy.States
 {
-    public class SlapState : ActiveState
+    public class SlapState : BusyState
     {
         public SlapState(EnemyController enemy) : base(enemy) {}
         
