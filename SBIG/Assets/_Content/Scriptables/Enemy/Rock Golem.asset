@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Rock Golem
   m_EditorClassIdentifier: 
   enemyName: Rock Golem
-  detectionRange: 25
+  detectionRange: 1000
   attackRange: 2
   attackCooldown: 5
   targetPlayer: 1
-  targetCrops: 1
+  targetCrops: 0
   prioritizePlayer: 1
   canBeInterrupted: 0
   baseHealth: 10

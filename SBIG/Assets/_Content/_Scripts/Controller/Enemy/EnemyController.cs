@@ -26,6 +26,7 @@ namespace Controller.Enemy
         public IdleState StateIdle { get; private set; }
         public ChaseState StateChase { get; private set; }
         public CombatState StateCombat { get; private set; }
+        public EatCropState StateEatCrop { get; private set; }
         public EnterGardenState StateEnterGarden { get; private set; }
         public LeaveGardenState StateLeaveGarden { get; private set; }
         public KnockedBackState StateKnockedBack { get; private set; }
@@ -89,6 +90,7 @@ namespace Controller.Enemy
             StateLeaveGarden = new LeaveGardenState(this);
             StateKnockedBack = new KnockedBackState(this);
             StateSlap = new SlapState(this);
+            StateEatCrop = new EatCropState(this);
             
             // Spawned enemies will default to EnterGardenState
             StateCurrent = StateEnterGarden;

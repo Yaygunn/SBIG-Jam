@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Fire Golem
   m_EditorClassIdentifier: 
   enemyName: Water Golem
-  detectionRange: 35
+  detectionRange: 1000
   attackRange: 5
   attackCooldown: 1.5
   targetPlayer: 1
-  targetCrops: 1
+  targetCrops: 0
   prioritizePlayer: 1
   canBeInterrupted: 0
   baseHealth: 10
