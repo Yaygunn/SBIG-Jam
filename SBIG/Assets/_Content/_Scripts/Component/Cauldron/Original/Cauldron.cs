@@ -1,13 +1,23 @@
 using Components.Cookables;
 using Enums.CookableType;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
+using FMODUnity;
 
 namespace Components.Cauldrons.Original
 {
     public class Cauldron : BaseCauldron
     {
         List<ECookableType> _cookablesInCauldron = new List<ECookableType>();
+        private Animator _animator;
+        readonly private int necesserySize = 3;
+        private string _isCookingBool = "isCooking";
+
+        private void OnEnable()
+        {
+            _animator = GetComponentInChildren<Animator>();
+        }
 
         public override void ThrowInCauldron(BaseCookable cookable) 
         {
@@ -15,9 +25,36 @@ namespace Components.Cauldrons.Original
             cookable.ThrowenToCauldron();
         }
 
-        public override void Cook() 
+        public override void Cook()
         {
-            print("cook is empty fill here");
+            if(_cookablesInCauldron.Count > necesserySize)
+            {
+                _cookablesInCauldron.Clear();
+                StartCoroutine(Cooking());
+            }
+            else
+            {
+                print("Not enough crops in cauldron");
+            }
+        }
+
+        private IEnumerator Cooking()
+        {
+            RuntimeManager.StudioSystem.setParameterByName("CookingStatus", 0);
+            EventHub.CauldronStartCook();
+            _animator.SetBool(_isCookingBool, true);
+ 
+            float cookTime = 3;
+            yield return new WaitForSeconds(cookTime);
+
+            RuntimeManager.StudioSystem.setParameterByName("CookingStatus", 1);
+
+            _animator.SetBool(_isCookingBool, false);
+
+            float cookEndTime = 2;
+            yield return new WaitForSeconds(cookEndTime);
+
+            EventHub.CauldronEndCook();
         }
     }
 }

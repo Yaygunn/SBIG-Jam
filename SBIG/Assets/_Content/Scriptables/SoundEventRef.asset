@@ -61,3 +61,10 @@ MonoBehaviour:
       Data3: 2014826400
       Data4: -177970873
     Path: event:/SFX/FlaskPistol/Reload
+  <CauldronCook>k__BackingField:
+    Guid:
+      Data1: -1727856103
+      Data2: 1327794080
+      Data3: -52759659
+      Data4: 1822639247
+    Path: event:/SFX/Objects/Cauldron/CauldronCooking

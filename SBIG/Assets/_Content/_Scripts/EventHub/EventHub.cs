@@ -32,6 +32,18 @@ public static class EventHub
         Ev_ShowCookInCauldronText?.Invoke(text);
     }
 
+    public static event Action Ev_CauldronStartCook;
+    public static void CauldronStartCook()
+    {
+        Ev_CauldronStartCook?.Invoke();
+    }
+
+    public static event Action Ev_CauldronEndCook;
+    public static void CauldronEndCook()
+    {
+        Ev_CauldronEndCook?.Invoke();
+    }
+
     #endregion
 
     #region Turn

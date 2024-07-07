@@ -28,5 +28,11 @@ namespace Audio.Events
         [field: SerializeField] public EventReference Reload { get; private set; }
 
         #endregion
+
+        #region Craft
+
+        [field: SerializeField] public EventReference CauldronCook { get; private set; }
+
+        #endregion
     }
 }
