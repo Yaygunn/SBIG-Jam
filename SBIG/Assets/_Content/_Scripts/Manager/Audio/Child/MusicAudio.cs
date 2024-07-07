@@ -16,13 +16,17 @@ namespace Audio.Child
         {
             EventHub.Event_StartMenu += OnMenu;
             EventHub.Ev_StartMusic += PlayMusic;
-
+            EventHub.Ev_CraftStart += craft;
+            EventHub.Ev_CombatStart += combat;
         }
 
         public void DeActivate()
         {
             EventHub.Event_StartMenu -= OnMenu;
             EventHub.Ev_StartMusic -= PlayMusic;
+            EventHub.Ev_CraftStart -= craft;
+            EventHub.Ev_CombatStart -= combat;
+
 
             _com.RelaeseInstance(ref _musicInstance);
             _com.RelaeseInstance(ref _ambianceInstance);
@@ -53,6 +57,14 @@ namespace Audio.Child
                 _com.SetInstanceAndPlay(ref _musicInstance, _data.MenuMusic);
                 _com.RelaeseInstance(ref _ambianceInstance);
             }
+        }
+        private void craft()
+        {
+            _com.SetGlobalParameter("Gathering", 0);
+        }
+        private void combat()
+        {
+            _com.SetGlobalParameter("Gathering", 1);
         }
     }
 }
