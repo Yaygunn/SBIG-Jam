@@ -12,7 +12,7 @@ namespace Scriptables.Magazines.Child.RockMag
         {
             base.OnButtonPressed();
             Weapon.Fire(InstantiateBullet(_rockBullet));
-            EndMagazine();
+            ReduceAmmo();
         }
     }   
 }

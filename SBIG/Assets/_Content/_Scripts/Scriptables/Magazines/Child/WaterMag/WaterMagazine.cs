@@ -10,7 +10,7 @@ namespace Scriptables.Magazines.Child.WaterMag
         {
             base.OnButtonPressed();
             Weapon.Fire(InstantiateBullet(_waterBullet));
-            EndMagazine();
+            ReduceAmmo();
         }
     }
 }

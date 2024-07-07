@@ -10,7 +10,7 @@ namespace Scriptables.Magazines.Child.BasketballMag
         {
             base.OnButtonPressed();
             Weapon.Fire(InstantiateBullet(_basketballBullet));
-            EndMagazine();
+            ReduceAmmo();
         }
     }
 }

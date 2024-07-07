@@ -11,7 +11,7 @@ namespace Scriptables.Magazines.Child.BubbleMag
         {
             base.OnButtonPressed();
             Weapon.Fire(InstantiateBullet(_bubbleBullet));
-            EndMagazine();
+            ReduceAmmo();
         }
     }
 }
