@@ -6,6 +6,7 @@ using UnityEngine;
 using FMODUnity;
 using Audio;
 using FMOD.Studio;
+using Managers.UI;
 
 namespace Components.Cauldrons.Original
 {
@@ -43,6 +44,9 @@ namespace Components.Cauldrons.Original
 
         private IEnumerator Cooking()
         {
+            float upDuringCooking = 0.5f;
+            transform.position += new Vector3(0, upDuringCooking, 0);
+            UIManager.Instance.HideCraftUI();
             EventHub.CauldronStartCook();
             _animator.SetBool(_isCookingBool, true);
  
@@ -51,10 +55,12 @@ namespace Components.Cauldrons.Original
 
             _animator.SetBool(_isCookingBool, false);
 
-            float cookEndTime = 2;
+            float cookEndTime = 1.5f;
             yield return new WaitForSeconds(cookEndTime);
 
             EventHub.CauldronEndCook();
+            UIManager.Instance.ShowCraftUI();
+            transform.position += new Vector3(0, -upDuringCooking, 0);
         }
     }
 }

@@ -195,6 +195,26 @@ PrefabInstance:
       propertyPath: _cookingEvent.Guid.Data4
       value: 1822639247
       objectReference: {fileID: 0}
+    - target: {fileID: 8261550031353126887, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8261550031353126887, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8261550031353126887, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8261550031353126887, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8261550031353126887, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

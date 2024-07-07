@@ -24,5 +24,10 @@ namespace Managers.UI
         {
             _craftUI.SetActive(true);
         }
+
+        public void HideCraftUI()
+        {
+            _craftUI.SetActive(false);
+        }
     }
 }
