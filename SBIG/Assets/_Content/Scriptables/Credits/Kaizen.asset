@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7de89b49248f3e8479806c9929524b4b, type: 3}
-  m_Name: Raikenleo
+  m_Name: Kaizen
   m_EditorClassIdentifier: 
-  Position: Game Designer, 3D Artist, Writer
-  Name: Rizwan Javed
+  Position: 2D / 3D artist, UI/UX
+  Name: Oyku Erdenlig
   Flag: {fileID: 21300000, guid: 822119fe5addf11448e0ccc9827859bb, type: 3}
-  ItchProfile: https://renska52.itch.io/
+  ItchProfile: https://kaizenmushin.artstation.com/
