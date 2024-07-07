@@ -15,6 +15,8 @@ namespace Components.Weapons.Original
         public BaseMagazine CurrentMagazine => _currentMagazine;
 
         private bool _isReloading;
+        float reloadTime = 3;
+        float _timer;
 
         private void Start()
         {
@@ -44,20 +46,22 @@ namespace Components.Weapons.Original
 
             _isReloading = true;
             EventHub.ReloadStarted();
-            StartCoroutine(ReloadOver());
         }
-
-        private IEnumerator ReloadOver()
+        private void Update()
         {
-            float reloadTime = 3;
+            if (_isReloading)
+            {
+                _timer += Time.deltaTime;
+                if(_timer > reloadTime)
+                {
+                    _timer = 0;
+                    EquipNewMagazine(ReloadManager.Instance.GetNewMagazine());
 
-            yield return new WaitForSeconds(reloadTime);
+                    EventHub.ReloadFinished();
 
-            EquipNewMagazine(ReloadManager.Instance.GetNewMagazine());
-
-            EventHub.ReloadFinished();
-
-            _isReloading = false;
+                    _isReloading = false;
+                }
+            }
         }
 
         private void EquipCauldronMagazine(BaseMagazine magazine)
