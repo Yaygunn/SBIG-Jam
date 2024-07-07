@@ -21,8 +21,10 @@ public class Prologue : BaseTurn
     private EventInstance SoundInstance;
     float _timer;
     bool targetAchieved;
+    bool _continue;
     public override IEnumerator TurnOperations()
     {
+        _continue = true;
         yield return null;
         EventHub.Ev_CookFail += CookFail;
         UIManager.Instance.ShowCraftUI();
@@ -32,16 +34,18 @@ public class Prologue : BaseTurn
         Cursor.visible = false;
 
         PlayReferance(Dialogue1);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(32);
+        EventHub.ShowPrologueText();
         while (true)
         {
             yield return null;
             if (IsPressed())
                 break;
         }
-                    //close black screen
-        yield return new WaitForSeconds(1);
+        //close black screen
+        EventHub.ClosePrologue();
         InputHandler.Instance.EnableGameplayMod();
+        yield return new WaitForSeconds(1);
 
         PlayReferance(Dialogue2);
         yield return new WaitForSeconds(4);
@@ -49,47 +53,69 @@ public class Prologue : BaseTurn
         targetAchieved = false;
         EventHub.Ev_CropPicked += TargetAction;
         yield return new WaitForSeconds(9);
-        PlayReferance(Dialogue3);
+        if (_continue)
+        {
+            PlayReferance(Dialogue3);
 
-        _timer = 0;
-        
-        while (!targetAchieved)
-        {
-            yield return null;
-            _timer += Time.deltaTime;
-            if (_timer > 40)
+            _timer = 0;
+
+            while (!targetAchieved)
             {
-                PlayReferance(Dialogue3);
-                _timer = 0;
+                yield return null;
+                _timer += Time.deltaTime;
+                if (_timer > 40)
+                {
+                    PlayReferance(Dialogue3);
+                    _timer = 0;
+                }
+                if (!_continue)
+                    break;
             }
-        }
-        EventHub.ShowWeapon(false);
-        targetAchieved = false;
-        EventHub.Ev_CropPicked -= TargetAction;
-        PlayReferance(Dialogue4);
-        EventHub.Ev_ThrowInToCauldron += TargetAction;
-        _timer = 0;
-        while (!targetAchieved)
-        {
-            yield return null;
-            _timer += Time.deltaTime;
-            if (_timer > 40)
+            if (_continue)
             {
+
+
+                EventHub.ShowWeapon(false);
+                targetAchieved = false;
+                EventHub.Ev_CropPicked -= TargetAction;
                 PlayReferance(Dialogue4);
+                EventHub.Ev_ThrowInToCauldron += TargetAction;
                 _timer = 0;
-            }
+                while (!targetAchieved)
+                {
+                    if (!_continue)
+                        break;
+                    yield return null;
+                    _timer += Time.deltaTime;
+                    if (_timer > 40)
+                    {
+                        PlayReferance(Dialogue4);
+                        _timer = 0;
+                    }
 
+                }
+                if (_continue)
+                {
+
+                    PlayReferance(Dialogue5);
+                    targetAchieved = false;
+
+                    while (!targetAchieved)
+                    {
+                        yield return null;
+                        if (!_continue)
+                            break;
+                    }
+                }
+                if (_continue)
+                {
+
+                EventHub.Ev_ThrowInToCauldron -= TargetAction;
+                targetAchieved = false;
+                PlayReferance(Dialogue7);
+                }
+            }
         }
-        PlayReferance(Dialogue5);
-        targetAchieved = false;
-    
-        while(!targetAchieved)
-        {
-            yield return null;
-        }
-        EventHub.Ev_ThrowInToCauldron -= TargetAction;
-        targetAchieved = false;
-        PlayReferance(Dialogue7);
     }
 
     private void TargetAction()
@@ -107,6 +133,7 @@ public class Prologue : BaseTurn
 
     private void CookFail()
     {
+        _continue = false;
         EndTurn();
     }
 
