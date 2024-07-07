@@ -2261,6 +2261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _combatUI: {fileID: 2371953644712484708}
   _craftUI: {fileID: 6479891573127962997}
+  _hdrSkybox: {fileID: 2100000, guid: 91e33943ee774f247b66236b09aa668d, type: 2}
 --- !u!1 &4709713261587202187
 GameObject:
   m_ObjectHideFlags: 0
