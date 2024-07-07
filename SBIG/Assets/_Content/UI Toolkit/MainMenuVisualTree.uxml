@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/_Content/UI%20Toolkit/USS/gameTitle.uss?fileID=7433441132597879392&amp;guid=2473dcf5407e1984395e88a9972ffe13&amp;type=3#gameTitle" />
-    <ui:VisualElement name="MenuContainer" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/MainMenu_Temp.png?fileID=2800000&amp;guid=6fd78bfd39e574c499f2efe9300c588d&amp;type=3#MainMenu_Temp&quot;); position: absolute; left: 0; top: 0; right: 0; bottom: 0; display: flex;">
+    <ui:VisualElement name="MenuContainer" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/Title_page.png?fileID=2800000&amp;guid=235c07258433ff7469610ba57fea9128&amp;type=3#Title_page&quot;); position: absolute; left: 0; top: 0; right: 0; bottom: 0; display: flex; -unity-font: url(&quot;project://database/Assets/_Content/Fonts/Baby%20Doll.otf?fileID=12800000&amp;guid=21fdc991704b1bf4dbb918d4c77eb82c&amp;type=3#Baby Doll&quot;); -unity-font-definition: initial;">
         <ui:VisualElement name="MenuDiv" class="menuDiv" style="flex-grow: 1; margin-left: 200px; width: 600px; margin-top: 0; margin-right: 0; margin-bottom: 50px; flex-direction: column-reverse;">
             <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="QuitButton" class="menuButton" />
             <ui:Button text="Credits" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CreditsButton" class="menuButton" />
@@ -8,7 +8,7 @@
             <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayButton" class="menuButton" style="-unity-font-definition: initial;" />
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement name="SettingsContainer" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/MainMenu_Temp.png?fileID=2800000&amp;guid=6fd78bfd39e574c499f2efe9300c588d&amp;type=3#MainMenu_Temp&quot;); -unity-background-image-tint-color: rgb(33, 11, 34); display: none; -unity-font: url(&quot;project://database/Assets/_Content/Fonts/Baby%20Doll.otf?fileID=12800000&amp;guid=21fdc991704b1bf4dbb918d4c77eb82c&amp;type=3#Baby Doll&quot;); -unity-font-definition: initial;">
+    <ui:VisualElement name="SettingsContainer" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/Title_page.png?fileID=2800000&amp;guid=235c07258433ff7469610ba57fea9128&amp;type=3#Title_page&quot;); -unity-background-image-tint-color: rgb(33, 11, 34); display: none; -unity-font: url(&quot;project://database/Assets/_Content/Fonts/Baby%20Doll.otf?fileID=12800000&amp;guid=21fdc991704b1bf4dbb918d4c77eb82c&amp;type=3#Baby Doll&quot;); -unity-font-definition: initial;">
         <ui:VisualElement name="TitleDiv" style="flex-grow: 1;">
             <ui:Label tabindex="-1" text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ScreenTitle" class="gameTitle" style="margin-bottom: 40px;" />
         </ui:VisualElement>
@@ -70,7 +70,7 @@
         </ui:VisualElement>
         <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BackButtonSettings" class="menuButton backButton" style="margin-top: 20px;" />
     </ui:VisualElement>
-    <ui:VisualElement name="CreditsContainer" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/MainMenu_Temp.png?fileID=2800000&amp;guid=6fd78bfd39e574c499f2efe9300c588d&amp;type=3#MainMenu_Temp&quot;); -unity-background-image-tint-color: rgb(33, 11, 34); position: absolute; left: 0; top: 0; right: 0; bottom: 0; display: none; opacity: 1; flex-direction: row;">
+    <ui:VisualElement name="CreditsContainer" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/Title_page.png?fileID=2800000&amp;guid=235c07258433ff7469610ba57fea9128&amp;type=3#Title_page&quot;); -unity-background-image-tint-color: rgb(33, 11, 34); position: absolute; left: 0; top: 0; right: 0; bottom: 0; display: none; opacity: 1; flex-direction: row;">
         <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BackButtonCredits" class="menuButton backButton" style="margin-top: 0; justify-content: flex-end; height: 100%; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
         <ui:VisualElement name="CreditsScroller" style="flex-grow: 1; width: 800px; height: 100%; align-self: center; justify-content: center;">
             <ui:ListView name="creditsListView" />
