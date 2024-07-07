@@ -170,9 +170,6 @@ MonoBehaviour:
   Banks:
   - Master
   - Master.strings
-  - Music
-  - Narration
-  - SFX
   Scene: MainMenu
 --- !u!1 &1472535110
 GameObject:
