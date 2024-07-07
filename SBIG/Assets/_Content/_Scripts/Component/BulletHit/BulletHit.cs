@@ -1,6 +1,9 @@
 using System.Collections.Generic;
+using Controller.Enemy;
 using Enums.Bullet;
+using Enums.Golem;
 using FMODUnity;
+using Manager.Enemy;
 using Scriptables.Enemy;
 using UnityEngine;
 
@@ -38,7 +41,7 @@ namespace Components.BulletHit
                     waterHit.OnWaterHit(DamageAmount);
                 }
 
-                return;
+                Destroy(gameObject);
             }
             
             if (BulletType == EBulletType.Rock)
@@ -47,6 +50,7 @@ namespace Components.BulletHit
                 {
                     rockHit.OnRockHit(DamageAmount);
                 }
+                Destroy(gameObject);
 
                 return;
             }
@@ -58,7 +62,7 @@ namespace Components.BulletHit
                     Vector3 direction = other.contacts[0].point - transform.position;
                     basketBallHit.OnBasketBallHit(DamageAmount, direction);
                 }
-                
+
                 return;
             }
 
@@ -69,7 +73,8 @@ namespace Components.BulletHit
                     slapHit.OnSlapHit();
                     Destroy(gameObject);
                 }   
-                
+                Destroy(gameObject);
+
                 return;
             }
 
@@ -81,7 +86,12 @@ namespace Components.BulletHit
                     Vector3 direction = other.contacts[0].point - transform.position;
                     golemHit.OnGolemHit(DamageAmount, direction, other.contacts[0].point);
                 }
-                
+                else
+                {
+
+                EnemyController theRock = EnemyManager.Instance.SpawnEnemy(EGolemType.ROCK, other.contacts[0].point);
+                theRock.ChangeState(theRock.StateIdle);
+                }
                 Destroy(gameObject);
             }
         }

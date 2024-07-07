@@ -247,8 +247,7 @@ namespace Controller.Enemy
             hitDirection = direction;
             TakeDamage(damageAmount);
             ChangeState(StateKnockedBack);
-            EnemyController theRock = EnemyManager.Instance.SpawnEnemy(EGolemType.ROCK, spawnPoint);
-            theRock.ChangeState(theRock.StateIdle);
+            
         }
         
         public void OnWaterHit(int damageAmount)

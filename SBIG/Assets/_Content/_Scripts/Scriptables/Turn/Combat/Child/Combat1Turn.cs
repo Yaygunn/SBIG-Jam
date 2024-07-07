@@ -12,6 +12,7 @@ namespace Scriptables.Turn.Combat
             Debug.Log("CombatStart");
             yield return new WaitForSeconds(800);
             EndTurn();
+            Debug.Log("CombatEnd");
         }
     }
 }
