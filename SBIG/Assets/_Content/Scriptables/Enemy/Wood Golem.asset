@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Wood Golem
   m_EditorClassIdentifier: 
   enemyName: Water Golem
-  detectionRange: 20
-  attackRange: 3
-  attackCooldown: 1.5
+  detectionRange: 25
+  attackRange: 5
+  attackCooldown: 2.5
   targetPlayer: 1
   targetCrops: 1
   prioritizePlayer: 1
   canBeInterrupted: 0
   baseHealth: 10
-  baseDamage: 5
+  baseDamage: 10
   golemState: 2
   golemType: 1
