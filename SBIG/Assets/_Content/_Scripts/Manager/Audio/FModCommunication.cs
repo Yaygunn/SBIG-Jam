@@ -74,6 +74,7 @@ namespace Audio
         {
             if (eventInstance.isValid())
             {
+                eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
                 eventInstance.release();
             }
         }
