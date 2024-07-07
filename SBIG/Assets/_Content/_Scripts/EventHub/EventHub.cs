@@ -1,3 +1,4 @@
+using Managers.LevelStart;
 using System;
 using UnityEngine;
 
@@ -108,7 +109,7 @@ public static class EventHub
 
     #endregion
 
-    #region
+    #region Plants
 
     public static event Action Ev_GrowPlants;
     public static void GrowPlant()
@@ -118,4 +119,13 @@ public static class EventHub
 
     #endregion
 
+    #region Audio
+
+    public static event Action<EStartMusic> Ev_StartMusic;
+    public static void StartMusic(EStartMusic musicType)
+    {
+        Ev_StartMusic?.Invoke(musicType);
+    }
+
+    #endregion
 }

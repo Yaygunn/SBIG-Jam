@@ -1,5 +1,6 @@
 using Audio.Events;
 using FMOD.Studio;
+using Managers.LevelStart;
 
 namespace Audio.Child
 {
@@ -14,13 +15,14 @@ namespace Audio.Child
         public void Activate()
         {
             EventHub.Event_StartMenu += OnMenu;
+            EventHub.Ev_StartMusic += PlayMusic;
 
-            _com.SetInstance(ref _musicInstance, _data.Music);
         }
 
         public void DeActivate()
         {
             EventHub.Event_StartMenu -= OnMenu;
+            EventHub.Ev_StartMusic -= PlayMusic;
 
             _com.RelaeseInstance(ref _musicInstance);
         }
@@ -34,8 +36,15 @@ namespace Audio.Child
 
         private void OnMenu()
         {
-            _com.PlayInstanceIfNotPlaying(ref _musicInstance, _data.Music);
-            _com.SetParameter(ref _musicInstance, "Song" , 0);
+            _com.SetInstanceAndPlay(ref _musicInstance, _data.MenuMusic);
+        }
+
+        private void PlayMusic(EStartMusic musicType)
+        {
+            if(musicType == EStartMusic.level)
+                _com.SetInstanceAndPlay(ref _musicInstance, _data.LevelMusic);
+            else
+                _com.SetInstanceAndPlay(ref _musicInstance, _data.MenuMusic);
         }
     }
 }

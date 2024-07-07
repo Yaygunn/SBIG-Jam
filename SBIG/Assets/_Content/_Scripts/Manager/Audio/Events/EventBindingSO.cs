@@ -9,7 +9,9 @@ namespace Audio.Events
     public class EventBindingSO : ScriptableObject
     {
         #region Music
-        [field:SerializeField] public EventReference Music { get; private set; }
+        [field:SerializeField] public EventReference MenuMusic { get; private set; }
+
+        [field:SerializeField] public EventReference LevelMusic { get; private set; }
         #endregion
         
         #region UI
