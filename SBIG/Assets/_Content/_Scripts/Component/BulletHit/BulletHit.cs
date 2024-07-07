@@ -85,6 +85,8 @@ namespace Components.BulletHit
                     _collider.enabled = false; // Safety measure
                     Vector3 direction = other.contacts[0].point - transform.position;
                     golemHit.OnGolemHit(DamageAmount, direction, other.contacts[0].point);
+                    EnemyController theRock = EnemyManager.Instance.SpawnEnemy(EGolemType.ROCK, other.contacts[0].point);
+                    theRock.ChangeState(theRock.StateIdle);
                 }
                 else
                 {
