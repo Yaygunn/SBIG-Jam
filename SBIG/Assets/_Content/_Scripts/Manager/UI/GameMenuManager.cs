@@ -14,6 +14,8 @@ namespace Manager.UI
         public RectTransform PauseMenu;
         public RectTransform SettingsMenu;
         public RectTransform YouDiedMenu;
+        public RectTransform PrologueMenu;
+        public RectTransform PrologueContinueText;
         
         public Button RestartButton;
         public Button QuitButton;
@@ -70,6 +72,8 @@ namespace Manager.UI
         private void OnDisable()
         {
             EventHub.Ev_PlayerDied -= ShowDiedMenu;
+            EventHub.Ev_ShowPrologueText -= ShowPrologueText;
+            EventHub.Ev_ClosePrologue -= ClosePrologue;
         }
 
         private void ShowDiedMenu()
@@ -104,6 +108,8 @@ namespace Manager.UI
             });
             
             EventHub.Ev_PlayerDied += ShowDiedMenu;
+            EventHub.Ev_ShowPrologueText += ShowPrologueText;
+            EventHub.Ev_ClosePrologue += ClosePrologue;
             
             DiedRestartButton.onClick.AddListener(() =>
             {
@@ -170,6 +176,17 @@ namespace Manager.UI
             VolumeSlider.value = AudioManager.Instance.MusicVolume;
             NarratorSlider.value = AudioManager.Instance.NarratorVolume;
             SFXSlider.value = AudioManager.Instance.SfxVolume;
+        }
+
+        private void ShowPrologueText()
+        {
+            PrologueContinueText.gameObject.SetActive(true);
+        }
+
+        private void ClosePrologue()
+        {
+            PrologueContinueText.gameObject.SetActive(false);
+            PrologueMenu.gameObject.SetActive(false);
         }
     } 
 }
