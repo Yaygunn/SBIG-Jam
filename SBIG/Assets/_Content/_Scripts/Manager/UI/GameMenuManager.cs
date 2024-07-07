@@ -22,6 +22,9 @@ namespace Manager.UI
         public Slider NarratorSlider;
         public Slider SFXSlider;
         public Slider MouseSensitivtySlider;
+
+        private bool _settingsOpen;
+        private bool _pauseOpen;
         
         private void Start()
         {
@@ -33,19 +36,20 @@ namespace Manager.UI
             // Yaygun plz don't hate me for this :D
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if (SettingsMenu.gameObject.activeSelf)
-                {
-                    HideSettingsMenu();
-                }
-                else if (PauseMenu.gameObject.activeSelf)
-                {
-                    InputHandler.Instance.EnableGameplayMod();
-                    HidePauseMenu();
-                }
-                else
+                if (!_settingsOpen && !_pauseOpen)
                 {
                     InputHandler.Instance.EnableUIMod();
                     ShowPauseMenu();
+                }
+                else if (_settingsOpen)
+                {
+                    HideSettingsMenu();
+                    ShowPauseMenu();
+                }
+                else if (_pauseOpen)
+                {
+                    InputHandler.Instance.EnableGameplayMod();
+                    HidePauseMenu();
                 }
             }
         }
@@ -100,22 +104,26 @@ namespace Manager.UI
 
         public void ShowPauseMenu()
         {
+            _pauseOpen = true;
             PauseMenu.gameObject.SetActive(true);
         }
         
         public void HidePauseMenu()
         {
+            _pauseOpen = false;
             PauseMenu.gameObject.SetActive(false);
         }
         
         public void ShowSettingsMenu()
         {
+            _settingsOpen = true;
             SettingsMenu.gameObject.SetActive(true);
             LoadSettingsValues();
         }
         
         public void HideSettingsMenu()
         {
+            _settingsOpen = false;
             SettingsMenu.gameObject.SetActive(false);
         }
         
