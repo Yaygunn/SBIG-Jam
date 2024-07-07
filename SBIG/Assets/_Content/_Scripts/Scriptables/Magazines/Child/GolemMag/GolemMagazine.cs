@@ -12,7 +12,7 @@ namespace Scriptables.Magazines.Child.GolemMag
         {
             base.OnButtonPressed();
             Weapon.Fire(InstantiateBullet(_golemBullet));
-            EndMagazine();
+            ReduceAmmo();
         }
     }   
 }

@@ -42,8 +42,15 @@ MonoBehaviour:
     Path: event:/Narration/4Crops2
   Dialogue5:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1119236074
+      Data2: 1320128141
+      Data3: -748772690
+      Data4: -2020507906
+    Path: event:/Narration/5Crops3
+  Dialogue7:
+    Guid:
+      Data1: -1595951292
+      Data2: 1152390941
+      Data3: -2051476588
+      Data4: -1383872521
+    Path: event:/Narration/7Crops5
