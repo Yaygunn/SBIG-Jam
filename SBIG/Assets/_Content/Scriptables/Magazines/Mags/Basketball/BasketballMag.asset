@@ -14,5 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MagName>k__BackingField: Basketball
   MagMaterial: {fileID: 2100000, guid: df03c38db6a49374a84b9e40355fbefe, type: 2}
+  <FireSoundEvent>k__BackingField:
+    Guid:
+      Data1: -290450256
+      Data2: 1306083494
+      Data3: -927318086
+      Data4: 295177690
+    Path: event:/SFX/FlaskPistol/AmmoFire/AmmoType3
   _maxAmmo: 5
   _basketballBullet: {fileID: 8743788246640384336, guid: 988c8fa1aa5a2604ebf3f3691546ac36, type: 3}

@@ -1,4 +1,5 @@
 using Components.Weapons;
+using FMODUnity;
 using System;
 using UnityEngine;
 using YInput;
@@ -9,6 +10,7 @@ namespace Scriptables.Magazines
     {
         [field:SerializeField] public string MagName { get; private set; }
         [field: SerializeField] public Material MagMaterial;
+        [field: SerializeField] public EventReference FireSoundEvent {  get; private set; }
         protected bool IsMagazineOver;
         protected Action EndAction { get; private set; }
         protected BaseWeapon Weapon { get; private set; }

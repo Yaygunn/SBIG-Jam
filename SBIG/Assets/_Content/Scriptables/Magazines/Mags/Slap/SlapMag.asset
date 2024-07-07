@@ -14,5 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MagName>k__BackingField: Slap
   MagMaterial: {fileID: 2100000, guid: 62139d98437fd5f4188c0cc7d9c3262c, type: 2}
+  <FireSoundEvent>k__BackingField:
+    Guid:
+      Data1: -1124362556
+      Data2: 1269932757
+      Data3: -1704311932
+      Data4: 447980235
+    Path: event:/SFX/FlaskPistol/AmmoFire/AmmoSlapFire
   _maxAmmo: 5
   _slapBullet: {fileID: 8584552860148516545, guid: 881e0f7e9883ba8488a1bf5ee865ee17, type: 3}

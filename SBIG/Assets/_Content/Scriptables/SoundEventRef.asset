@@ -54,3 +54,10 @@ MonoBehaviour:
       Data3: -1193047422
       Data4: -714896284
     Path: event:/SFX/UI/MenuSlider
+  <Reload>k__BackingField:
+    Guid:
+      Data1: -154290195
+      Data2: 1242172331
+      Data3: 2014826400
+      Data4: -177970873
+    Path: event:/SFX/FlaskPistol/Reload
