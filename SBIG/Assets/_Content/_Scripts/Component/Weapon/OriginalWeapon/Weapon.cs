@@ -33,6 +33,7 @@ namespace Components.Weapons.Original
             else if (inputState.IsPressed)
             {
                 EventHub.NoAmmo();
+                EventHub.MagazineEnded();
             }
         }
 

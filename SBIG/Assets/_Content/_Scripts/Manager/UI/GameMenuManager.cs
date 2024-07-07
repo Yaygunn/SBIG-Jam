@@ -87,7 +87,7 @@ namespace Manager.UI
         {
             RestartButton.onClick.AddListener(() =>
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene("GameLevel");
             });
             
             QuitButton.onClick.AddListener(() =>
