@@ -68,3 +68,24 @@ MonoBehaviour:
       Data3: -52759659
       Data4: 1822639247
     Path: event:/SFX/Objects/Cauldron/CauldronCooking
+  <CropPicked>k__BackingField:
+    Guid:
+      Data1: 2046499080
+      Data2: 1320775823
+      Data3: -1333264731
+      Data4: 124714646
+    Path: event:/SFX/Objects/Crops/CropInteraction
+  <CropInToCauldron>k__BackingField:
+    Guid:
+      Data1: 385281150
+      Data2: 1259634266
+      Data3: 1570517439
+      Data4: -2095954635
+    Path: event:/SFX/Objects/Crops/CropIntoCauldron
+  <CookFail>k__BackingField:
+    Guid:
+      Data1: 2031011992
+      Data2: 1179657723
+      Data3: 8589493
+      Data4: 2104217516
+    Path: event:/SFX/Objects/Cauldron/CookingFail
