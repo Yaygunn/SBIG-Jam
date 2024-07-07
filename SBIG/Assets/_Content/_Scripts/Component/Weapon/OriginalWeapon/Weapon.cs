@@ -2,6 +2,7 @@ using Components.BulletMove;
 using Managers.Magazines;
 using Managers.MainCamera;
 using Scriptables.Magazines;
+using System.Collections;
 using UnityEngine;
 using YInput;
 
@@ -11,6 +12,8 @@ namespace Components.Weapons.Original
     {
         private BaseMagazine _currentMagazine;
         public BaseMagazine CurrentMagazine => _currentMagazine;
+
+        private bool _isReloading;
 
         private void Start()
         {
@@ -27,9 +30,22 @@ namespace Components.Weapons.Original
 
         public override void Reload()
         {
+            if(_isReloading) 
+                return;
+
+            _isReloading = true;
+            StartCoroutine(ReloadOver());
+        }
+
+        private IEnumerator ReloadOver()
+        {
+            float reloadTime = 3;
+            yield return new WaitForSeconds(reloadTime);
             EquipNewMagazine(ReloadManager.Instance.GetNewMagazine());
-            
+
             EventHub.ReloadFinished();
+
+            _isReloading = false;
         }
 
         private void EquipCauldronMagazine(BaseMagazine magazine)
