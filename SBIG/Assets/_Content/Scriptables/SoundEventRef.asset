@@ -12,13 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 860a13d05e9adac498d7037dcc25852e, type: 3}
   m_Name: SoundEventRef
   m_EditorClassIdentifier: 
-  <Music>k__BackingField:
+  <MenuMusic>k__BackingField:
     Guid:
       Data1: -594366208
       Data2: 1218668290
       Data3: -797367622
       Data4: -58974726
     Path: event:/Music/MainMenu
+  <LevelMusic>k__BackingField:
+    Guid:
+      Data1: 1220324430
+      Data2: 1093494627
+      Data3: 726392713
+      Data4: -1682089873
+    Path: event:/Music/Level1
+  <Ambiance>k__BackingField:
+    Guid:
+      Data1: 1261863830
+      Data2: 1335459719
+      Data3: -1390921556
+      Data4: -2047461124
+    Path: event:/Ambiance/LevelAmbiance
   <UIHover>k__BackingField:
     Guid:
       Data1: -1841213679

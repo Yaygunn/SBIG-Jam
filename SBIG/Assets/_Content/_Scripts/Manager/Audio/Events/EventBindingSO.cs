@@ -12,6 +12,9 @@ namespace Audio.Events
         [field:SerializeField] public EventReference MenuMusic { get; private set; }
 
         [field:SerializeField] public EventReference LevelMusic { get; private set; }
+
+        [field:SerializeField] public EventReference Ambiance { get; private set; }
+        
         #endregion
         
         #region UI

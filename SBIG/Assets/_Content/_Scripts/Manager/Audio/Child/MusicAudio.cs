@@ -25,6 +25,7 @@ namespace Audio.Child
             EventHub.Ev_StartMusic -= PlayMusic;
 
             _com.RelaeseInstance(ref _musicInstance);
+            _com.RelaeseInstance(ref _ambianceInstance);
         }
         
         private FModCommunication _com { get; }
@@ -33,6 +34,7 @@ namespace Audio.Child
 
 
         EventInstance _musicInstance;
+        EventInstance _ambianceInstance;
 
         private void OnMenu()
         {
@@ -41,10 +43,16 @@ namespace Audio.Child
 
         private void PlayMusic(EStartMusic musicType)
         {
-            if(musicType == EStartMusic.level)
+            if (musicType == EStartMusic.level)
+            {
                 _com.SetInstanceAndPlay(ref _musicInstance, _data.LevelMusic);
+                _com.SetInstanceAndPlay(ref _ambianceInstance, _data.Ambiance);
+            }
             else
+            {
                 _com.SetInstanceAndPlay(ref _musicInstance, _data.MenuMusic);
+                _com.RelaeseInstance(ref _ambianceInstance);
+            }
         }
     }
 }

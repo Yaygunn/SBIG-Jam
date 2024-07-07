@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8016
+--- !u!114 &-8875312107632669572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoFire/AmmoType2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoFire/AmmoType2
+  Guid:
+    Data1: -877788394
+    Data2: 1150996509
+    Data3: -1725016648
+    Data4: 2086551904
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8832090744829655098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +210,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 60
   Length: 0
+--- !u!114 &-8079466144811153438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoHits/AmmoHit 4
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoHits/AmmoHit 4
+  Guid:
+    Data1: -139659223
+    Data2: 1331567175
+    Data3: -813908311
+    Data4: 156883522
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 400
+  Length: 0
 --- !u!114 &-7854468542161103066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,10 +333,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638558935125142068
+  lastModified: 638559348261115827
   FileSizes:
   - Name: 
-    Value: 3666
+    Value: 3940
   Exists: 1
 --- !u!114 &-7210150842544809154
 MonoBehaviour:
@@ -365,33 +419,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 60
   Length: 11328
---- !u!114 &-6806580946330089270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/FlaskPistol/AmmoType1
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/FlaskPistol/AmmoType1
-  Guid:
-    Data1: -412175450
-    Data2: 1311126640
-    Data3: -331299196
-    Data4: 1639160600
-  Banks:
-  - {fileID: 2690339585343514002}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-6673040273890946137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,6 +581,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 450
   Length: 27500
+--- !u!114 &-5740269556056914521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoHits/AmmoHit 5
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoHits/AmmoHit 5
+  Guid:
+    Data1: 1828792088
+    Data2: 1231587767
+    Data3: 1634780850
+    Data4: 783681294
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 400
+  Length: 0
 --- !u!114 &-5566090447818168025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,33 +636,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1500
---- !u!114 &-4857680286833619765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambiance/Witch'sHut
-  m_EditorClassIdentifier: 
-  Path: event:/Ambiance/Witch'sHut
-  Guid:
-    Data1: 58096789
-    Data2: 1141555817
-    Data3: 620657029
-    Data4: 2107375775
-  Banks:
-  - {fileID: 2690339585343514002}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 95
-  Length: 17304
 --- !u!114 &-4518729911613517211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,33 +660,6 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &-4477983905588199297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/FlaskPistol/AmmoType2
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/FlaskPistol/AmmoType2
-  Guid:
-    Data1: -877788394
-    Data2: 1150996509
-    Data3: -1725016648
-    Data4: 2086551904
-  Banks:
-  - {fileID: 2690339585343514002}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-4370111391082621412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,6 +716,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3476925257883365948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoHits/AmmoSlapHitEnemy
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoHits/AmmoSlapHitEnemy
+  Guid:
+    Data1: -243743486
+    Data2: 1270115754
+    Data3: -317139788
+    Data4: 1913141041
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5544
 --- !u!114 &-3220260043952040972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -881,6 +908,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 60
   Length: 0
+--- !u!114 &-2761001256992587654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoFire/AmmoSlapFire
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoFire/AmmoSlapFire
+  Guid:
+    Data1: -1124362556
+    Data2: 1269932757
+    Data3: -1704311932
+    Data4: 447980235
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2464297655051887829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -908,6 +962,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 9316
+--- !u!114 &-1679615368924103636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoFire/AmmoType7
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoFire/AmmoType7
+  Guid:
+    Data1: 721923324
+    Data2: 1111010719
+    Data3: 1088657555
+    Data4: 456142552
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1603407050660666978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1041,6 +1122,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-314064271079601011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoFire/AmmoType4
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoFire/AmmoType4
+  Guid:
+    Data1: -2035546155
+    Data2: 1094316695
+    Data3: -1532511332
+    Data4: 1408549565
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1059,10 +1167,8 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -3220260043952040972}
   - {fileID: -7210150842544809154}
-  - {fileID: 1280436688795016141}
   - {fileID: 7313967773702296485}
   - {fileID: -6182649125500955056}
-  - {fileID: -4477983905588199297}
   - {fileID: -6673040273890946137}
   - {fileID: -5784454906605412437}
   - {fileID: -2848662523031457279}
@@ -1072,12 +1178,8 @@ MonoBehaviour:
   - {fileID: 8410402308133256829}
   - {fileID: -8927205575373770488}
   - {fileID: 5813617361938218948}
-  - {fileID: 311478322724539241}
-  - {fileID: -4857680286833619765}
   - {fileID: 5248452163814541185}
-  - {fileID: -6806580946330089270}
   - {fileID: -7779550831224759045}
-  - {fileID: 334757215955590311}
   - {fileID: 3847003799674526549}
   - {fileID: -6982533128289698057}
   - {fileID: -2464297655051887829}
@@ -1109,6 +1211,20 @@ MonoBehaviour:
   - {fileID: 7326286805262733955}
   - {fileID: 5076202487594559298}
   - {fileID: 8486035814485004517}
+  - {fileID: -3476925257883365948}
+  - {fileID: 6872379086666653835}
+  - {fileID: -8875312107632669572}
+  - {fileID: -5740269556056914521}
+  - {fileID: 283248753000130379}
+  - {fileID: -8079466144811153438}
+  - {fileID: 5615343947606504432}
+  - {fileID: 3748294246433400887}
+  - {fileID: 8951032782434928145}
+  - {fileID: 5494046511255461233}
+  - {fileID: 7942153388551041387}
+  - {fileID: -2761001256992587654}
+  - {fileID: -314064271079601011}
+  - {fileID: -1679615368924103636}
   EditorParameters:
   - {fileID: -8832090744829655098}
   - {fileID: -2971804783865992327}
@@ -1120,9 +1236,9 @@ MonoBehaviour:
   - {fileID: 2690339585343514002}
   StringsBanks:
   - {fileID: -7549739970555532702}
-  cacheTime: 638558935125142068
+  cacheTime: 638559348261115827
   cacheVersion: 131618
---- !u!114 &311478322724539241
+--- !u!114 &283248753000130379
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1132,14 +1248,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/FlaskPistol/AmmoExplosiveHit
+  m_Name: event:/SFX/FlaskPistol/AmmoFire/AmmoType5
   m_EditorClassIdentifier: 
-  Path: event:/SFX/FlaskPistol/AmmoExplosiveHit
+  Path: event:/SFX/FlaskPistol/AmmoFire/AmmoType5
   Guid:
-    Data1: 1242822541
-    Data2: 1116379039
-    Data3: 66491019
-    Data4: -1494144510
+    Data1: -1918598107
+    Data2: 1207883460
+    Data3: 1140508090
+    Data4: -55590944
   Banks:
   - {fileID: 2690339585343514002}
   IsStream: 0
@@ -1149,60 +1265,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &334757215955590311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/FlaskPistol/AmmoSlapFire
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/FlaskPistol/AmmoSlapFire
-  Guid:
-    Data1: -1124362556
-    Data2: 1269932757
-    Data3: -1704311932
-    Data4: 447980235
-  Banks:
-  - {fileID: 2690339585343514002}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &1280436688795016141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/FlaskPistol/AmmoSlapHitEnemy
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/FlaskPistol/AmmoSlapHitEnemy
-  Guid:
-    Data1: -243743486
-    Data2: 1270115754
-    Data3: -317139788
-    Data4: 1913141041
-  Banks:
-  - {fileID: 2690339585343514002}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 5544
 --- !u!114 &2690339585343514002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1218,7 +1280,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638558935125086918
+  lastModified: 638559348261090277
   FileSizes: []
   Exists: 1
 --- !u!114 &3303042177172122614
@@ -1247,6 +1309,33 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 60
+  Length: 0
+--- !u!114 &3748294246433400887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoHits/AmmoHit 2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoHits/AmmoHit 2
+  Guid:
+    Data1: 1130244724
+    Data2: 1335574363
+    Data3: -727670635
+    Data4: 1124193338
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 400
   Length: 0
 --- !u!114 &3847003799674526549
 MonoBehaviour:
@@ -1436,6 +1525,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 60
   Length: 12072
+--- !u!114 &5494046511255461233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoFire/AmmoType3
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoFire/AmmoType3
+  Guid:
+    Data1: -290450256
+    Data2: 1306083494
+    Data3: -927318086
+    Data4: 295177690
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5615343947606504432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoHits/AmmoHit 7
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoHits/AmmoHit 7
+  Guid:
+    Data1: -2041381011
+    Data2: 1322107664
+    Data3: -636863345
+    Data4: -1547118159
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 400
+  Length: 0
 --- !u!114 &5651017679790082278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1623,6 +1766,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 32160
+--- !u!114 &6872379086666653835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoHits/AmmoHit 6
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoHits/AmmoHit 6
+  Guid:
+    Data1: 1284171285
+    Data2: 1277565255
+    Data3: -549587793
+    Data4: -1411408276
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 400
+  Length: 0
 --- !u!114 &7313967773702296485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1731,6 +1901,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 55
   Length: 7920
+--- !u!114 &7942153388551041387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoHits/AmmoHit 3
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoHits/AmmoHit 3
+  Guid:
+    Data1: -1186760002
+    Data2: 1281323581
+    Data3: 730582718
+    Data4: -2112355569
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 400
+  Length: 0
 --- !u!114 &8172049824727987935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1863,3 +2060,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &8951032782434928145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/AmmoFire/AmmoType6
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/AmmoFire/AmmoType6
+  Guid:
+    Data1: 1109974164
+    Data2: 1337416651
+    Data3: 1293364118
+    Data4: 362041735
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
