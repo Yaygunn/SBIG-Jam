@@ -1,3 +1,4 @@
+using Components.BulletHit;
 using Components.Carry;
 using Components.Move;
 using Components.Rotate;
@@ -7,7 +8,7 @@ using UnityEngine;
 
 namespace Controller.Player
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : MonoBehaviour, IBasketBallHit
     {
         #region States
         public CombatState StateCombat { get; private set; }
@@ -69,6 +70,11 @@ namespace Controller.Player
         {
             PlayerHealth -= damage;
             EventHub.PlayerHealthChange();
+        }
+
+        public void OnBasketBallHit(int damageAmount, Vector3 direction)
+        {
+            TakeDamage(damageAmount);
         }
     }
 }

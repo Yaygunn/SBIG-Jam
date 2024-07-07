@@ -164,53 +164,9 @@ namespace Controller.Enemy
             HandleChangeTexture();
         }
 
-        public void OnWaterHit(int damageAmount)
-        {
-            if (EnemyConfig.golemType == EGolemType.WOOD || EnemyConfig.golemType == EGolemType.WATER)
-            {
-                transform.localScale += new Vector3(0.5f, 0.5f, 0.5f);
-                
-                TakeDamage(damageAmount);
-            }
-            else if (EnemyConfig.golemType == EGolemType.FIRE)
-            {
-                TakeDamage(damageAmount * 2);
-            }
-            else if (EnemyConfig.golemType == EGolemType.ROCK)
-            {
-                SetFaceState(EGolemState.HUNGRY);
-            }
-        }
-        
-        public void OnBasketBallHit(int damageAmount, Vector3 direction)
-        {
-            hitDirection = direction;
-            TakeDamage(damageAmount, false);
-            ChangeState(StateKnockedBack);
-        }
-
-        public void OnRockHit(int damageAmount)
-        {
-            TakeDamage(damageAmount);
-        }
-
         public void TriggerSlapSequence()
         {
             ChangeState(StateSlap);
-        }
-        
-        public void OnSlapHit()
-        {
-            EventHub.SlapHit();
-        }
-        
-        public void OnGolemHit(int damageAmount, Vector3 direction, Vector3 spawnPoint)
-        {
-            hitDirection = direction;
-            TakeDamage(damageAmount);
-            ChangeState(StateKnockedBack);
-            EnemyController theRock = EnemyManager.Instance.SpawnEnemy(EGolemType.ROCK, spawnPoint);
-            theRock.ChangeState(theRock.StateIdle);
         }
 
         private void SetHealth(int amount)
@@ -252,5 +208,51 @@ namespace Controller.Enemy
             
             Destroy(gameObject);
         }
+        
+        #region On Hit Effects
+        public void OnSlapHit()
+        {
+            EventHub.SlapHit();
+        }
+        
+        public void OnGolemHit(int damageAmount, Vector3 direction, Vector3 spawnPoint)
+        {
+            hitDirection = direction;
+            TakeDamage(damageAmount);
+            ChangeState(StateKnockedBack);
+            EnemyController theRock = EnemyManager.Instance.SpawnEnemy(EGolemType.ROCK, spawnPoint);
+            theRock.ChangeState(theRock.StateIdle);
+        }
+        
+        public void OnWaterHit(int damageAmount)
+        {
+            if (EnemyConfig.golemType == EGolemType.WOOD || EnemyConfig.golemType == EGolemType.WATER)
+            {
+                transform.localScale += new Vector3(0.5f, 0.5f, 0.5f);
+                
+                TakeDamage(damageAmount);
+            }
+            else if (EnemyConfig.golemType == EGolemType.FIRE)
+            {
+                TakeDamage(damageAmount * 2);
+            }
+            else if (EnemyConfig.golemType == EGolemType.ROCK)
+            {
+                SetFaceState(EGolemState.HUNGRY);
+            }
+        }
+        
+        public void OnBasketBallHit(int damageAmount, Vector3 direction)
+        {
+            hitDirection = direction;
+            TakeDamage(damageAmount, false);
+            ChangeState(StateKnockedBack);
+        }
+
+        public void OnRockHit(int damageAmount)
+        {
+            TakeDamage(damageAmount);
+        }
+        #endregion
     }   
 }
