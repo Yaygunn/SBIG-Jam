@@ -31,7 +31,6 @@ namespace Components.BulletMove.Basketball
                 return;
             }
             
-            Debug.Log("OnCollisionEnter BasketballBulletMovement.cs");
             if (_bounceCount >= maxBounces)
             {
                 Destroy(gameObject);
