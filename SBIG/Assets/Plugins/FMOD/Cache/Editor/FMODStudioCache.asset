@@ -333,10 +333,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638559581314906103
+  lastModified: 638559811792853422
   FileSizes:
   - Name: 
-    Value: 4044
+    Value: 4136
   Exists: 1
 --- !u!114 &-7210150842544809154
 MonoBehaviour:
@@ -364,7 +364,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 83076
+  Length: 107112
 --- !u!114 &-7058644423077852677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,7 +686,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 55
-  Length: 816
+  Length: 828
 --- !u!114 &-4370111391082621412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1043,6 +1043,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1417575017971034112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/MagazineEmpty
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/MagazineEmpty
+  Guid:
+    Data1: 1984767976
+    Data2: 1150573905
+    Data3: -532231014
+    Data4: -963196550
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1308994494978642776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1148,7 +1175,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 6686
 --- !u!114 &-314064271079601011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1254,6 +1281,8 @@ MonoBehaviour:
   - {fileID: -1679615368924103636}
   - {fileID: 4406025722526108689}
   - {fileID: -4488917064507480301}
+  - {fileID: 6152227734359727392}
+  - {fileID: -1417575017971034112}
   EditorParameters:
   - {fileID: -8832090744829655098}
   - {fileID: -2971804783865992327}
@@ -1265,7 +1294,7 @@ MonoBehaviour:
   - {fileID: 2690339585343514002}
   StringsBanks:
   - {fileID: -7549739970555532702}
-  cacheTime: 638559581314906103
+  cacheTime: 638559811792853422
   cacheVersion: 131618
 --- !u!114 &283248753000130379
 MonoBehaviour:
@@ -1293,7 +1322,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1248
 --- !u!114 &2690339585343514002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1309,7 +1338,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638559581314860861
+  lastModified: 638559811792818066
   FileSizes: []
   Exists: 1
 --- !u!114 &3303042177172122614
@@ -1739,6 +1768,33 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 60
+  Length: 0
+--- !u!114 &6152227734359727392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FlaskPistol/MagazineBlank
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FlaskPistol/MagazineBlank
+  Guid:
+    Data1: 1710258870
+    Data2: 1264586542
+    Data3: 1972086178
+    Data4: -470493279
+  Banks:
+  - {fileID: 2690339585343514002}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
   Length: 0
 --- !u!114 &6170205917273038786
 MonoBehaviour:

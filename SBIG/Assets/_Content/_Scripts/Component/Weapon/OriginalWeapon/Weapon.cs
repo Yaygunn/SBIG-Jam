@@ -26,7 +26,14 @@ namespace Components.Weapons.Original
         }
         public override void SendFireInput(InputState inputState)
         {
-            _currentMagazine?.LogicTick(inputState);
+            if(_currentMagazine != null)
+            {
+                _currentMagazine.LogicTick(inputState);
+            }
+            else if (inputState.IsPressed)
+            {
+                EventHub.NoAmmo();
+            }
         }
 
         public override void Reload()

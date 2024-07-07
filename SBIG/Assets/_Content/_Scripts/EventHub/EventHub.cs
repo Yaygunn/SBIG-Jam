@@ -134,6 +134,12 @@ public static class EventHub
         Ev_Slapped?.Invoke();
     }
 
+    public static event Action Ev_NoAmmo;
+    public static void NoAmmo()
+    {
+        Ev_NoAmmo?.Invoke();
+    }
+
     #endregion
 
     #region Menu

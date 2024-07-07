@@ -89,3 +89,10 @@ MonoBehaviour:
       Data3: 8589493
       Data4: 2104217516
     Path: event:/SFX/Objects/Cauldron/CookingFail
+  <NoAmmo>k__BackingField:
+    Guid:
+      Data1: 1984767976
+      Data2: 1150573905
+      Data3: -532231014
+      Data4: -963196550
+    Path: event:/SFX/FlaskPistol/MagazineEmpty

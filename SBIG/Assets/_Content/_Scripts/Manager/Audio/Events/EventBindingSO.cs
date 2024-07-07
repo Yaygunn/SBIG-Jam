@@ -38,6 +38,7 @@ namespace Audio.Events
         [field: SerializeField] public EventReference CropInToCauldron { get; private set; }
 
         [field: SerializeField] public EventReference CookFail{ get; private set; }
+        [field: SerializeField] public EventReference NoAmmo{ get; private set; }
 
         #endregion
     }
