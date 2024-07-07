@@ -11,6 +11,8 @@ namespace Scriptables.Turn.Craft.Child
         [SerializeField] private string _text;
         public bool _continue;
         public static Craft1 Instance;
+        float timer;
+        float necesseryTime = 20;
         public override IEnumerator TurnOperations()
         {
             Instance = this;
@@ -18,10 +20,14 @@ namespace Scriptables.Turn.Craft.Child
             PlayerController player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
             player.ChangeState(player.StateCraft);
             _continue = true;
+            timer = 0;
             while (_continue)
             {
                 yield return null;
                 EnemyManager.Instance.EndAndFlee();
+                timer += Time.deltaTime;
+                if (timer > necesseryTime)
+                    break;
             }
 
             EndTurn();
