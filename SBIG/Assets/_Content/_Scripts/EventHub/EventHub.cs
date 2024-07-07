@@ -203,4 +203,19 @@ public static class EventHub
         Ev_EnemyEndAndKill?.Invoke();
     }
     #endregion
+    
+    #region Prologue
+    public static event Action Ev_ShowPrologueText;
+    public static void ShowPrologueText()
+    {
+        Ev_ShowPrologueText?.Invoke();
+    }
+    
+    public static event Action Ev_ClosePrologue;
+    public static void ClosePrologue()
+    {
+        Ev_ClosePrologue?.Invoke();
+    }
+    
+    #endregion
 }
