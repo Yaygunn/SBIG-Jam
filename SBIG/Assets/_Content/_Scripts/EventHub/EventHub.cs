@@ -61,7 +61,13 @@ public static class EventHub
     {
         Ev_SlapHit?.Invoke();
     }
-    
+
+    public static event Action Ev_ReloadStarted;
+    public static void ReloadStarted()
+    {
+        Ev_ReloadStarted?.Invoke();
+    }
+
     public static event Action Ev_ReloadFinished;
     public static void ReloadFinished()
     {
@@ -128,4 +134,5 @@ public static class EventHub
     }
 
     #endregion
+
 }

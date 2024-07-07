@@ -34,13 +34,16 @@ namespace Components.Weapons.Original
                 return;
 
             _isReloading = true;
+            EventHub.ReloadStarted();
             StartCoroutine(ReloadOver());
         }
 
         private IEnumerator ReloadOver()
         {
             float reloadTime = 3;
+
             yield return new WaitForSeconds(reloadTime);
+
             EquipNewMagazine(ReloadManager.Instance.GetNewMagazine());
 
             EventHub.ReloadFinished();

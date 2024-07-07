@@ -14,6 +14,8 @@ namespace Manager.Audio
         private FModCommunication _fmodCommunication;
         private MusicAudio _musicAudio;
         private UIAudio _uiAudio;
+        private CombatAudio _combatAudio;
+        private CraftAudio _craftAudio;
         
         #region Volume Controls
 
@@ -65,13 +67,18 @@ namespace Manager.Audio
         private void Initialize()
         {
             _fmodCommunication = new FModCommunication();
+
             _musicAudio = new MusicAudio(_fmodCommunication, _eventBindingSO);
             _uiAudio = new UIAudio(_fmodCommunication, _eventBindingSO);
+            _combatAudio = new CombatAudio(_fmodCommunication, _eventBindingSO);
+            _craftAudio = new CraftAudio(_fmodCommunication, _eventBindingSO);
 
             RegisterAudioEvents();
             
             _musicAudio.Activate();
             _uiAudio.Activate();
+            _combatAudio.Activate();
+            _craftAudio.Activate();
             
             // Fetch the current volume settings from FMOD
 

@@ -22,5 +22,11 @@ namespace Audio.Events
         [field: SerializeField] public EventReference UIClick { get; private set; }
         [field: SerializeField] public EventReference UISlider { get; private set; }
         #endregion
-    }   
+
+        #region Weapon
+
+        [field: SerializeField] public EventReference Reload { get; private set; }
+
+        #endregion
+    }
 }
