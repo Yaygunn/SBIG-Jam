@@ -1,5 +1,6 @@
 using Controller.Player;
 using Managers.Global;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Temporary_QuitGame : MonoBehaviour
@@ -20,6 +21,7 @@ public class Temporary_QuitGame : MonoBehaviour
     
     private void OnDestroy()
     {
+        _hdrSkybox.SetColor("_Tint", new Color(0.3294118f, 0.3882353f, 0.6745098f));
         EventHub.Ev_PlayerHealthChange -= OnPlayerHealthChange;
     }
 
