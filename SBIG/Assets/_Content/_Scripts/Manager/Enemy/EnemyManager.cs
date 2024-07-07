@@ -11,6 +11,7 @@ namespace Manager.Enemy
         public static EnemyManager Instance { get; private set; }
         public GameObject EnemyPrefab;
         public GameObject MiniEnemyPrefab;
+        public List<Transform> SpawnLocations = new List<Transform>();
         
         public List<EnemyDataPair> EnemyDataList = new List<EnemyDataPair>();
         private Dictionary<EGolemType, EnemyData> _enemyDataDictionary;
@@ -36,7 +37,32 @@ namespace Manager.Enemy
                 _enemyDataDictionary[pair.GolemType] = pair.Data;
             }
         }
+
+        /**
+         * Spawns a Random Golem at a random spawn location
+         */
+        public EnemyController SpawnEnemy()
+        {
+            if (SpawnLocations.Count == 0)
+                return null;
+            
+            return SpawnEnemy(GetRandomGolemType(), SpawnLocations[Random.Range(0, SpawnLocations.Count)].position);
+        }
+
+        /**
+         * Spawns a specific Golem Type in a random spawn location 
+         */
+        public EnemyController SpawnEnemy(EGolemType golemType)
+        {
+            if (SpawnLocations.Count == 0)
+                return null;
+            
+            return SpawnEnemy(golemType, SpawnLocations[Random.Range(0, SpawnLocations.Count)].position);
+        }
         
+        /**
+         * Spawns a specific Golem Type in the position provided
+         */
         public EnemyController SpawnEnemy(EGolemType golemType, Vector3 spawnPoint)
         {
             if (_enemyDataDictionary.ContainsKey(golemType))
@@ -59,6 +85,15 @@ namespace Manager.Enemy
         {
             GameObject enemyGO = Instantiate(MiniEnemyPrefab, spawnPoint, Quaternion.identity);
             enemyGO.GetComponent<EnemyRagdoll>().Initialize( golemType );
+        }
+        
+        private EGolemType GetRandomGolemType()
+        {
+            // Feels overkill but I'm not sure how else to pick a random one from an enum
+            EGolemType[] values = (EGolemType[]) System.Enum.GetValues(typeof(EGolemType));
+            int randomIndex = Random.Range(0, values.Length);
+            
+            return values[randomIndex];
         }
     }
     
