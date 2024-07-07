@@ -6,7 +6,7 @@ namespace Controller.Enemy.States
     {
         public LeaveGardenState(EnemyController enemy) : base(enemy) { }
         
-        private float _idleTriggerDistance = 1.5f;
+        private float _idleTriggerDistance = 3.5f;
         private Vector3 _runoffDirection = Vector3.zero;
         private bool _runoffDestinationSet = false;
         private static readonly int SpeedHash = Animator.StringToHash("Speed");
@@ -23,24 +23,27 @@ namespace Controller.Enemy.States
             base.LogicUpdate();
 
             if (_runoffDestinationSet)
-                return;
-
-            if (_enemy.EntrancePoint != null)
             {
+                _enemy.GolemAnimator.SetFloat(SpeedHash, _enemy.NavMeshAgent.speed);
+                _enemy.NavMeshAgent.SetDestination(_runoffDirection);
+            } 
+            else
+            {
+                // Default logic for running to the entrance point
                 float distanceToEntrance = Vector3.Distance(_enemy.transform.position, _enemy.EntrancePoint.position);
                 
                 if (distanceToEntrance < _idleTriggerDistance)
                 {
                     if (_runoffDirection == Vector3.zero)
                     {
-                        _runoffDirection = _enemy.transform.position + _enemy.transform.forward * 50f;
+                        _runoffDirection = _enemy.transform.position + _enemy.transform.forward * 20f;
                     }
                     
                     // Just keep on "Running into the woods"
                     _enemy.GolemAnimator.SetFloat(SpeedHash, _enemy.NavMeshAgent.speed);
                     _enemy.NavMeshAgent.SetDestination(_runoffDirection);
                     _runoffDestinationSet = true;
-                    _enemy.StartCoroutine(_enemy.DestroyAfterTime(10f));
+                    _enemy.StartCoroutine(_enemy.DestroyAfterTime(3f));
                 }
                 else
                 {

@@ -10,6 +10,12 @@ public static class EventHub
     {
         Ev_PlayerHealthChange?.Invoke();
     }
+    
+    public static event Action Ev_PlayerDied;
+    public static void PlayerDied()
+    {
+        Ev_PlayerDied?.Invoke();
+    }
     #endregion
     
     #region CarrySystem

@@ -1,3 +1,4 @@
+using System;
 using Manager.Audio;
 using Managers.LevelStart;
 using UnityEngine;
@@ -12,11 +13,15 @@ namespace Manager.UI
     {
         public RectTransform PauseMenu;
         public RectTransform SettingsMenu;
+        public RectTransform YouDiedMenu;
         
         public Button RestartButton;
         public Button QuitButton;
         public Button BackButton;
         public Button SettingsButton;
+        
+        public Button DiedRestartButton;
+        public Button DiedQuitButton;
         
         public Slider VolumeSlider;
         public Slider NarratorSlider;
@@ -25,6 +30,7 @@ namespace Manager.UI
 
         private bool _settingsOpen;
         private bool _pauseOpen;
+        private bool _diedOpen;
         
         private void Start()
         {
@@ -33,6 +39,9 @@ namespace Manager.UI
 
         private void Update()
         {
+            if (_diedOpen)
+                return;
+            
             // Yaygun plz don't hate me for this :D
             if (Input.GetKeyDown(KeyCode.Escape))
             {
@@ -52,6 +61,18 @@ namespace Manager.UI
                     HidePauseMenu();
                 }
             }
+        }
+
+        private void OnDisable()
+        {
+            EventHub.Ev_PlayerDied -= ShowDiedMenu;
+        }
+
+        private void ShowDiedMenu()
+        {
+            InputHandler.Instance.EnableUIMod();
+            _diedOpen = true;
+            YouDiedMenu.gameObject.SetActive(true);
         }
 
         private void RegisterButtonListeners()
@@ -76,6 +97,18 @@ namespace Manager.UI
             {
                 HidePauseMenu();
                 ShowSettingsMenu();
+            });
+            
+            EventHub.Ev_PlayerDied += ShowDiedMenu;
+            
+            DiedRestartButton.onClick.AddListener(() =>
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            });
+            
+            DiedQuitButton.onClick.AddListener(() =>
+            {
+                SceneManager.LoadScene(0);
             });
             
             VolumeSlider.onValueChanged.AddListener((value) =>

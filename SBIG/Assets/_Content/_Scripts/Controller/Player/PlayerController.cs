@@ -70,6 +70,11 @@ namespace Controller.Player
         {
             PlayerHealth -= damage;
             EventHub.PlayerHealthChange();
+            
+            if (PlayerHealth <= 0)
+            {
+                EventHub.PlayerDied();
+            }
         }
 
         public void OnBasketBallHit(int damageAmount, Vector3 direction)

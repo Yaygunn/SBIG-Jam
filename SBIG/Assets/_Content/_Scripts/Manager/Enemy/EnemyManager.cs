@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Controller.Enemy;
 using Enums.Golem;
 using Scriptables.Enemy;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Manager.Enemy
 {
@@ -52,8 +54,15 @@ namespace Manager.Enemy
         private void Start()
         {
             ReleaseTheGolems();
+            
+            EventHub.Ev_PlayerDied += EndAndFlee; 
         }
-        
+
+        private void OnDisable()
+        {
+            EventHub.Ev_PlayerDied -= EndAndFlee;
+        }
+
         private void InitializeDictionary()
         {
             _enemyDataDictionary = new Dictionary<EGolemType, EnemyData>();
