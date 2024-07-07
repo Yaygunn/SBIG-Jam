@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startInput: 1
+  _startMusic: 0
 --- !u!4 &1341049476
 Transform:
   m_ObjectHideFlags: 0
