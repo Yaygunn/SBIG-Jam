@@ -44,6 +44,24 @@ public static class EventHub
         Ev_CauldronEndCook?.Invoke();
     }
 
+    public static event Action Ev_CookFail;
+    public static void CookFail()
+    {
+        Ev_CookFail?.Invoke();
+    }
+
+    public static event Action Ev_ThrowInToCauldron;
+    public static void ThrowInToCauldron()
+    {
+        Ev_ThrowInToCauldron?.Invoke();
+    }
+
+    public static event Action Ev_CropPicked;
+    public static void CropPicked()
+    {
+        Ev_CropPicked?.Invoke();
+    }
+
     #endregion
 
     #region Turn

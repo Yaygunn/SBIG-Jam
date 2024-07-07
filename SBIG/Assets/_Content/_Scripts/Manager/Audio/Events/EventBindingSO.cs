@@ -33,6 +33,12 @@ namespace Audio.Events
 
         [field: SerializeField] public EventReference CauldronCook { get; private set; }
 
+        [field: SerializeField] public EventReference CropPicked { get; private set; }
+
+        [field: SerializeField] public EventReference CropInToCauldron { get; private set; }
+
+        [field: SerializeField] public EventReference CookFail{ get; private set; }
+
         #endregion
     }
 }

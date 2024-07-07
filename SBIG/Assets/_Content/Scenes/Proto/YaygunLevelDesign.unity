@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2640272144253860074, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1290903
+      value: -5.14
       objectReference: {fileID: 0}
     - target: {fileID: 2640272144253860074, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2640272144253860074, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.05
+      value: -8.59
       objectReference: {fileID: 0}
     - target: {fileID: 2640272144253860074, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -174,6 +174,26 @@ PrefabInstance:
     - target: {fileID: 6759738741893288060, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
       propertyPath: m_Name
       value: 'Cauldron '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107033230923923465, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: _cookingEvent.Path
+      value: event:/SFX/Objects/Cauldron/CauldronCooking
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107033230923923465, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: _cookingEvent.Guid.Data1
+      value: -1727856103
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107033230923923465, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: _cookingEvent.Guid.Data2
+      value: 1327794080
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107033230923923465, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: _cookingEvent.Guid.Data3
+      value: -52759659
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107033230923923465, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: _cookingEvent.Guid.Data4
+      value: 1822639247
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

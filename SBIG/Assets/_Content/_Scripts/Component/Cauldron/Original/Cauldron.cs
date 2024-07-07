@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using FMODUnity;
+using Audio;
+using FMOD.Studio;
 
 namespace Components.Cauldrons.Original
 {
@@ -23,6 +25,7 @@ namespace Components.Cauldrons.Original
         {
             _cookablesInCauldron.Add(cookable.type);
             cookable.ThrowenToCauldron();
+            EventHub.ThrowInToCauldron();
         }
 
         public override void Cook()
@@ -34,20 +37,17 @@ namespace Components.Cauldrons.Original
             }
             else
             {
-                print("Not enough crops in cauldron");
+                EventHub.CookFail();
             }
         }
 
         private IEnumerator Cooking()
         {
-            RuntimeManager.StudioSystem.setParameterByName("CookingStatus", 0);
             EventHub.CauldronStartCook();
             _animator.SetBool(_isCookingBool, true);
  
             float cookTime = 3;
             yield return new WaitForSeconds(cookTime);
-
-            RuntimeManager.StudioSystem.setParameterByName("CookingStatus", 1);
 
             _animator.SetBool(_isCookingBool, false);
 

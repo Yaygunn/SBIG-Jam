@@ -74,6 +74,9 @@ namespace Components.Carry.Original
 
         private void Pick()
         {
+            if (_cauldronInFront == null)
+                EventHub.CropPicked();
+
             _carriableBeingCarried = _carriableInFrontCamera.PickUp(_dependencies.FpsCam.transform);
             _carriableInFrontCamera = null;
 
