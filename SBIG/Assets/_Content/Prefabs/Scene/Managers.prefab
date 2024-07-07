@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27cfd35e1852e6e43866baa2828a8729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaveSpawnInterval: 5
-  WaveEnemiesOnScreen: 6
+  WaveSpawnInterval: 8
+  WaveEnemiesOnScreen: 5
   IncreaseEnemiesPerWave: 2
   WaveIncreaseInterval: 20
   MaximumEnemiesOnScreen: 50
