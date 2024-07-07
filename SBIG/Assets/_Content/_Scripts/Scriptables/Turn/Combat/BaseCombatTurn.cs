@@ -1,3 +1,4 @@
+using Controller.Player;
 using Managers.UI;
 using System;
 using System.Collections;
@@ -11,8 +12,13 @@ namespace Scriptables.Turn.Combat
         public override void Enter(Action endAction)
         {
             base.Enter(endAction);
+            Debug.Log("ActionStart");
             EventHub.CombatStart();
-            //UIManager.Instance.ShowCombatUI();
+            EventHub.ShowWeapon(true);
+            UIManager.Instance.ShowCombatUI();
+           
+            PlayerController player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+            player.ChangeState(player.StateCombat);
         }
 
         protected override void EndTurn()

@@ -17,7 +17,7 @@ namespace Managers.LevelStart
         {
             InputOperation();
             UpdateMouseSensitivity();
-            //MusicOperation();
+            MusicOperation();
         }
 
         private void MusicOperation()

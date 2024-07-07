@@ -115,6 +115,13 @@ public static class EventHub
     {
         ForceEndMagazine();
     }
+
+    public static event Action<bool> Ev_ShowWeapon;
+    public static void ShowWeapon(bool show)
+    {
+        Ev_ShowWeapon?.Invoke(show);
+    }
+
     #endregion
 
     #region Menu

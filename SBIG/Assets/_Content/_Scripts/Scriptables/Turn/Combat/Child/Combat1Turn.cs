@@ -9,7 +9,8 @@ namespace Scriptables.Turn.Combat
     {
         public override IEnumerator TurnOperations()
         {
-            yield return new WaitForSeconds(5);
+            Debug.Log("CombatStart");
+            yield return new WaitForSeconds(800);
             EndTurn();
         }
     }

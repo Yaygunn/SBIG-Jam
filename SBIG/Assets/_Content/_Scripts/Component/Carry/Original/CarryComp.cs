@@ -124,7 +124,7 @@ namespace Components.Carry.Original
                 if (_cookableBeingCarried != null)
                     EventHub.ShowPickableText("throw", true);
 
-                EventHub.ShowCookInCauldronText("throw");
+                //EventHub.ShowCookInCauldronText("throw");
                 
             }
 

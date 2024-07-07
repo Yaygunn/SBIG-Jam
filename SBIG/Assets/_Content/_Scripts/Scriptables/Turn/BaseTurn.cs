@@ -20,4 +20,9 @@ public class BaseTurn : ScriptableObject
         EventHub.TurnChange();
         _endAction();
     }
+
+    public virtual void EndBeforeEndTurn()
+    {
+
+    }
 }
