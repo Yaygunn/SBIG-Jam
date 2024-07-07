@@ -1,3 +1,4 @@
+using Components.Crops;
 using Enums;
 using Enums.Golem;
 using Managers.Global;
@@ -57,7 +58,7 @@ namespace Controller.Enemy.States
             {
                 // This needs to be refactored, ideally if we store a reference to all crops in the scene
                 // in the GlobalObject or a Singleton for the CropManager?
-                cropObjects = GameObject.FindGameObjectsWithTag("Crop");
+                cropObjects = Crop.Crops.ToArray();//GameObject.FindGameObjectsWithTag("Crop");
             }
             
             if (FindClosestTarget(playerObject, cropObjects, out Transform closestTarget))

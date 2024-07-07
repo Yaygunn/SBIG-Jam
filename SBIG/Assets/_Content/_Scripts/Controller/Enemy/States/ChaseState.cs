@@ -36,7 +36,14 @@ namespace Controller.Enemy.States
 
              if (targetDistanceSq <= combatRangeSq)
              {
+                if(_enemy.TargetType == ETargetType.PLAYER)
+                {
                  _enemy.ChangeState(_enemy.StateCombat);
+                }
+                else if(_enemy.TargetType == ETargetType.CROP)
+                {
+                    _enemy.ChangeState(_enemy.StateEatCrop);
+                }
              }
              else if (targetDistanceSq <= detectionRangeSq)
              {

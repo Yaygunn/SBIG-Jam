@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Water Golem
   m_EditorClassIdentifier: 
   enemyName: Water Golem
-  detectionRange: 20
+  detectionRange: 1000
   attackRange: 5
   attackCooldown: 1.5
   targetPlayer: 1
@@ -22,5 +22,5 @@ MonoBehaviour:
   canBeInterrupted: 0
   baseHealth: 10
   baseDamage: 5
-  golemState: 2
+  golemState: 1
   golemType: 3

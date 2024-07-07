@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Components.Crops
@@ -15,6 +17,9 @@ namespace Components.Crops
 
         private int currentGrowCycle;
 
+        private float Health = 100;
+
+        public static List<GameObject> Crops = new List<GameObject>();
         private void Awake()
         {
             EventHub.Ev_GrowPlants += GrowCrop;
@@ -25,12 +30,17 @@ namespace Components.Crops
             }
             else
             {
-                EndFruit();
+                HasFruit = false;
+                foreach (GameObject fruit in _fruitGameObjects)
+                {
+                    fruit.SetActive(false);
+                }
             }
         }
         private void OnDestroy()
         {
             EventHub.Ev_GrowPlants -= GrowCrop;
+            EndFruit() ;
         }
         public override void GrowCrop()
         {
@@ -58,15 +68,33 @@ namespace Components.Crops
             {
                 fruit.SetActive(true);
             }
+            Health = 100;
+            Crops.Add(gameObject);
         }
 
         private void EndFruit()
         {
+            if (!HasFruit)
+                return;
+
             HasFruit = false;
             foreach (GameObject fruit in _fruitGameObjects)
             {
                 fruit.SetActive(false);
             }
+            Crops.Remove(gameObject);
+        }
+
+        public bool GiveDamage()
+        {
+            float damageAmount = 30;
+            Health -= damageAmount;
+            if(Health < 0)
+            {
+                EndFruit();
+                return true;
+            }
+            return false;
         }
     }
 
