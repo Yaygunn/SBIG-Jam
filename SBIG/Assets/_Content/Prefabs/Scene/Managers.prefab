@@ -44,8 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27cfd35e1852e6e43866baa2828a8729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WaveSpawnInterval: 5
+  WaveEnemiesOnScreen: 5
+  IncreaseEnemiesPerWave: 1
+  WaveIncreaseInterval: 20
+  MaximumEnemiesOnScreen: 20
   EnemyPrefab: {fileID: 5516784872569310626, guid: b344827c0d07b8c4394607f7679bf7b9, type: 3}
   MiniEnemyPrefab: {fileID: 611455891421957375, guid: 30f5f8d60ce9dbd41901b52e61e53cb4, type: 3}
+  SpawnLocations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   EnemyDataList:
   - GolemType: 0
     Data: {fileID: 11400000, guid: 416a31cfad4966b48aaa7ec988c082ca, type: 2}

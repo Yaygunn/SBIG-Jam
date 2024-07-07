@@ -172,4 +172,17 @@ public static class EventHub
 
     #endregion
 
+    #region Enemy
+    public static event Action Ev_EnemyEndAndFlee;
+    public static void EnemyEndAndFlee()
+    {
+        Ev_EnemyEndAndFlee?.Invoke();
+    }
+    
+    public static event Action Ev_EnemyEndAndKill;
+    public static void EnemyEndAndKill()
+    {
+        Ev_EnemyEndAndKill?.Invoke();
+    }
+    #endregion
 }

@@ -52,7 +52,14 @@ namespace Controller.Enemy
             new Color(1, 0.92f, 0.65f),
         };
         #endregion
+        
+        public static int EnemyCount { get; private set; }
 
+        private void Awake()
+        {
+            EnemyCount++;
+        }
+        
         private void Start()
         {
             NavMeshAgent = GetComponent<NavMeshAgent>();
@@ -63,9 +70,13 @@ namespace Controller.Enemy
             RB.isKinematic = true;
         }
 
-        private void OnDisable()
+        private void OnDestroy()
         {
+            EnemyCount--;
+            
             EventHub.Ev_SlapHit -= TriggerSlapSequence;
+            EventHub.Ev_EnemyEndAndFlee -= TriggerFleeSequence;
+            EventHub.Ev_EnemyEndAndKill -= TriggerDeathSequence;
         }
 
         public void Initialize(EnemyData data)
@@ -97,6 +108,8 @@ namespace Controller.Enemy
             StateCurrent?.Enter();
 
             EventHub.Ev_SlapHit += TriggerSlapSequence;
+            EventHub.Ev_EnemyEndAndFlee += TriggerFleeSequence;
+            EventHub.Ev_EnemyEndAndKill += TriggerDeathSequence;
 
             yield break;
         }
@@ -169,6 +182,18 @@ namespace Controller.Enemy
         public void TriggerSlapSequence()
         {
             ChangeState(StateSlap);
+        }
+        
+        private void TriggerFleeSequence()
+        {
+            ChangeState(StateLeaveGarden);
+        }
+        
+        private void TriggerDeathSequence()
+        {
+            EnemyManager.Instance.SpawnMiniEnemy(EnemyConfig.golemType, transform.position);
+            
+            Destroy(gameObject);
         }
 
         private void SetHealth(int amount)
