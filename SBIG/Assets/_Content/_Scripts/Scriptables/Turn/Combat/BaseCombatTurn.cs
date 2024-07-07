@@ -24,6 +24,7 @@ namespace Scriptables.Turn.Combat
         protected override void EndTurn()
         {
             //UIManager.Instance.HideCombatUI();
+            EventHub.GrowPlant();
             base.EndTurn();
         }
     }

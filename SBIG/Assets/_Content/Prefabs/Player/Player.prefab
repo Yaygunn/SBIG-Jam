@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5023003607435841647}
   - component: {fileID: 3880345837413301160}
   - component: {fileID: 5517183870279040526}
+  - component: {fileID: 6180761376778839936}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -181,6 +182,22 @@ MonoBehaviour:
   _groundMask:
     serializedVersion: 2
     m_Bits: 305
+--- !u!208 &6180761376778839936
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66311514213484598}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &264745959868187262
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,6 +357,7 @@ GameObject:
   - component: {fileID: 7962196473091990483}
   - component: {fileID: 412495075641087022}
   - component: {fileID: 7095814999036680962}
+  - component: {fileID: 401987932836819780}
   m_Layer: 0
   m_Name: WeaponCamera
   m_TagString: Untagged
@@ -421,6 +439,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4566681196665404102}
   m_Enabled: 1
+--- !u!114 &401987932836819780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4566681196665404102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a974eae0ced8e746a090f60536c6a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponparts: {fileID: 4906235632769019319}
 --- !u!1 &4906235632769019319
 GameObject:
   m_ObjectHideFlags: 0

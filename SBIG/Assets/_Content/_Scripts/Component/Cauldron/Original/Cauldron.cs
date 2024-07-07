@@ -8,6 +8,7 @@ using Audio;
 using FMOD.Studio;
 using Managers.UI;
 using YInput;
+using Scriptables.Turn.Craft.Child;
 
 namespace Components.Cauldrons.Original
 {
@@ -71,6 +72,13 @@ namespace Components.Cauldrons.Original
 
             UIManager.Instance.ShowCraftUI();
             transform.position += new Vector3(0, -upDuringCooking, 0);
+            Invoke("EndTurn", 2);
+        }
+
+        private void EndTurn()
+        {
+            if(Craft1.Instance != null)
+                Craft1.Instance._continue = false;
         }
     }
 }

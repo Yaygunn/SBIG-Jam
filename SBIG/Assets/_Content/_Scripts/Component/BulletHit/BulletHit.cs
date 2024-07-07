@@ -71,6 +71,7 @@ namespace Components.BulletHit
                 if (other.gameObject.TryGetComponent(out ISlapHit slapHit))
                 {
                     slapHit.OnSlapHit();
+                    EventHub.Slapped();
                     Destroy(gameObject);
                 }   
                 Destroy(gameObject);

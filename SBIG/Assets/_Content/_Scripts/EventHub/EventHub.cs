@@ -128,6 +128,12 @@ public static class EventHub
         Ev_ShowWeapon?.Invoke(show);
     }
 
+    public static event Action Ev_Slapped;
+    public static void Slapped()
+    {
+        Ev_Slapped?.Invoke();
+    }
+
     #endregion
 
     #region Menu

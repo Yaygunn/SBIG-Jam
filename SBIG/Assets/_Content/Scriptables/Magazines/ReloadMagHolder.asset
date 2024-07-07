@@ -22,6 +22,6 @@ MonoBehaviour:
   - <Mag>k__BackingField: {fileID: 11400000, guid: 945d79d332eba584b83aa87a557a77e1, type: 2}
     <RandomRate>k__BackingField: 2
   - <Mag>k__BackingField: {fileID: 11400000, guid: e76841aa754d77c4887205e627bb5b9a, type: 2}
-    <RandomRate>k__BackingField: 1
+    <RandomRate>k__BackingField: 50
   - <Mag>k__BackingField: {fileID: 11400000, guid: ad9b4405fa153c046bc0848a85afff5a, type: 2}
     <RandomRate>k__BackingField: 5

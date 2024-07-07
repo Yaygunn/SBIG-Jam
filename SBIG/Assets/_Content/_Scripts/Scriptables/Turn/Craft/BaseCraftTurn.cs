@@ -1,3 +1,4 @@
+using Controller.Player;
 using Managers.UI;
 using System;
 using System.Collections;
@@ -12,7 +13,11 @@ namespace Scriptables.Turn.Craft
         {
             base.Enter(endAction);
             EventHub.CraftStart();
-            //UIManager.Instance.ShowCraftUI();
+            UIManager.Instance.ShowCraftUI();
+            UIManager.Instance.HideCombatUI();
+            EventHub.ShowWeapon(false);
+            PlayerController player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+            player.ChangeState(player.StateCraft);
         }
 
         protected override void EndTurn()

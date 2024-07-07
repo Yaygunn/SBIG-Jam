@@ -1,3 +1,5 @@
+using Controller.Player;
+using Manager.Enemy;
 using System.Collections;
 using UnityEngine;
 
@@ -7,10 +9,21 @@ namespace Scriptables.Turn.Craft.Child
     public class Craft1 : BaseCraftTurn
     {
         [SerializeField] private string _text;
+        public bool _continue;
+        public static Craft1 Instance;
         public override IEnumerator TurnOperations()
         {
-            yield return new WaitForSeconds(5);
-            //Debug.Log(_text);
+            Instance = this;
+            Debug.Log("CraftStarter");
+            PlayerController player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+            player.ChangeState(player.StateCraft);
+            _continue = true;
+            while (_continue)
+            {
+                yield return null;
+                EnemyManager.Instance.EndAndFlee();
+            }
+
             EndTurn();
         }
     }

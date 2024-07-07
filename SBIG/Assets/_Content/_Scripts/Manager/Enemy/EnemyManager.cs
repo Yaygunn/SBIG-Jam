@@ -53,7 +53,7 @@ namespace Manager.Enemy
 
         private void Start()
         {
-            ReleaseTheGolems();
+            //ReleaseTheGolems();
             
             EventHub.Ev_PlayerDied += EndAndFlee; 
         }
