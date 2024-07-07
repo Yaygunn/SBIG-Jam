@@ -114,7 +114,7 @@ namespace UI
     {
         EventHub.UIClick();
         
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("GameLevel");
     }
     
     private void OnSettingsButtonClick(ClickEvent evt)

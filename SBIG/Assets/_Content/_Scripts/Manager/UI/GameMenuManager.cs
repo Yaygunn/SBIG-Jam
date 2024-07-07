@@ -92,7 +92,7 @@ namespace Manager.UI
             
             QuitButton.onClick.AddListener(() =>
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene("MainMenu");
             });
             
             BackButton.onClick.AddListener(() =>
@@ -118,7 +118,7 @@ namespace Manager.UI
             
             DiedQuitButton.onClick.AddListener(() =>
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene("MainMenu");
             });
             
             VolumeSlider.onValueChanged.AddListener((value) =>
