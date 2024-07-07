@@ -192,5 +192,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165834387ced0a34d8a4048c59ebd79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HitSound:
+    Guid:
+      Data1: -243743486
+      Data2: 1270115754
+      Data3: -317139788
+      Data4: 1913141041
+    Path: event:/SFX/FlaskPistol/AmmoHits/AmmoSlapHitEnemy
   BulletType: 3
   DamageAmount: 0

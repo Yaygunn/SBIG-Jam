@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Enums.Bullet;
+using FMODUnity;
 using Scriptables.Enemy;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ namespace Components.BulletHit
 {
     public class BulletHit : MonoBehaviour
     {
+        [SerializeField] private EventReference HitSound;
         public EBulletType BulletType;
         public int DamageAmount = 5;
         private HashSet<GameObject> _hitTargets = new HashSet<GameObject>();
@@ -26,7 +28,9 @@ namespace Components.BulletHit
             } else {
                 return;
             }
-            
+
+            PlayHitSound();
+
             if (BulletType == EBulletType.Water)
             {
                 if (other.gameObject.TryGetComponent(out IWaterHit waterHit))
@@ -81,5 +85,13 @@ namespace Components.BulletHit
                 Destroy(gameObject);
             }
         }
-    }   
+    
+        private void PlayHitSound()
+        {
+            if( ! HitSound.IsNull)
+            RuntimeManager.PlayOneShot(HitSound);
+        }
+    }  
+    
+    
 }
