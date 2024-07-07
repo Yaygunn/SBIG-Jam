@@ -256,8 +256,11 @@ namespace Controller.Enemy
             if (EnemyConfig.golemType == EGolemType.WOOD || EnemyConfig.golemType == EGolemType.WATER)
             {
                 transform.localScale += new Vector3(0.5f, 0.5f, 0.5f);
-                
-                TakeDamage(damageAmount);
+
+                if (EnemyConfig.golemType == EGolemType.WOOD)
+                {
+                    TakeDamage(damageAmount / 2);   
+                }
             }
             else if (EnemyConfig.golemType == EGolemType.FIRE)
             {
