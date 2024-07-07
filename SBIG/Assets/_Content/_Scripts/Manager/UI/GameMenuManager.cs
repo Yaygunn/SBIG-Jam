@@ -34,6 +34,8 @@ namespace Manager.UI
         
         private void Start()
         {
+            Time.timeScale = 1;
+            
             RegisterButtonListeners();
         }
 
@@ -47,6 +49,7 @@ namespace Manager.UI
             {
                 if (!_settingsOpen && !_pauseOpen)
                 {
+                    Time.timeScale = 0;
                     InputHandler.Instance.EnableUIMod();
                     ShowPauseMenu();
                 }
@@ -57,6 +60,7 @@ namespace Manager.UI
                 }
                 else if (_pauseOpen)
                 {
+                    Time.timeScale = 1;
                     InputHandler.Instance.EnableGameplayMod();
                     HidePauseMenu();
                 }
