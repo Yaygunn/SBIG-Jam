@@ -140,6 +140,13 @@ public static class EventHub
         Ev_NoAmmo?.Invoke();
     }
 
+    public static event Action Ev_Victory;
+    public static void Victory()
+    {
+        Ev_Victory?.Invoke();
+    }
+
+
     #endregion
 
     #region Menu

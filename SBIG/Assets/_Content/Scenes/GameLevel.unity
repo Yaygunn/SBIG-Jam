@@ -2458,6 +2458,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 364478613389806101, guid: b2085b5c2c5718546899344631bb20fd, type: 3}
   m_PrefabInstance: {fileID: 242656834}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &267584130 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1671804529062961926, guid: 1ca32592c1da598429989857e242b887, type: 3}
+  m_PrefabInstance: {fileID: 396992922}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &305646710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3106,6 +3111,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3498201266346486946, guid: 1ca32592c1da598429989857e242b887, type: 3}
+      propertyPath: _vImage
+      value: 
+      objectReference: {fileID: 1839859695}
     - target: {fileID: 5051426499348840399, guid: 1ca32592c1da598429989857e242b887, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3146,13 +3155,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5822949296886408706, guid: 1ca32592c1da598429989857e242b887, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6674745580719158299, guid: 1ca32592c1da598429989857e242b887, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8180823240986035052, guid: 1ca32592c1da598429989857e242b887, type: 3}
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1671804529062961926, guid: 1ca32592c1da598429989857e242b887, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1839859697}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ca32592c1da598429989857e242b887, type: 3}
 --- !u!1 &400017072 stripped
@@ -13732,6 +13752,81 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 1811.6471, y: 56.068, z: 1229.1371}
   m_TimeToStationary: 0.5
+--- !u!1 &1839859694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1839859697}
+  - component: {fileID: 1839859696}
+  - component: {fileID: 1839859695}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1839859695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839859694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 19116295498110e47b24416f0fe1dcc6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1839859696
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839859694}
+  m_CullTransparentMesh: 1
+--- !u!224 &1839859697
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839859694}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 267584130}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 296}
+  m_SizeDelta: {x: 900, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1842090796 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ed38d7642967aa84a8b3b31649f47cd0, type: 3}

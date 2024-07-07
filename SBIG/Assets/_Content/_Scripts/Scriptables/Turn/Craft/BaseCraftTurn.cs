@@ -12,6 +12,7 @@ namespace Scriptables.Turn.Craft
         public override void Enter(Action endAction)
         {
             base.Enter(endAction);
+            EventHub.Victory();
             EventHub.CraftStart();
             UIManager.Instance.ShowCraftUI();
             UIManager.Instance.HideCombatUI();
