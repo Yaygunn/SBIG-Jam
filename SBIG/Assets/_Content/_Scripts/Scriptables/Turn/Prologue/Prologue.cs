@@ -34,7 +34,25 @@ public class Prologue : BaseTurn
         Cursor.visible = false;
 
         PlayReferance(Dialogue1);
-        yield return new WaitForSeconds(32);
+        //yield return new WaitForSeconds(32);
+        float timer = 0;
+        while (true)
+        {
+            timer += Time.deltaTime;
+            if(timer > 32)
+            {
+                _com.StopInstance(ref SoundInstance);
+                break;
+            }
+
+            if (IsPressed())
+                break;
+            if(Input.GetKeyDown(KeyCode.Escape))
+            {
+                break;
+            }
+            yield return null;
+        }
         EventHub.ShowPrologueText();
         while (true)
         {
