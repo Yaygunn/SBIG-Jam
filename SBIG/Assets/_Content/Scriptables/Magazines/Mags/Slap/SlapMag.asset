@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afb0c387bceeae43b59726d4980c501, type: 3}
+  m_Name: SlapMag
+  m_EditorClassIdentifier: 
+  <MagName>k__BackingField: Slap
+  MagMaterial: {fileID: 2100000, guid: 62139d98437fd5f4188c0cc7d9c3262c, type: 2}
+  <FireSoundEvent>k__BackingField:
+    Guid:
+      Data1: -1124362556
+      Data2: 1269932757
+      Data3: -1704311932
+      Data4: 447980235
+    Path: event:/SFX/FlaskPistol/AmmoFire/AmmoSlapFire
+  _maxAmmo: 5
+  _slapBullet: {fileID: 8584552860148516545, guid: 881e0f7e9883ba8488a1bf5ee865ee17, type: 3}

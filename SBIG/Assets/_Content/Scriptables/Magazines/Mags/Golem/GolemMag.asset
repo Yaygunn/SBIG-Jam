@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb9a7f146d099f47aad9518268d0015, type: 3}
+  m_Name: GolemMag
+  m_EditorClassIdentifier: 
+  <MagName>k__BackingField: Golem
+  MagMaterial: {fileID: 2100000, guid: 12e3b4d9a61697342a7db66fe9a3a656, type: 2}
+  <FireSoundEvent>k__BackingField:
+    Guid:
+      Data1: 1109974164
+      Data2: 1337416651
+      Data3: 1293364118
+      Data4: 362041735
+    Path: event:/SFX/FlaskPistol/AmmoFire/AmmoType6
+  _maxAmmo: 5
+  _golemBullet: {fileID: 8743788246640384336, guid: 3d724c2b4942cff4d9b48a01407f1281, type: 3}

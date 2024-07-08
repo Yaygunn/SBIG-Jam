@@ -35,5 +35,10 @@ namespace Scriptables.Turn
                 _turnIndex++;
             }
         }
+
+        public void DestroyBeforeEnd()
+        {
+            turns[_turnIndex-1].EndBeforeEndTurn();
+        }
     }
 }

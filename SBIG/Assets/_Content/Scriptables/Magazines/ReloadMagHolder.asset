@@ -13,9 +13,15 @@ MonoBehaviour:
   m_Name: ReloadMagHolder
   m_EditorClassIdentifier: 
   _magList:
-  - <Mag>k__BackingField: {fileID: 11400000, guid: 0ee695a7fcb9f4d45a3ec1402f936466, type: 2}
-    <RandomRate>k__BackingField: 0
   - <Mag>k__BackingField: {fileID: 11400000, guid: 2a07b71c3ff8fec41864ba9f5be3a931, type: 2}
-    <RandomRate>k__BackingField: 1
-  - <Mag>k__BackingField: {fileID: 11400000, guid: e0c46a73c00c6594ca17fc44ba134169, type: 2}
     <RandomRate>k__BackingField: 2
+  - <Mag>k__BackingField: {fileID: 11400000, guid: 0ee695a7fcb9f4d45a3ec1402f936466, type: 2}
+    <RandomRate>k__BackingField: 5
+  - <Mag>k__BackingField: {fileID: 11400000, guid: e0c46a73c00c6594ca17fc44ba134169, type: 2}
+    <RandomRate>k__BackingField: 3
+  - <Mag>k__BackingField: {fileID: 11400000, guid: 945d79d332eba584b83aa87a557a77e1, type: 2}
+    <RandomRate>k__BackingField: 2
+  - <Mag>k__BackingField: {fileID: 11400000, guid: e76841aa754d77c4887205e627bb5b9a, type: 2}
+    <RandomRate>k__BackingField: 0.8
+  - <Mag>k__BackingField: {fileID: 11400000, guid: ad9b4405fa153c046bc0848a85afff5a, type: 2}
+    <RandomRate>k__BackingField: 5

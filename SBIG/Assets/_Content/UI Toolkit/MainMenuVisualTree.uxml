@@ -1,93 +1,79 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/USS/gameTitle.uss?fileID=7433441132597879392&amp;guid=2473dcf5407e1984395e88a9972ffe13&amp;type=3#gameTitle" />
-    <ui:VisualElement name="MenuContainer" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/739a6867-3fe4-4744-8f05-963b994a9d79.png?fileID=2800000&amp;guid=b7dcc3574d1bf154881f78e765b451f1&amp;type=3#739a6867-3fe4-4744-8f05-963b994a9d79&quot;); position: absolute; left: 0; top: 0; right: 0; bottom: 0;">
-        <ui:VisualElement name="TitleDiv" style="flex-grow: 1;">
-            <ui:Label tabindex="-1" text="Magic Slinger" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ScreenTitle" class="gameTitle" />
-        </ui:VisualElement>
-        <ui:VisualElement name="MenuDiv" class="menuDiv" style="flex-grow: 1;">
-            <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayButton" class="menuButton" />
-            <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SettingsButton" class="menuButton" />
-            <ui:Button text="Credits" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CreditsButton" class="menuButton" />
+    <Style src="project://database/Assets/_Content/UI%20Toolkit/USS/gameTitle.uss?fileID=7433441132597879392&amp;guid=2473dcf5407e1984395e88a9972ffe13&amp;type=3#gameTitle" />
+    <ui:VisualElement name="MenuContainer" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/Title_page.png?fileID=2800000&amp;guid=235c07258433ff7469610ba57fea9128&amp;type=3#Title_page&quot;); position: absolute; left: 0; top: 0; right: 0; bottom: 0; display: flex; -unity-font: url(&quot;project://database/Assets/_Content/Fonts/Baby%20Doll.otf?fileID=12800000&amp;guid=21fdc991704b1bf4dbb918d4c77eb82c&amp;type=3#Baby Doll&quot;); -unity-font-definition: initial;">
+        <ui:VisualElement name="MenuDiv" class="menuDiv" style="flex-grow: 1; margin-left: 200px; width: 600px; margin-top: 0; margin-right: 0; margin-bottom: 50px; flex-direction: column-reverse;">
             <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="QuitButton" class="menuButton" />
+            <ui:Button text="Credits" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CreditsButton" class="menuButton" />
+            <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SettingsButton" class="menuButton" style="display: flex;" />
+            <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayButton" class="menuButton" style="-unity-font-definition: initial;" />
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement name="SettingsContainer" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/739a6867-3fe4-4744-8f05-963b994a9d79.png?fileID=2800000&amp;guid=b7dcc3574d1bf154881f78e765b451f1&amp;type=3#739a6867-3fe4-4744-8f05-963b994a9d79&quot;); -unity-background-image-tint-color: rgb(10, 16, 69); display: none;">
+    <ui:VisualElement name="SettingsContainer" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/Title_page.png?fileID=2800000&amp;guid=235c07258433ff7469610ba57fea9128&amp;type=3#Title_page&quot;); -unity-background-image-tint-color: rgb(33, 11, 34); display: none; -unity-font: url(&quot;project://database/Assets/_Content/Fonts/Baby%20Doll.otf?fileID=12800000&amp;guid=21fdc991704b1bf4dbb918d4c77eb82c&amp;type=3#Baby Doll&quot;); -unity-font-definition: initial;">
         <ui:VisualElement name="TitleDiv" style="flex-grow: 1;">
             <ui:Label tabindex="-1" text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ScreenTitle" class="gameTitle" style="margin-bottom: 40px;" />
         </ui:VisualElement>
-        <ui:VisualElement name="SettingsOptions" style="flex-grow: 0; margin-left: 120px; width: 500px;">
-            <ui:VisualElement name="VolumeHeading" style="flex-grow: 1; flex-direction: row; height: 32px;">
-                <ui:VisualElement name="Icon" style="flex-grow: 0; width: 32px; height: 32px; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/Settings/icon-volume.png?fileID=21300000&amp;guid=d7142593ea6eacd48a20090b0d69bf2a&amp;type=3#icon-volume&quot;); -unity-background-scale-mode: scale-to-fit;" />
-                <ui:Label tabindex="-1" text="Volume" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="font-size: 20px; color: rgb(250, 250, 255); height: 32px; width: 220px; padding-left: 20px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; -unity-text-align: middle-left;" />
+        <ui:VisualElement name="SettingsOptions" style="flex-grow: 0; margin-left: 120px; width: 80%; flex-direction: row; margin-bottom: 120px;">
+            <ui:VisualElement name="Left" style="flex-grow: 1; width: 50%; padding-top: 50px; padding-right: 200px; padding-bottom: 50px; padding-left: 50px;">
+                <ui:VisualElement name="VolumeHeading" style="flex-grow: 1; flex-direction: row; height: 32px;">
+                    <ui:VisualElement name="Icon" style="flex-grow: 0; width: 32px; height: 32px; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/Settings/icon-volume.png?fileID=21300000&amp;guid=d7142593ea6eacd48a20090b0d69bf2a&amp;type=3#icon-volume&quot;); -unity-background-scale-mode: scale-to-fit;" />
+                    <ui:Label tabindex="-1" text="Volume" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="font-size: 20px; color: rgb(250, 250, 255); height: 32px; width: 220px; padding-left: 20px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; -unity-text-align: middle-left;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="VolumeSettings" style="flex-grow: 1;">
+                    <ui:Slider label="Music" high-value="1" name="MusicSlider" style="color: rgb(250, 250, 255);" />
+                    <ui:Slider label="Narrator" high-value="1" name="NarratorSlider" style="color: rgb(250, 250, 255);" />
+                    <ui:Slider label="Sfx" high-value="1" name="SfxSlider" style="color: rgb(250, 250, 255);" />
+                </ui:VisualElement>
+                <ui:VisualElement name="MouseHeading" style="flex-grow: 1; flex-direction: row; height: 32px; margin-top: 40px;">
+                    <ui:VisualElement name="Icon" style="flex-grow: 0; width: 32px; height: 32px; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/Settings/icon-mouse.png?fileID=21300000&amp;guid=e41ff6e808e2e70498e904e833b20d93&amp;type=3#icon-mouse&quot;); -unity-background-scale-mode: scale-to-fit;" />
+                    <ui:Label tabindex="-1" text="Mouse" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="font-size: 20px; color: rgb(250, 250, 255); height: 32px; width: 220px; padding-left: 20px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; -unity-text-align: middle-left;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="MouseSettings" style="flex-grow: 1;">
+                    <ui:Slider label="Sensitivity" high-value="5" low-value="0.1" name="MouseSensitivitySlider" style="color: rgb(250, 250, 255);" />
+                </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="VolumeSettings" style="flex-grow: 1;">
-                <ui:Slider label="Music" high-value="1" name="MusicSlider" style="color: rgb(250, 250, 255);" />
-                <ui:Slider label="Narrator" high-value="1" name="NarratorSlider" style="color: rgb(250, 250, 255);" />
-                <ui:Slider label="Sfx" high-value="1" name="SfxSlider" style="color: rgb(250, 250, 255);" />
-            </ui:VisualElement>
-            <ui:VisualElement name="MouseHeading" style="flex-grow: 1; flex-direction: row; height: 32px; margin-top: 40px;">
-                <ui:VisualElement name="Icon" style="flex-grow: 0; width: 32px; height: 32px; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/Settings/icon-mouse.png?fileID=21300000&amp;guid=e41ff6e808e2e70498e904e833b20d93&amp;type=3#icon-mouse&quot;); -unity-background-scale-mode: scale-to-fit;" />
-                <ui:Label tabindex="-1" text="Mouse" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="font-size: 20px; color: rgb(250, 250, 255); height: 32px; width: 220px; padding-left: 20px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; -unity-text-align: middle-left;" />
-            </ui:VisualElement>
-            <ui:VisualElement name="MouseSettings" style="flex-grow: 1;">
-                <ui:Slider label="Sensitivity" high-value="5" low-value="0.1" style="color: rgb(250, 250, 255);" />
-            </ui:VisualElement>
-            <ui:VisualElement name="KeyboardHeading" style="flex-grow: 1; flex-direction: row; height: 32px; margin-top: 40px;">
-                <ui:VisualElement name="Icon" style="flex-grow: 0; width: 32px; height: 32px; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/Settings/icon-keyboard.png?fileID=21300000&amp;guid=324e7afb2fb644d4881dd552a03d2e71&amp;type=3#icon-keyboard&quot;); -unity-background-scale-mode: scale-to-fit;" />
-                <ui:Label tabindex="-1" text="Keyboard" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="font-size: 20px; color: rgb(250, 250, 255); height: 32px; width: 220px; padding-left: 20px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; -unity-text-align: middle-left;" />
-            </ui:VisualElement>
-            <ui:VisualElement name="KeyboardSettings" style="flex-grow: 1;">
-                <ui:VisualElement name="ButtonBind-Forward" style="flex-grow: 1; flex-direction: row;">
-                    <ui:Label tabindex="-1" text="Forward" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindLabel" style="color: rgb(250, 250, 255); margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; -unity-text-align: middle-left;" />
-                    <ui:Button text="W" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindButton" />
+            <ui:VisualElement name="Right" style="flex-grow: 1; width: 50%; padding-top: 50px; padding-right: 50px; padding-bottom: 50px; padding-left: 50px;">
+                <ui:VisualElement name="KeyboardHeading" style="flex-grow: 1; flex-direction: row; height: 32px; margin-top: 40px;">
+                    <ui:VisualElement name="Icon" style="flex-grow: 0; width: 32px; height: 32px; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/Settings/icon-keyboard.png?fileID=21300000&amp;guid=324e7afb2fb644d4881dd552a03d2e71&amp;type=3#icon-keyboard&quot;); -unity-background-scale-mode: scale-to-fit;" />
+                    <ui:Label tabindex="-1" text="Keyboard" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="font-size: 20px; color: rgb(250, 250, 255); height: 32px; width: 220px; padding-left: 20px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; -unity-text-align: middle-left;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="ButtonBind-Backward" style="flex-grow: 1; flex-direction: row;">
-                    <ui:Label tabindex="-1" text="Backward" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindLabel" style="color: rgb(250, 250, 255); margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; -unity-text-align: middle-left;" />
-                    <ui:Button text="S" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindButton" />
-                </ui:VisualElement>
-                <ui:VisualElement name="ButtonBind-Left" style="flex-grow: 1; flex-direction: row;">
-                    <ui:Label tabindex="-1" text="Left" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindLabel" style="color: rgb(250, 250, 255); margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; -unity-text-align: middle-left;" />
-                    <ui:Button text="A" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindButton" />
-                </ui:VisualElement>
-                <ui:VisualElement name="ButtonBind-Right" style="flex-grow: 1; flex-direction: row;">
-                    <ui:Label tabindex="-1" text="Right" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindLabel" style="color: rgb(250, 250, 255); margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; -unity-text-align: middle-left;" />
-                    <ui:Button text="D" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindButton" />
-                </ui:VisualElement>
-                <ui:VisualElement name="ButtonBind-Shoot" style="flex-grow: 1; flex-direction: row;">
-                    <ui:Label tabindex="-1" text="Shoot" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindLabel" style="color: rgb(250, 250, 255); margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; -unity-text-align: middle-left;" />
-                    <ui:Button text="Left Click" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindButton" />
-                </ui:VisualElement>
-                <ui:VisualElement name="ButtonBind-Reload" style="flex-grow: 1; flex-direction: row;">
-                    <ui:Label tabindex="-1" text="Reload / Cook" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindLabel" style="color: rgb(250, 250, 255); margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; -unity-text-align: middle-left;" />
-                    <ui:Button text="R" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindButton" />
-                </ui:VisualElement>
-                <ui:VisualElement name="ButtonBind-Pickup" style="flex-grow: 1; flex-direction: row;">
-                    <ui:Label tabindex="-1" text="Pickup / Drop" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindLabel" style="color: rgb(250, 250, 255); margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; -unity-text-align: middle-left;" />
-                    <ui:Button text="E" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindButton" />
-                </ui:VisualElement>
-                <ui:VisualElement name="ButtonBind-Hotbar1" style="flex-grow: 1; flex-direction: row;">
-                    <ui:Label tabindex="-1" text="Hotbar 1" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindLabel" style="color: rgb(250, 250, 255); margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; -unity-text-align: middle-left;" />
-                    <ui:Button text="1" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindButton" />
-                </ui:VisualElement>
-                <ui:VisualElement name="ButtonBind-Hotbar2" style="flex-grow: 1; flex-direction: row;">
-                    <ui:Label tabindex="-1" text="Hotbar 2" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindLabel" style="color: rgb(250, 250, 255); margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; -unity-text-align: middle-left;" />
-                    <ui:Button text="2" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindButton" />
-                </ui:VisualElement>
-                <ui:VisualElement name="ButtonBind-Hotbar3" style="flex-grow: 1; flex-direction: row;">
-                    <ui:Label tabindex="-1" text="Hotbar 3" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindLabel" style="color: rgb(250, 250, 255); margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; -unity-text-align: middle-left;" />
-                    <ui:Button text="3" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindButton" />
+                <ui:VisualElement name="KeyboardSettings" style="flex-grow: 1;">
+                    <ui:VisualElement name="ButtonBind-Forward" style="flex-grow: 1; flex-direction: row;">
+                        <ui:Label tabindex="-1" text="Forward" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindLabel" style="color: rgb(250, 250, 255); margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; -unity-text-align: middle-left;" />
+                        <ui:Button text="W" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindButton" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ButtonBind-Backward" style="flex-grow: 1; flex-direction: row;">
+                        <ui:Label tabindex="-1" text="Backward" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindLabel" style="color: rgb(250, 250, 255); margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; -unity-text-align: middle-left;" />
+                        <ui:Button text="S" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindButton" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ButtonBind-Left" style="flex-grow: 1; flex-direction: row;">
+                        <ui:Label tabindex="-1" text="Left" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindLabel" style="color: rgb(250, 250, 255); margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; -unity-text-align: middle-left;" />
+                        <ui:Button text="A" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindButton" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ButtonBind-Right" style="flex-grow: 1; flex-direction: row;">
+                        <ui:Label tabindex="-1" text="Right" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindLabel" style="color: rgb(250, 250, 255); margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; -unity-text-align: middle-left;" />
+                        <ui:Button text="D" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindButton" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ButtonBind-Shoot" style="flex-grow: 1; flex-direction: row;">
+                        <ui:Label tabindex="-1" text="Shoot" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindLabel" style="color: rgb(250, 250, 255); margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; -unity-text-align: middle-left;" />
+                        <ui:Button text="Left Click" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindButton" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ButtonBind-Reload" style="flex-grow: 1; flex-direction: row;">
+                        <ui:Label tabindex="-1" text="Reload / Cook" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindLabel" style="color: rgb(250, 250, 255); margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; -unity-text-align: middle-left;" />
+                        <ui:Button text="R" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindButton" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ButtonBind-Pickup" style="flex-grow: 1; flex-direction: row;">
+                        <ui:Label tabindex="-1" text="Pickup / Drop / Throw" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindLabel" style="color: rgb(250, 250, 255); margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; -unity-text-align: middle-left;" />
+                        <ui:Button text="E" parse-escape-sequences="true" display-tooltip-when-elided="true" class="keybindButton" />
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BackButtonSettings" class="menuButton backButton" style="margin-top: 20px;" />
     </ui:VisualElement>
-    <ui:VisualElement name="CreditsContainer" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/739a6867-3fe4-4744-8f05-963b994a9d79.png?fileID=2800000&amp;guid=b7dcc3574d1bf154881f78e765b451f1&amp;type=3#739a6867-3fe4-4744-8f05-963b994a9d79&quot;); -unity-background-image-tint-color: rgb(10, 16, 69); position: absolute; left: 0; top: 0; right: 0; bottom: 0; display: none; opacity: 1;">
-        <ui:VisualElement name="TitleDiv" style="flex-grow: 1;">
-            <ui:Label tabindex="-1" text="Credits" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ScreenTitle" class="gameTitle" style="margin-bottom: 40px; -unity-text-align: upper-center; margin-left: 4px;" />
-        </ui:VisualElement>
-        <ui:VisualElement name="CreditsScroller" style="flex-grow: 1; width: 800px; height: 800px; align-self: center;">
+    <ui:VisualElement name="CreditsContainer" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_Content/Art/MainMenu/Title_page.png?fileID=2800000&amp;guid=235c07258433ff7469610ba57fea9128&amp;type=3#Title_page&quot;); -unity-background-image-tint-color: rgb(33, 11, 34); position: absolute; left: 0; top: 0; right: 0; bottom: 0; display: none; opacity: 1; flex-direction: row;">
+        <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BackButtonCredits" class="menuButton backButton" style="margin-top: 0; justify-content: flex-end; height: 100%; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+        <ui:VisualElement name="CreditsScroller" style="flex-grow: 1; width: 800px; height: 100%; align-self: center; justify-content: center;">
             <ui:ListView name="creditsListView" />
         </ui:VisualElement>
-        <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BackButtonCredits" class="menuButton backButton" style="margin-top: 20px;" />
     </ui:VisualElement>
 </ui:UXML>

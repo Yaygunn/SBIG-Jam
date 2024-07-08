@@ -12,13 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 860a13d05e9adac498d7037dcc25852e, type: 3}
   m_Name: SoundEventRef
   m_EditorClassIdentifier: 
-  <Music>k__BackingField:
+  <MenuMusic>k__BackingField:
     Guid:
       Data1: -594366208
       Data2: 1218668290
       Data3: -797367622
       Data4: -58974726
     Path: event:/Music/MainMenu
+  <LevelMusic>k__BackingField:
+    Guid:
+      Data1: 1220324430
+      Data2: 1093494627
+      Data3: 726392713
+      Data4: -1682089873
+    Path: event:/Music/Level1
+  <Ambiance>k__BackingField:
+    Guid:
+      Data1: 1261863830
+      Data2: 1335459719
+      Data3: -1390921556
+      Data4: -2047461124
+    Path: event:/Ambiance/LevelAmbiance
   <UIHover>k__BackingField:
     Guid:
       Data1: -1841213679
@@ -40,3 +54,45 @@ MonoBehaviour:
       Data3: -1193047422
       Data4: -714896284
     Path: event:/SFX/UI/MenuSlider
+  <Reload>k__BackingField:
+    Guid:
+      Data1: -154290195
+      Data2: 1242172331
+      Data3: 2014826400
+      Data4: -177970873
+    Path: event:/SFX/FlaskPistol/Reload
+  <CauldronCook>k__BackingField:
+    Guid:
+      Data1: -1727856103
+      Data2: 1327794080
+      Data3: -52759659
+      Data4: 1822639247
+    Path: event:/SFX/Objects/Cauldron/CauldronCooking
+  <CropPicked>k__BackingField:
+    Guid:
+      Data1: 2046499080
+      Data2: 1320775823
+      Data3: -1333264731
+      Data4: 124714646
+    Path: event:/SFX/Objects/Crops/CropInteraction
+  <CropInToCauldron>k__BackingField:
+    Guid:
+      Data1: 385281150
+      Data2: 1259634266
+      Data3: 1570517439
+      Data4: -2095954635
+    Path: event:/SFX/Objects/Crops/CropIntoCauldron
+  <CookFail>k__BackingField:
+    Guid:
+      Data1: 2031011992
+      Data2: 1179657723
+      Data3: 8589493
+      Data4: 2104217516
+    Path: event:/SFX/Objects/Cauldron/CookingFail
+  <NoAmmo>k__BackingField:
+    Guid:
+      Data1: 1984767976
+      Data2: 1150573905
+      Data3: -532231014
+      Data4: -963196550
+    Path: event:/SFX/FlaskPistol/MagazineEmpty

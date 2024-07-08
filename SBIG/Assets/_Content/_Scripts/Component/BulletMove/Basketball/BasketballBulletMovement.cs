@@ -11,6 +11,7 @@ namespace Components.BulletMove.Basketball
         [SerializeField] private float Speed = 15f;
         [SerializeField] private int maxBounces = 3;
         [SerializeField] private float destroyAfter = 15f;
+        private HashSet<GameObject> _hitTargets = new HashSet<GameObject>();
 
         private Rigidbody _rb;
         private int _bounceCount = 0;
@@ -24,6 +25,12 @@ namespace Components.BulletMove.Basketball
 
         private void OnCollisionEnter(Collision collision)
         {
+            if (!_hitTargets.Contains(collision.gameObject)) {
+                _hitTargets.Add(collision.gameObject);
+            } else {
+                return;
+            }
+            
             if (_bounceCount >= maxBounces)
             {
                 Destroy(gameObject);

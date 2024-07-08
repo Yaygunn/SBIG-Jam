@@ -15,10 +15,10 @@ TagManager:
   - UI
   - Carryable
   - Bullet
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Hands
+  - Environment
+  - PlayerOnly
   - 
   - 
   - 

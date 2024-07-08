@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
 using Manager.Audio;
+using Managers.LevelStart;
 using Scriptables.Credits;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 namespace UI
@@ -31,6 +33,8 @@ namespace UI
     private Slider _musicSlider;
     private Slider _narratorSlider;
     private Slider _sfxSlider;
+
+    private Slider _mouseSensitivitySlider;
     
     #endregion
     
@@ -102,14 +106,15 @@ namespace UI
         _musicSlider?.UnregisterCallback<ChangeEvent<float>>(OnSliderChangeEvent_music);
         _narratorSlider?.UnregisterCallback<ChangeEvent<float>>(OnSliderChangeEvent_narrator);
         _sfxSlider?.UnregisterCallback<ChangeEvent<float>>(OnSliderChangeEvent_sfx);
+        
+        _mouseSensitivitySlider?.UnregisterCallback<ChangeEvent<float>>(OnMouseSensitivityChange);
     }
     
     private void OnPlayButtonClick(ClickEvent evt)
     {
         EventHub.UIClick();
         
-        // Load game scene
-        Debug.Log("Load Game Scene");
+        SceneManager.LoadScene("GameLevel");
     }
     
     private void OnSettingsButtonClick(ClickEvent evt)
@@ -128,6 +133,7 @@ namespace UI
             _musicSlider = _settingsContainer.Q<Slider>("MusicSlider");
             _narratorSlider = _settingsContainer.Q<Slider>("NarratorSlider");
             _sfxSlider = _settingsContainer.Q<Slider>("SfxSlider");
+            _mouseSensitivitySlider = _settingsContainer.Q<Slider>("MouseSensitivitySlider");
             
             _musicSlider.RegisterCallback<PointerDownEvent>(OnSliderPointerDown);
             _narratorSlider.RegisterCallback<PointerDownEvent>(OnSliderPointerDown);
@@ -137,13 +143,21 @@ namespace UI
             _narratorSlider.RegisterCallback<ChangeEvent<float>>(OnSliderChangeEvent_narrator);
             _sfxSlider.RegisterCallback<ChangeEvent<float>>(OnSliderChangeEvent_sfx);
             
+            _mouseSensitivitySlider.RegisterCallback<ChangeEvent<float>>(OnMouseSensitivityChange);
+            _mouseSensitivitySlider.value = LevelStartManager.Instance.GetMouseSensitivity();
+            
             // Update initial slider values
             _musicSlider.value = AudioManager.Instance.MusicVolume;
             _narratorSlider.value = AudioManager.Instance.NarratorVolume;
             _sfxSlider.value = AudioManager.Instance.SfxVolume;
         }).StartingIn(0);
     }
-    
+
+    private void OnMouseSensitivityChange(ChangeEvent<float> evt)
+    {
+        LevelStartManager.Instance.SetMouseSensitivity(evt.newValue);
+    }
+
     private void OnCreditsButtonClick(ClickEvent evt)
     {
         EventHub.UIClick();

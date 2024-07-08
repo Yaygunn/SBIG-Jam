@@ -11,7 +11,7 @@ namespace Components.Carry.Original
     {
         private Dependencies _dependencies;
 
-        private float _rayDistance = 2.6f;
+        private float _rayDistance = 3f;
 
         private BaseCarriable _carriableInFrontCamera;
 
@@ -60,7 +60,8 @@ namespace Components.Carry.Original
             {
                 if (_carriableBeingCarried == null)
                 {
-                    Pick();
+                    if(_carriableInFrontCamera.IsPickable)
+                        Pick();
                 }
             }
 
@@ -73,6 +74,9 @@ namespace Components.Carry.Original
 
         private void Pick()
         {
+            if (_cauldronInFront == null)
+                EventHub.CropPicked();
+
             _carriableBeingCarried = _carriableInFrontCamera.PickUp(_dependencies.FpsCam.transform);
             _carriableInFrontCamera = null;
 
@@ -118,10 +122,10 @@ namespace Components.Carry.Original
             if (_cauldronInFront != null)
             {
                 if (_cookableBeingCarried != null)
-                    EventHub.ShowCookInCauldronText("throw"); //this is not good;
+                    EventHub.ShowPickableText("throw", true);
 
-                else if (_carriableBeingCarried == null)
-                    EventHub.ShowPickableText(_carriableInFrontCamera.GetUiText(), true);
+                //EventHub.ShowCookInCauldronText("throw");
+                
             }
 
             else if (_carriableInFrontCamera != null)

@@ -32,8 +32,8 @@ namespace Components.Weapon.WeaponSway
 
         void HandleWeaponSway()
         {
-            float horizontalPositionChange = InputHandler.Instance.MousePositionChange.x;
-            float verticalPositionChange = InputHandler.Instance.MousePositionChange.y;
+            float horizontalPositionChange = -InputHandler.Instance.MousePositionChange.x;
+            float verticalPositionChange = -InputHandler.Instance.MousePositionChange.y;
 
             float moveX = Mathf.Clamp(horizontalPositionChange * _swayAmount, -_maxSwayAmount, _maxSwayAmount);
             float moveY = Mathf.Clamp(verticalPositionChange * _swayAmount, -_maxSwayAmount, _maxSwayAmount);

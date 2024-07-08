@@ -6,7 +6,7 @@ namespace Components.Carriables
     {
 
 
-        [field: SerializeField] public bool IsPickable { get; protected set; } = true;
+        [field: SerializeField] public virtual bool IsPickable { get; protected set; } = true;
         public virtual string GetUiText() { return "____"; }
         public abstract BaseCarriable PickUp(Transform camera);
         public virtual bool Drop(Transform camera) { return false; }

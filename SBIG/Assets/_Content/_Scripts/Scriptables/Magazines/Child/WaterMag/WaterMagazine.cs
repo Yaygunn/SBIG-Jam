@@ -9,9 +9,8 @@ namespace Scriptables.Magazines.Child.WaterMag
         protected override void OnButtonPressed()
         {
             base.OnButtonPressed();
-            Debug.Log("Water Fire");
             Weapon.Fire(InstantiateBullet(_waterBullet));
-            EndMagazine();
+            ReduceAmmo();
         }
     }
 }

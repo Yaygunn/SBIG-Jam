@@ -196,7 +196,7 @@ public partial class @Keys: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""4b251ac6-5810-4ed7-8ab3-6b7706579d71"",
-                    ""path"": ""<Keyboard>/f"",
+                    ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

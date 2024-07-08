@@ -1,5 +1,69 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1248850990527479578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 956877025825576453}
+  - component: {fileID: 7316648500740875919}
+  m_Layer: 0
+  m_Name: EnemyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &956877025825576453
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248850990527479578}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2436144811072255442}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7316648500740875919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248850990527479578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27cfd35e1852e6e43866baa2828a8729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaveSpawnInterval: 8
+  WaveEnemiesOnScreen: 5
+  IncreaseEnemiesPerWave: 2
+  WaveIncreaseInterval: 20
+  MaximumEnemiesOnScreen: 50
+  EnemyPrefab: {fileID: 5516784872569310626, guid: b344827c0d07b8c4394607f7679bf7b9, type: 3}
+  MiniEnemyPrefab: {fileID: 611455891421957375, guid: 30f5f8d60ce9dbd41901b52e61e53cb4, type: 3}
+  SpawnLocations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  EnemyDataList:
+  - GolemType: 0
+    Data: {fileID: 11400000, guid: 416a31cfad4966b48aaa7ec988c082ca, type: 2}
+  - GolemType: 1
+    Data: {fileID: 11400000, guid: f1dcd4c93e27e5c49ae9857e8cae9d1b, type: 2}
+  - GolemType: 2
+    Data: {fileID: 11400000, guid: 96c350760abed02458d96e7001c0ae42, type: 2}
+  - GolemType: 3
+    Data: {fileID: 11400000, guid: 144735128f6376d4ebe2cfc6b77df7cb, type: 2}
 --- !u!1 &2236544839255444113
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,6 +185,7 @@ Transform:
   - {fileID: 5815853079420770357}
   - {fileID: 7031318963261098256}
   - {fileID: 3473085849336949749}
+  - {fileID: 956877025825576453}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8230555612660763381

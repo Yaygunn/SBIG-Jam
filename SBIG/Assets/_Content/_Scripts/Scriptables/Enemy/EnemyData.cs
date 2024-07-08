@@ -1,3 +1,4 @@
+using Enums.Golem;
 using UnityEngine;
 
 namespace Scriptables.Enemy
@@ -16,5 +17,7 @@ namespace Scriptables.Enemy
         public bool canBeInterrupted;
         public int baseHealth;
         public int baseDamage;
+        public EGolemState golemState;
+        public EGolemType golemType;
     }
 }

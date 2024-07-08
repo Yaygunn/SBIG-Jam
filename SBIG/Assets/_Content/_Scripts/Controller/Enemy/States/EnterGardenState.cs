@@ -8,6 +8,7 @@ namespace Controller.Enemy.States
         public EnterGardenState(EnemyController enemy) : base(enemy) { }
 
         private float _idleTriggerDistance = 1f;
+        private static readonly int SpeedHash = Animator.StringToHash("Speed");
 
         public override void Enter()
         {
@@ -30,6 +31,7 @@ namespace Controller.Enemy.States
                     return;
                 }
                 
+                _enemy.GolemAnimator.SetFloat(SpeedHash, _enemy.NavMeshAgent.speed);
                 _enemy.NavMeshAgent.SetDestination(_enemy.EntrancePoint.position);
             }
         }

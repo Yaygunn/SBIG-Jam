@@ -13,5 +13,13 @@ MonoBehaviour:
   m_Name: BubbleMag
   m_EditorClassIdentifier: 
   <MagName>k__BackingField: Bubble
-  <MagazineSize>k__BackingField: 5
-  <BulletPrefab>k__BackingField: {fileID: 0}
+  MagMaterial: {fileID: 2100000, guid: 90864ef403769d94aa925e0b3fcc1096, type: 2}
+  <FireSoundEvent>k__BackingField:
+    Guid:
+      Data1: -877788394
+      Data2: 1150996509
+      Data3: -1725016648
+      Data4: 2086551904
+    Path: event:/SFX/FlaskPistol/AmmoFire/AmmoType2
+  _maxAmmo: 5
+  _bubbleBullet: {fileID: 8584552860148516545, guid: 5c70eae002591584397d274836076e90, type: 3}

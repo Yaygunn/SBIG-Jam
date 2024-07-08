@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2067804a8f9cf3c43b7248a0b7f0fd2f, type: 3}
+  m_Name: RockMag
+  m_EditorClassIdentifier: 
+  <MagName>k__BackingField: Rock
+  MagMaterial: {fileID: 2100000, guid: dd9332a5979f50142a38a9ecbdbe45b1, type: 2}
+  <FireSoundEvent>k__BackingField:
+    Guid:
+      Data1: -1918598107
+      Data2: 1207883460
+      Data3: 1140508090
+      Data4: -55590944
+    Path: event:/SFX/FlaskPistol/AmmoFire/AmmoType5
+  _maxAmmo: 5
+  _rockBullet: {fileID: 8584552860148516545, guid: 19f7112de9a75084fba309730a57ed58, type: 3}

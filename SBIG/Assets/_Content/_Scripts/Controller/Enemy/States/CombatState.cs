@@ -1,22 +1,26 @@
+using Controller.Player;
+using Managers.Global;
 using UnityEngine;
 
 namespace Controller.Enemy.States
 {
     public class CombatState: ActiveState
     {
+        private float attackCooldown;
+        private float lastAttackTime;
+        private static readonly int HeadButHash = Animator.StringToHash("HeadBut");
+
         public CombatState(EnemyController enemy) : base(enemy)
         {
             attackCooldown = enemy.EnemyConfig.attackCooldown;
         }
-
-        private float attackCooldown;
-        private float lastAttackTime;
 
         public override void Enter()
         {
             base.Enter();
 
             lastAttackTime = -attackCooldown;
+            _enemy.NavMeshAgent.velocity = Vector3.zero;
         }
 
         public override void LogicUpdate()
@@ -43,16 +47,22 @@ namespace Controller.Enemy.States
 
         }
 
+        public override void Exit()
+        {
+            base.Exit();
+            
+            _enemy.GolemAnimator.ResetTrigger(HeadButHash);
+        }
+
         protected override void Attack()
         {
-            Debug.Log("Attacking target: " + _enemy.Target.name);
+            _enemy.GolemAnimator.SetTrigger(HeadButHash);
+            _enemy.SetFaceState(Enums.Golem.EGolemState.ANGRY);
             
-            // ##TODO:
-            // Play attack animation
-            // Apply damage to target
-            
-            // Temporary move to LeaveGardenState
-            _enemy.ChangeState(_enemy.StateLeaveGarden);
+            // ##TODO
+            // We need to have a TakeDamage method in both Player and the Crop
+            // But for now lets assume its only enemy
+            GlobalObject.Player.GetComponent<PlayerController>().TakeDamage(_enemy.EnemyConfig.baseDamage);
         }
     }
 }
