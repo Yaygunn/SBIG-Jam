@@ -95,6 +95,7 @@ namespace Components.Weapons.Original
             bullet.transform.position = FireLocation.transform.position;
             bullet.transform.rotation = CameraManager.Instance.MainCamera.transform.rotation;
             bullet.GetComponent<IBulletMove>().Initialize();
+            EventHub.Fired();
             if (!_currentMagazine.FireSoundEvent.IsNull)
                 RuntimeManager.PlayOneShot(_currentMagazine.FireSoundEvent);
             else

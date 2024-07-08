@@ -98,6 +98,12 @@ public static class EventHub
         Ev_SlapHit?.Invoke();
     }
 
+    public static event Action Ev_Fired;
+    public static void Fired()
+    {
+        Ev_Fired?.Invoke();
+    }
+
     public static event Action Ev_ReloadStarted;
     public static void ReloadStarted()
     {
