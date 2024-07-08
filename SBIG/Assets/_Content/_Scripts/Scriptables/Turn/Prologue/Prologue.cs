@@ -22,6 +22,7 @@ public class Prologue : BaseTurn
     float _timer;
     bool targetAchieved;
     bool _continue;
+    bool _isPaused;
     public override IEnumerator TurnOperations()
     {
         _continue = true;
@@ -30,14 +31,16 @@ public class Prologue : BaseTurn
         UIManager.Instance.ShowCraftUI();
         UIManager.Instance.HideCombatUI();
         EventHub.ShowWeapon(false);
+        EventHub.Ev_PauseGame += Pause;
         InputHandler.Instance.EnableUIMod();
         Cursor.visible = false;
-
+        _isPaused = false;
         PlayReferance(Dialogue1);
         //yield return new WaitForSeconds(32);
         float timer = 0;
         while (true)
         {
+
             timer += Time.deltaTime;
             if(timer > 32)
             {
@@ -46,11 +49,11 @@ public class Prologue : BaseTurn
             }
 
             if (IsPressed())
-                break;
-            if(Input.GetKeyDown(KeyCode.Escape))
             {
-                break;
+                if(!_isPaused)
+                    break;
             }
+
             yield return null;
         }
         EventHub.ShowPrologueText();
@@ -63,7 +66,6 @@ public class Prologue : BaseTurn
         //close black screen
         EventHub.ClosePrologue();
         InputHandler.Instance.EnableGameplayMod();
-        yield return new WaitForSeconds(1);
 
         PlayReferance(Dialogue2);
         yield return new WaitForSeconds(4);
@@ -168,7 +170,7 @@ public class Prologue : BaseTurn
         EventHub.Ev_CropPicked -= TargetAction;
         EventHub.Ev_ThrowInToCauldron -= TargetAction;
         EventHub.Ev_CookFail -= CookFail;
-
+        EventHub.Ev_PauseGame -= Pause;
 
         SoundInstance.release() ;
     }
@@ -177,6 +179,12 @@ public class Prologue : BaseTurn
     {
         base.EndTurn();
         EndBeforeEndTurn();
+    }
+
+    private void Pause(bool pause)
+    {
+        if (SoundInstance.isValid()) 
+            SoundInstance.setPaused(pause);
     }
     
 

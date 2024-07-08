@@ -223,6 +223,12 @@ public static class EventHub
     {
         Ev_ClosePrologue?.Invoke();
     }
+
+    public static event Action<bool> Ev_PauseGame;
+    public static void PauseGame(bool pause)
+    {
+        Ev_PauseGame?.Invoke(pause);
+    }
     
     #endregion
 }

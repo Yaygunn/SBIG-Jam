@@ -52,6 +52,7 @@ namespace Manager.UI
                 if (!_settingsOpen && !_pauseOpen)
                 {
                     Time.timeScale = 0;
+                    EventHub.PauseGame(true);
                     InputHandler.Instance.EnableUIMod();
                     ShowPauseMenu();
                 }
@@ -63,6 +64,7 @@ namespace Manager.UI
                 else if (_pauseOpen)
                 {
                     Time.timeScale = 1;
+                    EventHub.PauseGame(false);
                     InputHandler.Instance.EnableGameplayMod();
                     HidePauseMenu();
                 }
