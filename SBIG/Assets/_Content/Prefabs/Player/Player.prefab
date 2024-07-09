@@ -92,6 +92,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de83b4d7ec7531439dd8aed79ebd038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <OnCollisionAudio>k__BackingField:
+    Guid:
+      Data1: -907454800
+      Data2: 1206478271
+      Data3: -1715559254
+      Data4: 1537297323
+    Path: event:/SFX/Objects/GenericObjectCollision
 --- !u!114 &4855854386875045901
 MonoBehaviour:
   m_ObjectHideFlags: 0

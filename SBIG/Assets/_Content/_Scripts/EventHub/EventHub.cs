@@ -16,6 +16,13 @@ public static class EventHub
     {
         Ev_PlayerDied?.Invoke();
     }
+
+    public static event Action Ev_PlayerCollision;
+
+    public static void PlayerCollision()
+    {
+        Ev_PlayerCollision?.Invoke();
+    }
     #endregion
     
     #region CarrySystem
