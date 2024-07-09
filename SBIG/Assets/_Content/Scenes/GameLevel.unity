@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1551714159}
-  m_IndirectSpecularColor: {r: 0.15900661, g: 0.24428558, b: 0.97741663, a: 1}
+  m_IndirectSpecularColor: {r: 0.06432401, g: 0.111132786, b: 0.54034454, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3275,6 +3275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 8760589416256400810, guid: 1ca32592c1da598429989857e242b887, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4154,6 +4158,126 @@ PrefabInstance:
     - target: {fileID: 66311514213484598, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstRockAmmo>k__BackingField.Path
+      value: event:/Narration/16RockAmmo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstGolemAmmo>k__BackingField.Path
+      value: event:/Narration/15.5GolemAmmo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstWaterAmmo>k__BackingField.Path
+      value: event:/Narration/14WaterAmmo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstBubbleAmmo>k__BackingField.Path
+      value: event:/Narration/13BubbleAmmo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstSlapPostHit>k__BackingField.Path
+      value: event:/Narration/17AfterSlap
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstBasketballAmmo>k__BackingField.Path
+      value: event:/Narration/15BasketballAmmo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstRockAmmo>k__BackingField.Guid.Data1
+      value: 1604387875
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstRockAmmo>k__BackingField.Guid.Data2
+      value: 1310935914
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstRockAmmo>k__BackingField.Guid.Data3
+      value: 773079705
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstRockAmmo>k__BackingField.Guid.Data4
+      value: 1715227562
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstGolemAmmo>k__BackingField.Guid.Data1
+      value: 707935382
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstGolemAmmo>k__BackingField.Guid.Data2
+      value: 1241332742
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstGolemAmmo>k__BackingField.Guid.Data3
+      value: 623756190
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstGolemAmmo>k__BackingField.Guid.Data4
+      value: -464262423
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstWaterAmmo>k__BackingField.Guid.Data1
+      value: -463149789
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstWaterAmmo>k__BackingField.Guid.Data2
+      value: 1306084560
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstWaterAmmo>k__BackingField.Guid.Data3
+      value: -1838089336
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstWaterAmmo>k__BackingField.Guid.Data4
+      value: 1354983424
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstBubbleAmmo>k__BackingField.Guid.Data1
+      value: -990439053
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstBubbleAmmo>k__BackingField.Guid.Data2
+      value: 1268786792
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstBubbleAmmo>k__BackingField.Guid.Data3
+      value: 1222152629
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstBubbleAmmo>k__BackingField.Guid.Data4
+      value: 361586241
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstSlapPostHit>k__BackingField.Guid.Data1
+      value: -1904683696
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstSlapPostHit>k__BackingField.Guid.Data2
+      value: 1275903633
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstSlapPostHit>k__BackingField.Guid.Data3
+      value: 1591066283
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstSlapPostHit>k__BackingField.Guid.Data4
+      value: 1074698340
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstBasketballAmmo>k__BackingField.Guid.Data1
+      value: 1376517008
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstBasketballAmmo>k__BackingField.Guid.Data2
+      value: 1281040737
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstBasketballAmmo>k__BackingField.Guid.Data3
+      value: 1496458386
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339384163481972013, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
+      propertyPath: <FirstBasketballAmmo>k__BackingField.Guid.Data4
+      value: -728551609
       objectReference: {fileID: 0}
     - target: {fileID: 2435493487929890902, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
       propertyPath: m_LocalPosition.x
