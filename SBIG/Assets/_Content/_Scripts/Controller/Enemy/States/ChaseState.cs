@@ -1,4 +1,5 @@
 using Enums;
+using FMODUnity;
 using UnityEngine;
 
 namespace Controller.Enemy.States
@@ -14,6 +15,11 @@ namespace Controller.Enemy.States
             base.Enter();
             
             _enemy.GolemAnimator.SetBool(Charge, _enemy.TargetType == ETargetType.PLAYER);
+            
+            if (!_enemy.EnemyConfig.AudioIdle.IsNull)
+            {
+                RuntimeManager.PlayOneShot(_enemy.EnemyConfig.AudioCharge);
+            }
         }
 
         public override void LogicUpdate()

@@ -5,6 +5,7 @@ using Components.BulletHit;
 using Controller.Enemy.States;
 using Enums;
 using Enums.Golem;
+using FMODUnity;
 using Manager.Enemy;
 using Managers.Global;
 using Scriptables.Enemy;
@@ -213,6 +214,11 @@ namespace Controller.Enemy
             if (Health <= 0 && allowKilling)
             {
                 EnemyManager.Instance.SpawnMiniEnemy(EnemyConfig.golemType, transform.position);
+                
+                if (!EnemyConfig.AudioIdle.IsNull)
+                {
+                    RuntimeManager.PlayOneShot(EnemyConfig.AudioIdle);
+                }
             
                 Destroy(gameObject);
                 

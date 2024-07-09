@@ -24,3 +24,31 @@ MonoBehaviour:
   baseDamage: 20
   golemState: 2
   golemType: 2
+  AudioIdle:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  AudioCharge:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  AudioAttack:
+    Guid:
+      Data1: -1344492210
+      Data2: 1202611359
+      Data3: -1522058847
+      Data4: 144971515
+    Path: event:/SFX/Golems/Stone/StoneAttack
+  AudioDeath:
+    Guid:
+      Data1: 1486930384
+      Data2: 1160575081
+      Data3: -1967023951
+      Data4: 54596397
+    Path: event:/SFX/Golems/GolemDeath

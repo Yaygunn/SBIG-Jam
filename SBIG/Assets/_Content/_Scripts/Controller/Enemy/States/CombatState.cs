@@ -1,4 +1,5 @@
 using Controller.Player;
+using FMODUnity;
 using Managers.Global;
 using UnityEngine;
 
@@ -63,6 +64,11 @@ namespace Controller.Enemy.States
             // We need to have a TakeDamage method in both Player and the Crop
             // But for now lets assume its only enemy
             GlobalObject.Player.GetComponent<PlayerController>().TakeDamage(_enemy.EnemyConfig.baseDamage);
+            
+            if (!_enemy.EnemyConfig.AudioIdle.IsNull)
+            {
+                RuntimeManager.PlayOneShot(_enemy.EnemyConfig.AudioAttack);
+            }
         }
     }
 }
