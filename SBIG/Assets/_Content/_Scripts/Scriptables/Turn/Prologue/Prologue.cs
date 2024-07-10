@@ -27,6 +27,7 @@ public class Prologue : BaseTurn
     {
         _continue = true;
         yield return null;
+        EventHub.ReduceMusicVolume();
         EventHub.Ev_CookFail += CookFail;
         UIManager.Instance.ShowCraftUI();
         UIManager.Instance.HideCombatUI();
@@ -171,6 +172,7 @@ public class Prologue : BaseTurn
         EventHub.Ev_ThrowInToCauldron -= TargetAction;
         EventHub.Ev_CookFail -= CookFail;
         EventHub.Ev_PauseGame -= Pause;
+        EventHub.NormalizeMusicVolume();
 
         SoundInstance.release() ;
     }

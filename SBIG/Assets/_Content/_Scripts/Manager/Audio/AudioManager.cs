@@ -88,7 +88,7 @@ namespace Manager.Audio
         private void LowerMusicVolume()
         {
             _initialMusicVolume = GetMusicVolume();
-            SetMusicVolume(_initialMusicVolume * 0.4f);
+            SetMusicVolume(_initialMusicVolume * 0.25f);
         }
 
         private void NormalizeMusicVolume()
