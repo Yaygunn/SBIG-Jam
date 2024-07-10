@@ -1,9 +1,11 @@
+using System;
 using Components.BulletMove;
 using FMODUnity;
 using Managers.Magazines;
 using Managers.MainCamera;
 using Scriptables.Magazines;
 using System.Collections;
+using FMOD.Studio;
 using UnityEngine;
 using YInput;
 
@@ -17,6 +19,20 @@ namespace Components.Weapons.Original
         private bool _isReloading;
         float reloadTime = 3;
         float _timer;
+        
+        #region Narration Ammo Types
+        [field: SerializeField] public EventReference FirstBubbleAmmo { get; private set; }
+        [field: SerializeField] public EventReference FirstWaterAmmo { get; private set; }
+        [field: SerializeField] public EventReference FirstGolemAmmo { get; private set; }
+        [field: SerializeField] public EventReference FirstBasketballAmmo { get; private set; }
+        [field: SerializeField] public EventReference FirstRockAmmo { get; private set; }
+        
+        private bool _loadedBubbleOnce;
+        private bool _loadedWaterOnce;
+        private bool _loadedGolemOnce;
+        private bool _loadedBasketballOnce;
+        private bool _loadedRockOnce;
+        #endregion
 
         private void Start()
         {
@@ -97,9 +113,55 @@ namespace Components.Weapons.Original
             bullet.GetComponent<IBulletMove>().Initialize();
             EventHub.Fired();
             if (!_currentMagazine.FireSoundEvent.IsNull)
+            {
                 RuntimeManager.PlayOneShot(_currentMagazine.FireSoundEvent);
+            } 
             else
                 print("null sound event");
+
+            // This is probably the worst way I could do this, but it works...
+            switch (_currentMagazine.MagName)
+            {
+                case "Basketball":
+                    if (!_loadedBasketballOnce)
+                    {
+                        _loadedBasketballOnce = true;
+                        RuntimeManager.PlayOneShot(FirstBasketballAmmo);
+                    }
+                    break;
+                case "Bubble":
+                    if (!_loadedBubbleOnce)
+                    {
+                        _loadedBubbleOnce = true;
+                        RuntimeManager.PlayOneShot(FirstBubbleAmmo);
+                    }
+
+                    break;
+                case "Golem":
+                    if (!_loadedGolemOnce)
+                    {
+                        _loadedGolemOnce = true;
+                        RuntimeManager.PlayOneShot(FirstGolemAmmo);
+                    }
+
+                    break;
+                case "Rock":
+                    if (!_loadedRockOnce)
+                    {
+                        _loadedRockOnce = true;
+                        RuntimeManager.PlayOneShot(FirstRockAmmo);
+                    }
+
+                    break;
+                case "Water":
+                    if (!_loadedWaterOnce)
+                    {
+                        _loadedWaterOnce = true;
+                        RuntimeManager.PlayOneShot(FirstWaterAmmo);
+                    }
+
+                    break;
+            }
         }
     }
 }

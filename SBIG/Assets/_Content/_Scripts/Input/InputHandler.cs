@@ -61,11 +61,13 @@ namespace YInput
         {
             _keys.gameplay.Enable();
             Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
         public void EnableUIMod()
         {
             _keys.gameplay.Disable();
             Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
 
         public void SetMouseSensitivity(float sensitivity)

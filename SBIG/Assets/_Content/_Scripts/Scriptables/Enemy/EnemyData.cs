@@ -1,4 +1,5 @@
 using Enums.Golem;
+using FMODUnity;
 using UnityEngine;
 
 namespace Scriptables.Enemy
@@ -19,5 +20,9 @@ namespace Scriptables.Enemy
         public int baseDamage;
         public EGolemState golemState;
         public EGolemType golemType;
+        public EventReference AudioIdle;
+        public EventReference AudioCharge;
+        public EventReference AudioAttack;
+        public EventReference AudioDeath;
     }
 }

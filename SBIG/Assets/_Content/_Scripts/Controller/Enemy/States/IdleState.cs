@@ -1,6 +1,7 @@
 using Components.Crops;
 using Enums;
 using Enums.Golem;
+using FMODUnity;
 using Managers.Global;
 using UnityEngine;
 
@@ -22,6 +23,11 @@ namespace Controller.Enemy.States
             _enemy.Target = null;
             _enemy.GolemAnimator.SetFloat(SpeedHash, 0f);
             _enemy.SetFaceState(EGolemState.HUNGRY);
+            
+            if (!_enemy.EnemyConfig.AudioIdle.IsNull)
+            {
+                RuntimeManager.PlayOneShot(_enemy.EnemyConfig.AudioIdle);
+            }
         }
 
         public override void LogicUpdate()

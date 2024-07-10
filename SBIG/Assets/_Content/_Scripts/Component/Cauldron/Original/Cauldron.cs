@@ -1,3 +1,4 @@
+using System;
 using Components.Cookables;
 using Enums.CookableType;
 using System.Collections.Generic;
@@ -20,9 +21,27 @@ namespace Components.Cauldrons.Original
         private string _isCookingBool = "isCooking";
 
         [SerializeField] private bool _isCooking;
+        [SerializeField] EventReference _eventReference;
+        EventInstance _eventInstance;
         private void OnEnable()
         {
             _animator = GetComponentInChildren<Animator>();
+
+            if (!_eventReference.IsNull)
+            {
+                _eventInstance = RuntimeManager.CreateInstance(_eventReference);
+                _eventInstance.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
+                _eventInstance.start(); // Play idle sound from the start   
+            }
+        }
+
+        private void OnDisable()
+        {
+            if (_eventInstance.isValid())
+            {
+                _eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                _eventInstance.release();
+            }
         }
 
         public override void ThrowInCauldron(BaseCookable cookable) 
@@ -47,7 +66,10 @@ namespace Components.Cauldrons.Original
 
         public void Cook2()
         {
-
+            if (_eventInstance.isValid())
+                _eventInstance.setPaused(true);
+            
+            
             _cookablesInCauldron.Clear();
             UIManager.Instance.HideCraftUI();
             EventHub.CauldronStartCook();
@@ -81,6 +103,9 @@ namespace Components.Cauldrons.Original
 
         private void EndCook()
         {
+            if (_eventInstance.isValid())
+                _eventInstance.setPaused(false);
+            
             EventHub.CauldronEndCook();
             EventHub.CookFail();
 

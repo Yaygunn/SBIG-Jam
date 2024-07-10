@@ -3231,6 +3231,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1228382824203591853, guid: 1ca32592c1da598429989857e242b887, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5051426499348840399, guid: 1ca32592c1da598429989857e242b887, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -14538,6 +14542,26 @@ PrefabInstance:
     - target: {fileID: 6759738741893288060, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
       propertyPath: m_Name
       value: Cauldron
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107033230923923465, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: _eventReference.Path
+      value: event:/SFX/Objects/Cauldron/CauldronIdle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107033230923923465, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: _eventReference.Guid.Data1
+      value: 1193926637
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107033230923923465, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: _eventReference.Guid.Data2
+      value: 1298017705
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107033230923923465, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: _eventReference.Guid.Data3
+      value: -1086277207
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107033230923923465, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: _eventReference.Guid.Data4
+      value: 9087478
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -26,12 +26,13 @@ namespace Audio.Events
         #region Weapon
 
         [field: SerializeField] public EventReference Reload { get; private set; }
-
+        [field: SerializeField] public EventReference ReloadFinished { get; private set; }
         #endregion
 
         #region Craft
 
         [field: SerializeField] public EventReference CauldronCook { get; private set; }
+        [field: SerializeField] public EventReference CauldronIdle { get; private set; }
 
         [field: SerializeField] public EventReference CropPicked { get; private set; }
 
@@ -40,6 +41,15 @@ namespace Audio.Events
         [field: SerializeField] public EventReference CookFail{ get; private set; }
         [field: SerializeField] public EventReference NoAmmo{ get; private set; }
 
+        #endregion
+        
+        #region Level Mechanics
+        [field: SerializeField] public EventReference WaveOneStart { get; private set; }
+        [field: SerializeField] public EventReference WaveTwoStart { get; private set; }
+        #endregion
+        
+        #region Player
+        [field: SerializeField] public EventReference PlayerDeath { get; private set; }
         #endregion
     }
 }

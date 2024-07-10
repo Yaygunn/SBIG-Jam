@@ -28,8 +28,7 @@ namespace Audio.Child
             EventHub.Ev_CropPicked -= CropPicked;
             EventHub.Ev_CookFail -= CookFail;
             EventHub.Ev_ThrowInToCauldron -= ThrowToCauldron;
-
-
+            
             _com.RelaeseInstance(ref _cauldronInstance);
         }
 
@@ -61,6 +60,24 @@ namespace Audio.Child
         private void ThrowToCauldron()
         {
             _com.PlayOneShot(_data.CropInToCauldron);
+        }
+
+        private void StartCauldronIdle()
+        {
+            // Start the idle
+            _cauldronInstance.start();
+        }
+
+        private void PauseCauldronIdle()
+        {
+            // Pause idle
+            _cauldronInstance.setPaused(true);
+        }
+        
+        private void StopCauldronIdle()
+        {
+            // Stop idle
+            _cauldronInstance.setPaused(false);
         }
     }
 }
