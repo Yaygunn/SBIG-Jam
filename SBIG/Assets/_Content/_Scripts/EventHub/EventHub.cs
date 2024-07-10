@@ -213,6 +213,18 @@ public static class EventHub
     {
         Ev_StartMusic?.Invoke(musicType);
     }
+    
+    public static event Action Ev_ReduceMusicVolume;
+    public static void ReduceMusicVolume()
+    {
+        Ev_ReduceMusicVolume?.Invoke();
+    }
+    
+    public static event Action Ev_NormalizeMusicVolume;
+    public static void NormalizeMusicVolume()
+    {
+        Ev_NormalizeMusicVolume?.Invoke();
+    }
 
     #endregion
 

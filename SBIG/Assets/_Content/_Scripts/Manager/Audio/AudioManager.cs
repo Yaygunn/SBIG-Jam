@@ -1,3 +1,4 @@
+using System;
 using Audio;
 using Audio.Child;
 using Audio.Events;
@@ -16,6 +17,8 @@ namespace Manager.Audio
         private UIAudio _uiAudio;
         private CombatAudio _combatAudio;
         private CraftAudio _craftAudio;
+
+        private float _initialMusicVolume;
         
         #region Volume Controls
 
@@ -64,6 +67,29 @@ namespace Manager.Audio
             }
         }
 
+        private void OnEnable()
+        {
+            EventHub.Ev_ReduceMusicVolume += LowerMusicVolume;
+            EventHub.Ev_NormalizeMusicVolume += NormalizeMusicVolume;
+        }
+
+        private void OnDisable()
+        {
+            EventHub.Ev_ReduceMusicVolume -= LowerMusicVolume;
+            EventHub.Ev_NormalizeMusicVolume -= NormalizeMusicVolume;
+        }
+        
+        private void LowerMusicVolume()
+        {
+            _initialMusicVolume = _fmodCommunication.GetMusicVolume();
+            _fmodCommunication.SetMusicVolume(_initialMusicVolume * 0.4f);
+        }
+
+        private void NormalizeMusicVolume()
+        {
+            _fmodCommunication.SetMusicVolume(_initialMusicVolume);
+        }
+
         private void Initialize()
         {
             _fmodCommunication = new FModCommunication();
@@ -83,12 +109,7 @@ namespace Manager.Audio
             // Fetch the current volume settings from FMOD
             _musicVolume = PlayerPrefs.GetFloat("MusicVolume", _fmodCommunication.GetMusicVolume());
             _narratorVolume = PlayerPrefs.GetFloat("NarrationVolume", _fmodCommunication.GetNarratorVolume());
-            _sfxVolume = PlayerPrefs.GetFloat("SFXVolume", _fmodCommunication.GetSfxVolume()); 
-            
-            // log the volume levels we're setting
-            Debug.Log($"Music Volume: {_musicVolume}");
-            Debug.Log($"Narrator Volume: {_narratorVolume}");
-            Debug.Log($"SFX Volume: {_sfxVolume}");
+            _sfxVolume = PlayerPrefs.GetFloat("SFXVolume", _fmodCommunication.GetSfxVolume());
             
             // Set the starting volume
             _fmodCommunication.SetMusicVolume(_musicVolume);
