@@ -2,6 +2,8 @@ using System;
 using Audio;
 using Audio.Child;
 using Audio.Events;
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 
 namespace Manager.Audio
@@ -20,6 +22,10 @@ namespace Manager.Audio
 
         private float _initialMusicVolume;
         
+        private Bus _musicBus;
+        private Bus _narratorBus;
+        private Bus _sfxBus;
+        
         #region Volume Controls
 
         public float MusicVolume
@@ -28,7 +34,7 @@ namespace Manager.Audio
             set
             {
                 _musicVolume = value;
-                _fmodCommunication.SetMusicVolume(_musicVolume);
+                SetMusicVolume(_musicVolume);
             }
         }
         
@@ -38,7 +44,7 @@ namespace Manager.Audio
             set
             {
                 _narratorVolume = value;
-                _fmodCommunication.SetNarratorVolume(_narratorVolume);
+                SetNarratorVolume(_narratorVolume);
             }
         }
         
@@ -48,7 +54,7 @@ namespace Manager.Audio
             set
             {
                 _sfxVolume = value;
-                _fmodCommunication.SetSfxVolume(_sfxVolume);
+                SetSfxVolume(_sfxVolume);
             }
         }
         
@@ -81,13 +87,13 @@ namespace Manager.Audio
         
         private void LowerMusicVolume()
         {
-            _initialMusicVolume = _fmodCommunication.GetMusicVolume();
-            _fmodCommunication.SetMusicVolume(_initialMusicVolume * 0.4f);
+            _initialMusicVolume = GetMusicVolume();
+            SetMusicVolume(_initialMusicVolume * 0.4f);
         }
 
         private void NormalizeMusicVolume()
         {
-            _fmodCommunication.SetMusicVolume(_initialMusicVolume);
+            SetMusicVolume(_initialMusicVolume);
         }
 
         private void Initialize()
@@ -98,6 +104,10 @@ namespace Manager.Audio
             _uiAudio = new UIAudio(_fmodCommunication, _eventBindingSO);
             _combatAudio = new CombatAudio(_fmodCommunication, _eventBindingSO);
             _craftAudio = new CraftAudio(_fmodCommunication, _eventBindingSO);
+            
+            _musicBus = RuntimeManager.GetBus("bus:/Music");
+            _narratorBus = RuntimeManager.GetBus("bus:/Narration");
+            _sfxBus = RuntimeManager.GetBus("bus:/SFX");
 
             RegisterAudioEvents();
             
@@ -107,19 +117,52 @@ namespace Manager.Audio
             _craftAudio.Activate();
             
             // Fetch the current volume settings from FMOD
-            _musicVolume = PlayerPrefs.GetFloat("MusicVolume", _fmodCommunication.GetMusicVolume());
-            _narratorVolume = PlayerPrefs.GetFloat("NarrationVolume", _fmodCommunication.GetNarratorVolume());
-            _sfxVolume = PlayerPrefs.GetFloat("SFXVolume", _fmodCommunication.GetSfxVolume());
+            _musicVolume = PlayerPrefs.GetFloat("MusicVolume", GetMusicVolume());
+            _narratorVolume = PlayerPrefs.GetFloat("NarrationVolume", GetNarratorVolume());
+            _sfxVolume = PlayerPrefs.GetFloat("SFXVolume", GetSfxVolume());
             
             // Set the starting volume
-            _fmodCommunication.SetMusicVolume(_musicVolume);
-            _fmodCommunication.SetNarratorVolume(_narratorVolume);
-            _fmodCommunication.SetSfxVolume(_sfxVolume);
+            SetMusicVolume(_musicVolume);
+            SetNarratorVolume(_narratorVolume);
+            SetSfxVolume(_sfxVolume);
         }
 
         private void RegisterAudioEvents()
         {
             // Register any audio events we need here, like starting of the level
+        }
+        
+        public void SetMusicVolume(float volume)
+        {
+            _musicBus.setVolume(volume);
+        }
+
+        public void SetNarratorVolume(float volume)
+        {
+            _narratorBus.setVolume(volume);
+        }
+
+        public void SetSfxVolume(float volume)
+        {
+            _sfxBus.setVolume(volume);
+        }
+
+        public float GetMusicVolume()
+        {
+            _musicBus.getVolume(out float volume);
+            return volume;
+        }
+
+        public float GetNarratorVolume()
+        {
+            _narratorBus.getVolume(out float volume);
+            return volume;
+        }
+
+        public float GetSfxVolume()
+        {
+            _sfxBus.getVolume(out float volume);
+            return volume;
         }
     }
 }
