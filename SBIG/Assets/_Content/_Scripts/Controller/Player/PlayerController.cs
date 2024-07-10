@@ -37,9 +37,7 @@ namespace Controller.Player
         
         #region Footsteps Audio
         [field: SerializeField] public EventReference FootstepSound { get; private set; }
-        public float WalkingSpeedThreshold = 4.8f; 
-        public float FootstepInterval = 1f;
-        private float _footstepTimer = 1f;
+        public float WalkingSpeedThreshold = 4.8f;
         private EventInstance _eventInstance;
         #endregion
         

@@ -6,9 +6,9 @@ namespace Audio
 {
     public class FModCommunication
     {
-        private Bus _musicBus;
-        private Bus _narratorBus;
-        private Bus _sfxBus;
+        private Bus _musicBus = RuntimeManager.GetBus("bus:/Music");
+        private Bus _narratorBus = RuntimeManager.GetBus("bus:/Narration");
+        private Bus _sfxBus = RuntimeManager.GetBus("bus:/SFX");
         
         public void PlayOneShot(EventReference eventReference)
         {
@@ -18,11 +18,6 @@ namespace Audio
         {
             RelaeseInstance(ref eventInstance);
             eventInstance = RuntimeManager.CreateInstance(eventReference);
-            
-            // Fetch the Bus for overall volume control
-            _musicBus = RuntimeManager.GetBus("bus:/Music");
-            _narratorBus = RuntimeManager.GetBus("bus:/Narration");
-            _sfxBus = RuntimeManager.GetBus("bus:/SFX");
         }
         
         public void SetInstanceAndPlay(ref EventInstance eventInstance, EventReference eventReference)

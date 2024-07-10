@@ -81,10 +81,14 @@ namespace Manager.Audio
             _craftAudio.Activate();
             
             // Fetch the current volume settings from FMOD
-
             _musicVolume = PlayerPrefs.GetFloat("MusicVolume", _fmodCommunication.GetMusicVolume());
             _narratorVolume = PlayerPrefs.GetFloat("NarrationVolume", _fmodCommunication.GetNarratorVolume());
-            _sfxVolume = PlayerPrefs.GetFloat("SFXVolume", _fmodCommunication.GetSfxVolume());
+            _sfxVolume = PlayerPrefs.GetFloat("SFXVolume", _fmodCommunication.GetSfxVolume()); 
+            
+            // log the volume levels we're setting
+            Debug.Log($"Music Volume: {_musicVolume}");
+            Debug.Log($"Narrator Volume: {_narratorVolume}");
+            Debug.Log($"SFX Volume: {_sfxVolume}");
             
             // Set the starting volume
             _fmodCommunication.SetMusicVolume(_musicVolume);
