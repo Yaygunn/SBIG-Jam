@@ -99,6 +99,15 @@ MonoBehaviour:
       Data3: -1715559254
       Data4: 1537297323
     Path: event:/SFX/Objects/GenericObjectCollision
+  <FootstepSound>k__BackingField:
+    Guid:
+      Data1: 1420447229
+      Data2: 1082051950
+      Data3: 177532560
+      Data4: 281668679
+    Path: event:/SFX/Player/FootstepsGeneral
+  WalkingSpeedThreshold: 4.8
+  FootstepInterval: 1
 --- !u!114 &4855854386875045901
 MonoBehaviour:
   m_ObjectHideFlags: 0

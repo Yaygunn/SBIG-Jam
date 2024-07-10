@@ -32,6 +32,7 @@ namespace Audio.Events
         #region Craft
 
         [field: SerializeField] public EventReference CauldronCook { get; private set; }
+        [field: SerializeField] public EventReference CauldronIdle { get; private set; }
 
         [field: SerializeField] public EventReference CropPicked { get; private set; }
 

@@ -62,6 +62,12 @@ public static class EventHub
     {
         Ev_CookFail?.Invoke();
     }
+    
+    public static event Action Ev_CauldronSpawned;
+    public static void CauldronSpawned()
+    {
+        Ev_CauldronSpawned?.Invoke();
+    }
 
     public static event Action Ev_ThrowInToCauldron;
     public static void ThrowInToCauldron()

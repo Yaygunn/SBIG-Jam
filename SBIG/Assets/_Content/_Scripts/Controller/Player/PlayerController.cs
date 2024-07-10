@@ -5,6 +5,7 @@ using Components.Move;
 using Components.Rotate;
 using Components.WeaponHandles;
 using Controller.Player.State;
+using FMOD.Studio;
 using FMODUnity;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -34,6 +35,14 @@ namespace Controller.Player
         private float _collisionCooldownDuration = 0.5f;
         #endregion
         
+        #region Footsteps Audio
+        [field: SerializeField] public EventReference FootstepSound { get; private set; }
+        public float WalkingSpeedThreshold = 4.8f; 
+        public float FootstepInterval = 1f;
+        private float _footstepTimer = 1f;
+        private EventInstance _eventInstance;
+        #endregion
+        
         public int PlayerHealth { get; private set; } = 100;
 
         public BaseState StateCurrent { get; private set; }
@@ -57,11 +66,28 @@ namespace Controller.Player
             StateCurrent.Enter();
         }
 
+        private void OnEnable()
+        {
+            _eventInstance = RuntimeManager.CreateInstance(FootstepSound); 
+            _eventInstance.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
+            _eventInstance.start();
+        }
+        
+        private void OnDisable()
+        {
+            if (_eventInstance.isValid())
+            {
+                _eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                _eventInstance.release();
+            }
+        }
+
         private void Update()
         {
             StateCurrent.LogicUpdate();
 
             CollisionCooldown();
+            HandleFootsteps();
         }
 
         private void CollisionCooldown()
@@ -74,6 +100,18 @@ namespace Controller.Player
                     _collisionIsCooldown = false;
                     _collisionCooldownTimer = _collisionCooldownDuration;
                 }
+            }
+        }
+
+        private void HandleFootsteps()
+        {
+            if (CharController.velocity.magnitude > WalkingSpeedThreshold)
+            {
+                _eventInstance.setPaused(false);
+            }
+            else
+            {
+                _eventInstance.setPaused(true);
             }
         }
 

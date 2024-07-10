@@ -4199,37 +4199,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3805124837236854134, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5543403197741541941, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
-      propertyPath: <OnCollisionAudio>k__BackingField.Path
-      value: event:/SFX/Objects/GenericObjectCollision
-      objectReference: {fileID: 0}
-    - target: {fileID: 5543403197741541941, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
-      propertyPath: <OnCollisionAudio>k__BackingField.Guid.Data1
-      value: -907454800
-      objectReference: {fileID: 0}
-    - target: {fileID: 5543403197741541941, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
-      propertyPath: <OnCollisionAudio>k__BackingField.Guid.Data2
-      value: 1206478271
-      objectReference: {fileID: 0}
-    - target: {fileID: 5543403197741541941, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
-      propertyPath: <OnCollisionAudio>k__BackingField.Guid.Data3
-      value: -1715559254
-      objectReference: {fileID: 0}
-    - target: {fileID: 5543403197741541941, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
-      propertyPath: <OnCollisionAudio>k__BackingField.Guid.Data4
-      value: 1537297323
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 66311514213484598, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1641917539}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
 --- !u!1001 &568432105
 PrefabInstance:
@@ -12737,38 +12710,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 684.31903, y: 56.068, z: 1763.7081}
   m_TimeToStationary: 0.5
---- !u!1 &1641917527 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 66311514213484598, guid: 7cef8433ae7c546e6877e44ae0072171, type: 3}
-  m_PrefabInstance: {fileID: 564684848}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1641917539
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641917527}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &1644824478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14541,6 +14482,26 @@ PrefabInstance:
     - target: {fileID: 6759738741893288060, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
       propertyPath: m_Name
       value: Cauldron
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107033230923923465, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: _eventReference.Path
+      value: event:/SFX/Objects/Cauldron/CauldronIdle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107033230923923465, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: _eventReference.Guid.Data1
+      value: 1193926637
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107033230923923465, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: _eventReference.Guid.Data2
+      value: 1298017705
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107033230923923465, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: _eventReference.Guid.Data3
+      value: -1086277207
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107033230923923465, guid: 0e847dc23251da8468155e55e546ff8f, type: 3}
+      propertyPath: _eventReference.Guid.Data4
+      value: 9087478
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
