@@ -24,3 +24,31 @@ MonoBehaviour:
   baseDamage: 10
   golemState: 2
   golemType: 3
+  AudioIdle:
+    Guid:
+      Data1: -1780259785
+      Data2: 1094894400
+      Data3: -1674385272
+      Data4: 104417337
+    Path: event:/SFX/Golems/Water/WaterIdle
+  AudioCharge:
+    Guid:
+      Data1: -1394409420
+      Data2: 1156719453
+      Data3: -1823675775
+      Data4: 1735468790
+    Path: event:/SFX/Golems/Water/WaterCharge
+  AudioAttack:
+    Guid:
+      Data1: -1345024889
+      Data2: 1336972203
+      Data3: -651151743
+      Data4: 497813758
+    Path: event:/SFX/Golems/Water/WaterAttack
+  AudioDeath:
+    Guid:
+      Data1: 1486930384
+      Data2: 1160575081
+      Data3: -1967023951
+      Data4: 54596397
+    Path: event:/SFX/Golems/GolemDeath

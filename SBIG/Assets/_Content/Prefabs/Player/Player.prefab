@@ -92,6 +92,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de83b4d7ec7531439dd8aed79ebd038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <OnCollisionAudio>k__BackingField:
+    Guid:
+      Data1: -907454800
+      Data2: 1206478271
+      Data3: -1715559254
+      Data4: 1537297323
+    Path: event:/SFX/Objects/GenericObjectCollision
+  <FootstepSound>k__BackingField:
+    Guid:
+      Data1: 1420447229
+      Data2: 1082051950
+      Data3: 177532560
+      Data4: 281668679
+    Path: event:/SFX/Player/FootstepsGeneral
+  WalkingSpeedThreshold: 4.8
+  FootstepInterval: 1
 --- !u!114 &4855854386875045901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,6 +835,106 @@ PrefabInstance:
     - target: {fileID: 2232198522788810747, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstRockAmmo>k__BackingField.Path
+      value: event:/Narration/16RockAmmo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstGolemAmmo>k__BackingField.Path
+      value: event:/Narration/15.5GolemAmmo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstWaterAmmo>k__BackingField.Path
+      value: event:/Narration/14WaterAmmo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstBubbleAmmo>k__BackingField.Path
+      value: event:/Narration/13BubbleAmmo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstBasketballAmmo>k__BackingField.Path
+      value: event:/Narration/15BasketballAmmo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstRockAmmo>k__BackingField.Guid.Data1
+      value: 1604387875
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstRockAmmo>k__BackingField.Guid.Data2
+      value: 1310935914
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstRockAmmo>k__BackingField.Guid.Data3
+      value: 773079705
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstRockAmmo>k__BackingField.Guid.Data4
+      value: 1715227562
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstGolemAmmo>k__BackingField.Guid.Data1
+      value: 707935382
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstGolemAmmo>k__BackingField.Guid.Data2
+      value: 1241332742
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstGolemAmmo>k__BackingField.Guid.Data3
+      value: 623756190
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstGolemAmmo>k__BackingField.Guid.Data4
+      value: -464262423
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstWaterAmmo>k__BackingField.Guid.Data1
+      value: -463149789
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstWaterAmmo>k__BackingField.Guid.Data2
+      value: 1306084560
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstWaterAmmo>k__BackingField.Guid.Data3
+      value: -1838089336
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstWaterAmmo>k__BackingField.Guid.Data4
+      value: 1354983424
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstBubbleAmmo>k__BackingField.Guid.Data1
+      value: -990439053
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstBubbleAmmo>k__BackingField.Guid.Data2
+      value: 1268786792
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstBubbleAmmo>k__BackingField.Guid.Data3
+      value: 1222152629
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstBubbleAmmo>k__BackingField.Guid.Data4
+      value: 361586241
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstBasketballAmmo>k__BackingField.Guid.Data1
+      value: 1376517008
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstBasketballAmmo>k__BackingField.Guid.Data2
+      value: 1281040737
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstBasketballAmmo>k__BackingField.Guid.Data3
+      value: 1496458386
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255185459346536538, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
+      propertyPath: <FirstBasketballAmmo>k__BackingField.Guid.Data4
+      value: -728551609
       objectReference: {fileID: 0}
     - target: {fileID: 2749846170699947888, guid: e61c93f908fb1496391c81326cc1fc5f, type: 3}
       propertyPath: m_LocalScale.x

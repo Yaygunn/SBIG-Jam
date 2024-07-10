@@ -16,6 +16,13 @@ public static class EventHub
     {
         Ev_PlayerDied?.Invoke();
     }
+
+    public static event Action Ev_PlayerCollision;
+
+    public static void PlayerCollision()
+    {
+        Ev_PlayerCollision?.Invoke();
+    }
     #endregion
     
     #region CarrySystem
@@ -54,6 +61,12 @@ public static class EventHub
     public static void CookFail()
     {
         Ev_CookFail?.Invoke();
+    }
+    
+    public static event Action Ev_CauldronSpawned;
+    public static void CauldronSpawned()
+    {
+        Ev_CauldronSpawned?.Invoke();
     }
 
     public static event Action Ev_ThrowInToCauldron;

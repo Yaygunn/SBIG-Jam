@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6dee51fa3de2a64aa330edfc3fce214, type: 3}
   m_Name: Wood Golem
   m_EditorClassIdentifier: 
-  enemyName: Water Golem
+  enemyName: Wood Golem
   detectionRange: 1000
   attackRange: 5
   attackCooldown: 2.5
@@ -24,3 +24,31 @@ MonoBehaviour:
   baseDamage: 10
   golemState: 1
   golemType: 1
+  AudioIdle:
+    Guid:
+      Data1: -1129956630
+      Data2: 1212452032
+      Data3: 165351325
+      Data4: -1277521655
+    Path: event:/SFX/Golems/Wood/WoodIdle
+  AudioCharge:
+    Guid:
+      Data1: -1574957569
+      Data2: 1340374800
+      Data3: -903515758
+      Data4: -2042270609
+    Path: event:/SFX/Golems/Wood/WoodCharge
+  AudioAttack:
+    Guid:
+      Data1: 424647480
+      Data2: 1151833791
+      Data3: 657979543
+      Data4: -1861721717
+    Path: event:/SFX/Golems/Wood/WoodAttack
+  AudioDeath:
+    Guid:
+      Data1: 1486930384
+      Data2: 1160575081
+      Data3: -1967023951
+      Data4: 54596397
+    Path: event:/SFX/Golems/GolemDeath

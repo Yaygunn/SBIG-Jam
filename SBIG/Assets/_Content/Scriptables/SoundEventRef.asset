@@ -61,6 +61,20 @@ MonoBehaviour:
       Data3: 2014826400
       Data4: -177970873
     Path: event:/SFX/FlaskPistol/Reload
+  <ReloadFinished>k__BackingField:
+    Guid:
+      Data1: 1225290816
+      Data2: 1316677716
+      Data3: 228014218
+      Data4: 129559917
+    Path: event:/Narration/10Reload2
+  <PostSlapNarration>k__BackingField:
+    Guid:
+      Data1: -1904683696
+      Data2: 1275903633
+      Data3: 1591066283
+      Data4: 1074698340
+    Path: event:/Narration/17AfterSlap
   <CauldronCook>k__BackingField:
     Guid:
       Data1: -1727856103
@@ -96,3 +110,24 @@ MonoBehaviour:
       Data3: -532231014
       Data4: -963196550
     Path: event:/SFX/FlaskPistol/MagazineEmpty
+  <WaveOneStart>k__BackingField:
+    Guid:
+      Data1: -1247224240
+      Data2: 1208758685
+      Data3: 591120022
+      Data4: -1975373681
+    Path: event:/Narration/11IncomingFirstWave1
+  <WaveTwoStart>k__BackingField:
+    Guid:
+      Data1: 1200105284
+      Data2: 1115887300
+      Data3: 145365634
+      Data4: -1703839118
+    Path: event:/Narration/12IncomingFirstWave2
+  <PlayerDeath>k__BackingField:
+    Guid:
+      Data1: -2026360395
+      Data2: 1190075218
+      Data3: 1270629559
+      Data4: -987826174
+    Path: event:/Narration/19-23GameOver
