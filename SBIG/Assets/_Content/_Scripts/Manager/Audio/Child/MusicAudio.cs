@@ -60,11 +60,11 @@ namespace Audio.Child
         }
         private void craft()
         {
-            _com.SetGlobalParameter("Gathering", 0);
+            _com.SetGlobalParameter("MusicState", 0);
         }
         private void combat()
         {
-            _com.SetGlobalParameter("Gathering", 1);
+            _com.SetGlobalParameter("MusicState", 1);
         }
     }
 }
