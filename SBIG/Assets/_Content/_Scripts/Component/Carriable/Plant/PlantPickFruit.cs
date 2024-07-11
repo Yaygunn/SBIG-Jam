@@ -1,4 +1,5 @@
 using Components.Crops;
+using Manager.Task;
 using UnityEngine;
 
 namespace Components.Carriables.Plant
@@ -29,6 +30,11 @@ namespace Components.Carriables.Plant
                     .GetComponent<BaseCarriable>();
 
             fruit.PickUp(camera);
+
+            if (TaskManager.Instance.IsCurrentTask("Pick 1 plant from the garden"))
+            {
+                TaskManager.Instance.CompleteTask("Pick 1 plant from the garden");   
+            }
 
             return fruit;
         }

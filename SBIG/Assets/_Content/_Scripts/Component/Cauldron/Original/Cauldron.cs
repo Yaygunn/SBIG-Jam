@@ -7,6 +7,7 @@ using UnityEngine;
 using FMODUnity;
 using Audio;
 using FMOD.Studio;
+using Manager.Task;
 using Managers.UI;
 using YInput;
 using Scriptables.Turn.Craft.Child;
@@ -49,6 +50,12 @@ namespace Components.Cauldrons.Original
             _cookablesInCauldron.Add(cookable.type);
             cookable.ThrowenToCauldron();
             EventHub.ThrowInToCauldron();
+            
+            if (TaskManager.Instance.IsCurrentTask("Add plant to cauldron"))
+            {
+                TaskManager.Instance.CompleteTask("Add plant to cauldron");   
+            }
+            
             if(_cookablesInCauldron.Count>= 3)
             {
                 _cookablesInCauldron.Clear();
@@ -108,6 +115,11 @@ namespace Components.Cauldrons.Original
             
             EventHub.CauldronEndCook();
             EventHub.CookFail();
+            
+            if (TaskManager.Instance.IsCurrentTask("Wait for cauldron to finish cooking"))
+            {
+                TaskManager.Instance.CompleteTask("Wait for cauldron to finish cooking");   
+            }
 
             UIManager.Instance.ShowCraftUI();
             Invoke("EndTurn", 2);

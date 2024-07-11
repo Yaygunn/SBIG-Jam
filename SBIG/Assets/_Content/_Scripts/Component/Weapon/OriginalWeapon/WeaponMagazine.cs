@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Components.Weapons.Original;
+using Manager.Task;
 using UnityEngine;
 
 public class WeaponMagazine : MonoBehaviour
@@ -49,6 +50,11 @@ public class WeaponMagazine : MonoBehaviour
         _magazineIsFinished = false;
         
         _meshRenderer.material = _weapon.CurrentMagazine.MagMaterial;
+        
+        if (TaskManager.Instance.IsCurrentTask("Reload weapon"))
+        {
+            TaskManager.Instance.CompleteTask("Reload weapon");   
+        }
     }
 
     private void LateUpdate()
