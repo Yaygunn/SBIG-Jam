@@ -1,6 +1,7 @@
 using Scriptables.Turn;
 using Scriptables.Turn.Combat;
 using System.Collections;
+using Manager.Task;
 using UnityEngine;
 using Utilities.Singleton;
 
@@ -55,6 +56,11 @@ namespace Managers.Turn
 
         private void Slapped()
         {
+            if (TaskManager.Instance.IsCurrentTask("Defeat incoming wave of enemies"))
+            {
+                TaskManager.Instance.CompleteTask("Defeat incoming wave of enemies");   
+            }
+            
             Invoke("FireEndCombat", 3);
         }
         private void FireEndCombat()

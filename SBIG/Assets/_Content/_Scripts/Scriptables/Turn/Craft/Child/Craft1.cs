@@ -1,6 +1,7 @@
 using Controller.Player;
 using Manager.Enemy;
 using System.Collections;
+using Manager.Task;
 using UnityEngine;
 
 namespace Scriptables.Turn.Craft.Child
@@ -28,6 +29,11 @@ namespace Scriptables.Turn.Craft.Child
                 timer += Time.deltaTime;
                 if (timer > necesseryTime)
                     break;
+            }
+            
+            if (TaskManager.Instance.IsCurrentTask("Pick and throw 3 plants into the cauldron"))
+            {
+                TaskManager.Instance.CompleteTask("Pick and throw 3 plants into the cauldron");   
             }
 
             EndTurn();
