@@ -5,6 +5,7 @@ using Controller.Enemy;
 using Enums.Golem;
 using Scriptables.Enemy;
 using UnityEngine;
+using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
 namespace Manager.Enemy
@@ -101,7 +102,9 @@ namespace Manager.Enemy
         {
             if (_enemyDataDictionary.ContainsKey(golemType))
             {
-                GameObject enemyGO = Instantiate(EnemyPrefab, spawnPoint, Quaternion.identity);
+                Vector3 navMeshSpawnPoint = GetClosestNavMeshPosition(spawnPoint);
+                
+                GameObject enemyGO = Instantiate(EnemyPrefab, navMeshSpawnPoint, Quaternion.identity);
                 EnemyController enemy = enemyGO.GetComponent<EnemyController>();
 
                 if (enemy)
@@ -113,6 +116,21 @@ namespace Manager.Enemy
             }
             
             return null;
+        }
+
+        private Vector3 GetClosestNavMeshPosition(Vector3 spawnPosition)
+        {
+            NavMeshHit hit;
+            
+            if (NavMesh.SamplePosition(spawnPosition, out hit, 8.0f, NavMesh.AllAreas))
+            {
+                return hit.position;
+            }
+            else
+            {
+                Debug.Log("No navmesh hit found for spawning enemy, using original spawn point");
+                return spawnPosition;
+            }
         }
         
         public void SpawnMiniEnemy(EGolemType golemType, Vector3 spawnPoint)

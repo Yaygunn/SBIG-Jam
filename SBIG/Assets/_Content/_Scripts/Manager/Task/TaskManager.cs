@@ -25,7 +25,6 @@ namespace Manager.Task
             tasks.Enqueue("Wait for cauldron to finish cooking");
             tasks.Enqueue("Reload weapon");
             tasks.Enqueue("Defeat incoming wave of enemies");
-            // Not sure we need to show them this again
             tasks.Enqueue("Pick and throw 3 plants into the cauldron");
             tasks.Enqueue("Defeat incoming wave of enemies");
 
