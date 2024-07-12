@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd827d6b3ddff048bbbbd29fbc40e1d, type: 3}
+  m_Name: 2TutorialStart
+  m_EditorClassIdentifier: 
+  audioEventReference: 2TutorialStart
+  CaptionLines:
+  - Caption: Nice. Nice. So deary
+    StartDelay: 0
+    Duration: 2
+    StackWithNext: 0
+  - Caption: I need you to get your magic-
+    StartDelay: 0
+    Duration: 2.6
+    StackWithNext: 0
+  - Caption: Smart gurl! You knew I'd ask you to bring the magic revolver!
+    StartDelay: 0
+    Duration: 3.4
+    StackWithNext: 0
+  - Caption: Great! Now let's gather up some of my plant specimens
+    StartDelay: 0
+    Duration: 3.2
+    StackWithNext: 0
+  - Caption: and then cook you up some ammo!
+    StartDelay: 0
+    Duration: 1.7
+    StackWithNext: 0
+  maximumCaptionsOnScreen: 2
