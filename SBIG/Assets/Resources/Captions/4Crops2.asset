@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd827d6b3ddff048bbbbd29fbc40e1d, type: 3}
+  m_Name: 4Crops2
+  m_EditorClassIdentifier: 
+  audioEventReference: 4Crops2
+  CaptionLines:
+  - Caption: I mean I said extract
+    StartDelay: 0.4
+    Duration: 1.1
+    StackWithNext: 0
+  - Caption: not just rip them out like a gorilla
+    StartDelay: 0
+    Duration: 3.4
+    StackWithNext: 0
+  - Caption: "but sure\u2026 we can work with this."
+    StartDelay: 0
+    Duration: 2.6
+    StackWithNext: 0
+  - Caption: Now I need you to head to the cauldron
+    StartDelay: 1.2
+    Duration: 2
+    StackWithNext: 0
+  - Caption: and throw a call my way when you are there.
+    StartDelay: 0
+    Duration: 2.2
+    StackWithNext: 0
+  maximumCaptionsOnScreen: 2

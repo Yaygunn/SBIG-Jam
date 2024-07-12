@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd827d6b3ddff048bbbbd29fbc40e1d, type: 3}
+  m_Name: 12IncomingFirstWave2
+  m_EditorClassIdentifier: 
+  audioEventReference: 12IncomingFirstWave2
+  CaptionLines:
+  - Caption: Hah! Those stoners only sent golems!
+    StartDelay: 0
+    Duration: 4.8
+    StackWithNext: 0
+  - Caption: Yes! Beloved niece of mine,
+    StartDelay: 0
+    Duration: 2.2
+    StackWithNext: 0
+  - Caption: show these phonies what real magic is like
+    StartDelay: 0
+    Duration: 3
+    StackWithNext: 0
+  maximumCaptionsOnScreen: 2

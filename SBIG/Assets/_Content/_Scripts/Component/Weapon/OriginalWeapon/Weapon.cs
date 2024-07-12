@@ -1,12 +1,12 @@
-using System;
 using Components.BulletMove;
 using FMODUnity;
 using Managers.Magazines;
 using Managers.MainCamera;
 using Scriptables.Magazines;
-using System.Collections;
-using FMOD.Studio;
+using Manager.Caption;
 using UnityEngine;
+using UnityEngine.Diagnostics;
+using Utilities;
 using YInput;
 
 namespace Components.Weapons.Original
@@ -126,6 +126,7 @@ namespace Components.Weapons.Original
                     if (!_loadedBasketballOnce)
                     {
                         _loadedBasketballOnce = true;
+                        CaptionManager.Instance.StartCaption( SBIGUtils.GetEventName(FirstBasketballAmmo) );
                         RuntimeManager.PlayOneShot(FirstBasketballAmmo);
                     }
                     break;
@@ -133,6 +134,7 @@ namespace Components.Weapons.Original
                     if (!_loadedBubbleOnce)
                     {
                         _loadedBubbleOnce = true;
+                        CaptionManager.Instance.StartCaption( SBIGUtils.GetEventName(FirstBubbleAmmo) );
                         RuntimeManager.PlayOneShot(FirstBubbleAmmo);
                     }
 
@@ -141,6 +143,7 @@ namespace Components.Weapons.Original
                     if (!_loadedGolemOnce)
                     {
                         _loadedGolemOnce = true;
+                        CaptionManager.Instance.StartCaption( SBIGUtils.GetEventName(FirstGolemAmmo) );
                         RuntimeManager.PlayOneShot(FirstGolemAmmo);
                     }
 
@@ -149,6 +152,7 @@ namespace Components.Weapons.Original
                     if (!_loadedRockOnce)
                     {
                         _loadedRockOnce = true;
+                        CaptionManager.Instance.StartCaption( SBIGUtils.GetEventName(FirstRockAmmo) );
                         RuntimeManager.PlayOneShot(FirstRockAmmo);
                     }
 
@@ -157,6 +161,7 @@ namespace Components.Weapons.Original
                     if (!_loadedWaterOnce)
                     {
                         _loadedWaterOnce = true;
+                        CaptionManager.Instance.StartCaption( SBIGUtils.GetEventName(FirstWaterAmmo) );
                         RuntimeManager.PlayOneShot(FirstWaterAmmo);
                     }
 

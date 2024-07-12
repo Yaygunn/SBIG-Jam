@@ -4,7 +4,9 @@ using FMODUnity;
 using Managers.UI;
 using System.Collections;
 using System.Collections.Generic;
+using Manager.Caption;
 using UnityEngine;
+using Utilities;
 using YInput;
 
 [CreateAssetMenu(fileName = "Prologue", menuName = "Scriptables/Turn/Prologue")]
@@ -160,6 +162,8 @@ public class Prologue : BaseTurn
 
     private void PlayReferance(EventReference referance)
     {
+        CaptionManager.Instance.StartCaption( SBIGUtils.GetEventName(referance) );
+        
         _com.StopInstance(ref SoundInstance);
         _com.RelaeseInstance(ref SoundInstance);
 

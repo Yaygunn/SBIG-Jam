@@ -1,4 +1,6 @@
 using Audio.Events;
+using Manager.Caption;
+using Utilities;
 
 namespace Audio.Child
 {
@@ -57,9 +59,11 @@ namespace Audio.Child
             switch (_waveCount)
             {
                 case 1:
+                    CaptionManager.Instance.StartCaption( SBIGUtils.GetEventName(_data.WaveOneStart) );
                     _com.PlayOneShot(_data.WaveOneStart);
                     break;
                 case 2:
+                    CaptionManager.Instance.StartCaption( SBIGUtils.GetEventName(_data.WaveTwoStart) );
                     _com.PlayOneShot(_data.WaveTwoStart);
                     break;
             }

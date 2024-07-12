@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd827d6b3ddff048bbbbd29fbc40e1d, type: 3}
+  m_Name: 13BubbleAmmo
+  m_EditorClassIdentifier: 
+  audioEventReference: 
+  CaptionLines:
+  - Caption: ... My disappointment is immeasurable
+    StartDelay: 0
+    Duration: 2.3
+    StackWithNext: 0
+  - Caption: and my day is ruined.
+    StartDelay: 0
+    Duration: 1.5
+    StackWithNext: 0
+  - Caption: Go get another mag!
+    StartDelay: 0
+    Duration: 1.4
+    StackWithNext: 0
+  maximumCaptionsOnScreen: 2
