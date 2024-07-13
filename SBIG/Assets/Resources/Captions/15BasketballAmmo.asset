@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd827d6b3ddff048bbbbd29fbc40e1d, type: 3}
   m_Name: 15BasketballAmmo
   m_EditorClassIdentifier: 
+  <SoundEventReferance>k__BackingField:
+    Guid:
+      Data1: 1376517008
+      Data2: 1281040737
+      Data3: 1496458386
+      Data4: -728551609
+    Path: event:/Narration/15BasketballAmmo
   audioEventReference: 15BasketballAmmo
   CaptionLines:
   - Caption: "You really made them\u2026 bounce!"

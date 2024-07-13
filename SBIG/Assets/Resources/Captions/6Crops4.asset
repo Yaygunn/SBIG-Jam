@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd827d6b3ddff048bbbbd29fbc40e1d, type: 3}
   m_Name: 6Crops4
   m_EditorClassIdentifier: 
+  <SoundEventReferance>k__BackingField:
+    Guid:
+      Data1: -1794940209
+      Data2: 1095389804
+      Data3: -1454561139
+      Data4: -433015958
+    Path: event:/Narration/6Crops4
   audioEventReference: 6Crops4
   CaptionLines:
   - Caption: Oh god! They are already starting their summoning spells.

@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd827d6b3ddff048bbbbd29fbc40e1d, type: 3}
   m_Name: 14WaterAmmo
   m_EditorClassIdentifier: 
+  <SoundEventReferance>k__BackingField:
+    Guid:
+      Data1: -463149789
+      Data2: 1306084560
+      Data3: -1838089336
+      Data4: 1354983424
+    Path: event:/Narration/14WaterAmmo
   audioEventReference: 14WaterAmmo
   CaptionLines:
   - Caption: Yeah, I don't think giving them a bath is going to do it.

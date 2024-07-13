@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd827d6b3ddff048bbbbd29fbc40e1d, type: 3}
   m_Name: 10Reload2
   m_EditorClassIdentifier: 
+  <SoundEventReferance>k__BackingField:
+    Guid:
+      Data1: 1225290816
+      Data2: 1316677716
+      Data3: 228014218
+      Data4: 129559917
+    Path: event:/Narration/10Reload2
   audioEventReference: 10Reload2
   CaptionLines:
   - Caption: "And there you go\u2026 reloading like a gorilla"

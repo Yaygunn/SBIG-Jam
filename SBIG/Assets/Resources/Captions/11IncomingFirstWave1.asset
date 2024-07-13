@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd827d6b3ddff048bbbbd29fbc40e1d, type: 3}
   m_Name: 11IncomingFirstWave1
   m_EditorClassIdentifier: 
+  <SoundEventReferance>k__BackingField:
+    Guid:
+      Data1: -1247224240
+      Data2: 1208758685
+      Data3: 591120022
+      Data4: -1975373681
+    Path: event:/Narration/11IncomingFirstWave1
   audioEventReference: 11IncomingFirstWave1
   CaptionLines:
   - Caption: Okay, now I need you to rush out there

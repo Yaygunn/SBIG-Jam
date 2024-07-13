@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd827d6b3ddff048bbbbd29fbc40e1d, type: 3}
   m_Name: 16RockAmmo
   m_EditorClassIdentifier: 
+  <SoundEventReferance>k__BackingField:
+    Guid:
+      Data1: 1604387875
+      Data2: 1310935914
+      Data3: 773079705
+      Data4: 1715227562
+    Path: event:/Narration/16RockAmmo
   audioEventReference: 16RockAmmo
   CaptionLines:
   - Caption: I guess rock does beat rock

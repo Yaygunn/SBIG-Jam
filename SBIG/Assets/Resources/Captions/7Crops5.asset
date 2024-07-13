@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd827d6b3ddff048bbbbd29fbc40e1d, type: 3}
   m_Name: 7Crops5
   m_EditorClassIdentifier: 
+  <SoundEventReferance>k__BackingField:
+    Guid:
+      Data1: -1595951292
+      Data2: 1152390941
+      Data3: -2051476588
+      Data4: -1383872521
+    Path: event:/Narration/7Crops5
   audioEventReference: 7Crops5
   CaptionLines:
   - Caption: Bloody hells!

@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd827d6b3ddff048bbbbd29fbc40e1d, type: 3}
   m_Name: 8-9Success
   m_EditorClassIdentifier: 
+  <SoundEventReferance>k__BackingField:
+    Guid:
+      Data1: 1328203160
+      Data2: 1206944204
+      Data3: 1512580783
+      Data4: 11234000
+    Path: event:/Narration/8-9Success
   audioEventReference: 8-9Success
   CaptionLines:
   - Caption: Even a broken clock is right at least twice a day huh sweetheart?

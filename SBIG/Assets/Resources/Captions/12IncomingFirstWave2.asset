@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd827d6b3ddff048bbbbd29fbc40e1d, type: 3}
   m_Name: 12IncomingFirstWave2
   m_EditorClassIdentifier: 
+  <SoundEventReferance>k__BackingField:
+    Guid:
+      Data1: 1200105284
+      Data2: 1115887300
+      Data3: 145365634
+      Data4: -1703839118
+    Path: event:/Narration/12IncomingFirstWave2
   audioEventReference: 12IncomingFirstWave2
   CaptionLines:
   - Caption: Hah! Those stoners only sent golems!
