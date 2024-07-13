@@ -173,7 +173,8 @@ namespace Manager.Enemy
 
         public void EndAndFlee()
         {
-            StopCoroutine(_enemyWaveCoroutine);
+            if(_enemyWaveCoroutine != null) 
+                StopCoroutine(_enemyWaveCoroutine);
             
             EventHub.EnemyEndAndFlee();
         }
