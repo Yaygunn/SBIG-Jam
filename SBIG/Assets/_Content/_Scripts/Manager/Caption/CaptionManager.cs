@@ -15,7 +15,7 @@ namespace Manager.Caption
         [SerializeField] private GameObject captionUITextPrefab;
         [SerializeField] private CaptionData activeCaption;
         
-        private Dictionary<string, CaptionData> captionDatabase = new Dictionary<string, CaptionData>();
+        private Dictionary<EventReference, CaptionData> captionDatabase = new Dictionary<EventReference, CaptionData>();
         private Coroutine displayCaptionCoroutine = null;
         
         void Start()
@@ -32,12 +32,12 @@ namespace Manager.Caption
             {
                 foreach (CaptionData caption in allCaptions)
                 {
-                    captionDatabase.Add(caption.audioEventReference, caption);
+                    captionDatabase.Add(caption.SoundEventReferance, caption);
                 }
             }
         }
 
-        public void StartCaption(string captionReference)
+        public void StartCaption(EventReference captionReference)
         {
             if (captionDatabase.TryGetValue(captionReference, out var captionToStart))
             {

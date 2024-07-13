@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ namespace Scriptables.Caption
     [CreateAssetMenu(fileName = "CaptionData", menuName = "Scriptables/Caption/CaptionData", order = -1)]
     public class CaptionData : ScriptableObject
     {
+        [field:SerializeField] public EventReference SoundEventReferance { get; private set; }
         public string audioEventReference;
         public List<CaptionLine> CaptionLines;
         public int maximumCaptionsOnScreen = 2;

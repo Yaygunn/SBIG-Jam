@@ -5,9 +5,10 @@ namespace Utilities
     // Had to rename the class to Utils otherwise it clashes
     public static class SBIGUtils
     {
-        public static string GetEventName(EventReference referance)
+        public static EventReference GetEventName(EventReference referance)
         {
-            string referenceString = referance.ToString();
+            return referance;
+            /*string referenceString = referance.ToString();
             int startIndex = referenceString.IndexOf("event:/Narration/") + "event:/Narration/".Length;
             if (startIndex > "event:/Narration/".Length - 1 && startIndex < referenceString.Length)
             {
@@ -18,7 +19,7 @@ namespace Utilities
                 }
                 return eventName;
             }
-            return string.Empty;
+            return string.Empty;*/
         }
     }   
 }
