@@ -6,7 +6,7 @@ public class LeftArmAnim : MonoBehaviour
     [SerializeField]
     private ParticleSystem _magickParticles;
 
-    public void TempLeftArmReloadAnimationEvent()
+    public void LeftArmReloadAnimationEvent()
     {
         _magickParticles.Play();
         var material = _magickParticles.GetComponent<Renderer>().material;
